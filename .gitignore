@@ -6,3 +6,4 @@
 /src/Wiki2FreebaseID.py
 data.zip
 config1.properties
+/src/*.class

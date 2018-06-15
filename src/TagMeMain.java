@@ -4,6 +4,7 @@ import java.util.Map;
 public class TagMeMain extends TagMe {
     private static final double rhoThreshold = 0.2;
     private static String filepath;
+    private static String answer;
 
     public static void main(String[] args) {
         processArguments(args);
@@ -20,6 +21,7 @@ public class TagMeMain extends TagMe {
                 writer.write(qa[0] + " | " + qa[1]);
                 System.out.print("QUESTION. " + qa[0] + " | " + qa[1]);
                 TagMe.tag(qa[0]);
+                answer = qa[0];
                 tags = TagMe.getTags();
                 if (tags.size() != 0) {
                     for (String tag : tags.keySet()) {
@@ -27,6 +29,7 @@ public class TagMeMain extends TagMe {
                         System.out.print(" | " + tag + " | " + tags.get(tag));
                     }
                 }
+                TagMe.tag(qa[1]);
                 System.out.print("\n");
                 writer.newLine();
             }

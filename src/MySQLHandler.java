@@ -18,7 +18,8 @@ public class MySQLHandler {
         try {
             Class.forName(dbDriver).newInstance();
             connection = DriverManager.getConnection(URL, user, pass);
-        } catch (InstantiationException | IllegalAccessException | ClassNotFoundException | SQLException e) {
+        } catch (InstantiationException | IllegalAccessException | 
+                ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
     }
@@ -97,7 +98,8 @@ public class MySQLHandler {
     }
 
     //---MISCELLANEOUS METHODS---
-    public String escapeMetaCharacters(String input) { //adds backslashes to escape special characters that MySQL cannot handle
+    //adds backslashes to escape special characters that MySQL cannot handle
+    public String escapeMetaCharacters(String input) { 
         final String[] metaCharacters = {"\'", "\"", "\\"};
         output = input;
         if (input != null) {

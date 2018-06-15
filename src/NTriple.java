@@ -13,6 +13,14 @@ public class NTriple {
         object = o;
     }
 
+    public boolean isStringNTriple(){
+        if(!this.objectID.startsWith("m.")){
+            objectID = objectID.substring(0,12);
+            return true;
+        }
+        return false;
+    }
+
     public String getSubject() {
         return subject;
     }

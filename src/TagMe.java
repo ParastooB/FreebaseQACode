@@ -35,7 +35,9 @@ public class TagMe {
 
     public static void tag(String question) {
         tags.clear(); //clear previous tags
-        String url = "https://tagme.d4science.org/tagme/tag?gcube-token=e276e0d3-30d5-4c40-bc43-4e19eafb1d89-843339462&text=".concat(question);
+        // String url = "https://tagme.d4science.org/tagme/tag?gcube-token=e276e0d3-30d5-4c40-bc43-4e19eafb1d89-843339462&text=".concat(question);
+        // String url = "https://tagme.d4science.org/tagme/tag?lang=en&include_abstract=true&include_categories=true&gcube-token=e276e0d3-30d5-4c40-bc43-4e19eafb1d89-843339462&text=".concat(question);
+        String url = "https://tagme.d4science.org/tagme/tag?include_categories=true&gcube-token=e276e0d3-30d5-4c40-bc43-4e19eafb1d89-843339462&text=".concat(question);
 
         try {
             page = client.getPage(url); //connects to specific TagMe page
@@ -49,6 +51,8 @@ public class TagMe {
             for (int i = 0; i < size; i++) {
                 //get an annotation
                 annotationElement = (JSONObject) iterator.next();
+                System.out.println(question);
+                System.out.println(annotationElement);
                 rhoValue = annotationElement.get("rho");
                 double rho;
                 if (rhoValue instanceof  Long) //when rho = 1 from TagMe, it becomes an instanceof Long which cannot be cast

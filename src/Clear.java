@@ -1,8 +1,9 @@
-//put -verbose:gc in VM options in Configurations to print GC data
+// Clears out the questions that can't be answered either becaause the answer name doesn't exists in freebase
+// or because their is no entities for us to start from.
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Clear {
     //---STATIC VARIABLES---
     private static String configpath;
     private static String filepath;
@@ -23,20 +24,29 @@ public class Main {
         List<Map<String, String>> tagsBank = new ArrayList<>();
         String question, answer;
         FreebaseDBHandler db;
-        Search search;
+        List<String> IDsList = new ArrayList<>(); //placeholder list for nameAlias2IDs method
         //uses a hash structure to ensure unique tags
         Map<String, String> tags = new HashMap<>(); 
         String spot; //stores a tag's corresponding spot when the tag get removed
+        Set<String> tagIDs = new HashSet<>();
+        List<NTriple> tagTriples = new ArrayList<>();
+        Map<String, NTriple> mediatorTriples = new HashMap<>();
+        NTriple mediatorTriple;
+        List<NTriple> answerTriples = new ArrayList<>();
+        Set<String> answerIDs = new HashSet<>();
+        //matches are saved uniquely based on subject, predicate, mediatorPredicate, object
+        Set<List<String>> matches = new HashSet<>(); 
+        List<String> match = new ArrayList<>();
 
 	//variables for console output
-        // unique matches are all the qs that had an answer
-        int uniqueMatches = 0 , answers = 0, mediators = 0 , count = 0, matches = 0;
+        boolean matched;
+        int uniqueMatches = 0 , answers = 0, mediators = 0;
         long startTime = System.currentTimeMillis();
         long previousTime = System.currentTimeMillis();
 
         PrintWriter writer = null;
         try{
-            writer = new PrintWriter("../outputs/output.txt", "UTF-8");
+            writer = new PrintWriter("../outputs/clearedqs.txt", "UTF-8");
         } catch (FileNotFoundException e) {
             System.err.println("FileNotFoundException: " + e.getMessage());
         } catch (SecurityException e) {
@@ -46,12 +56,8 @@ public class Main {
         }
         
 
-    //---Prep FUNCTIONS---
+        //---Prep FUNCTIONS---
         processArgs(args);
-        readConfigFile();
-
-	// database
-        db = new FreebaseDBHandler(dbURL, dbUser, dbPass);
 
         if (isRetrieved) {
             try {
@@ -76,15 +82,6 @@ public class Main {
                 e.printStackTrace();
             }
         }
-        else { //if the file is retirved aka not algorithm readable text file 
-            QARetrieval.parseJSON(filepath); //retrieves QAs from the JSON file
-            questionBank = QARetrieval.getQuestions();
-            answerBank = QARetrieval.getAnswers();
-        }
-        if (!isTagged) { //if the file is not tagged srart the service once and for all
-            TagMe.setRhoThreshold(rhoThreshold);
-            TagMe.startWebClient();
-        }
 
 	// boundry check
         if (startIndex < 0) startIndex = 0; //ensures startIndex has a minimum value of 0
@@ -96,73 +93,45 @@ public class Main {
         for (int i = startIndex; i < endIndex; i++) {
             question = questionBank.get(i);
             answer = answerBank.get(i);
-            // System.out.printf("QUESTION %d. %s (%s)\n", i+1, question, answer);
-            System.out.printf("------------------------------QUESTION %d -----------------------------\n", i+1);
-            System.out.println(question + "\n The answer is: " + answer);
+            //System.out.printf("QUESTION %d. %s (%s)\n", i+1, question, answer);
+            System.out.println(i);
 	    
+	        matched = false;
             //skips the QA pair if Q or A is null
             if (question == null || answer == null) continue; 
 
             if (isTagged){
                 tags.putAll(tagsBank.get(i));
-            }
-            else { // the file is not tagged find the tagges for each question 1 by 1
-                System.out.println("QUERYING TagMe...");
-                TagMe.tag(question);
-                tags.putAll(TagMe.getTags());
+                if (tagsBank.get(i).size() != 0) {
+                    try{
+                        writer.printf("%s | %s\n", question, answer);
+                        System.out.printf("%s | %s\n", question, answer);
+                    } catch (NullPointerException  e) {
+                        System.err.println("NullPointerException: " + e.getMessage());
+                    }
+                }
             }
 
             if (tags.size() != 0) {
-                //removes tags that are equivalent to the answer
-                spot = tags.remove(answer.toLowerCase().trim()); 
-                if (spot != null) { //if a tag was removed, the collected spot is used as the tag
-                    tags.put(spot.toLowerCase().trim(), spot.toLowerCase().trim()); //in case the spot is also equivalent to the answer
-                    tags.remove(answer.toLowerCase().trim()); 
-                }
+                System.out.println(tags.size());
+                continue;
             }
             if (tags.size() == 0) {
-                System.out.println("Skipping because no entities"); //prints an empty line for spacing
-                System.out.println();
-                continue; //skips the QA pair if there are no tags to use
-            }
-            System.out.println("TAGS: " + tags);
-
-        //bottom-up
-            search = new Search(answer,db,tags);
-            search.bottomUp();
-            if (!search.isInFB()) //answer doesn't exist in Freebase
-                continue;
-
-        //top-down
-            search.topDown();
-            matches = search.getMatchesSize();
-            if (matches == 0 && !search.isAnswerContained()){
-            // if (matches == 0){
                 try{
-                    writer.println(search.getQuestionPackage(question));
+                    writer.printf("%s | %s\n", question, answer);
+                    System.out.printf("%s | %s\n", question, answer);
                 } catch (NullPointerException  e) {
                     System.err.println("NullPointerException: " + e.getMessage());
                 }
-                System.out.printf("No answer but %d AIDs.\n",search.getAnswerIDsSize());
-                if(search.isAnswerInText()){
-                    System.out.println("However the answer was found in the texts associated with the tags");
-                }
-                System.out.println();
             }
-            search.cleanUp();
-
-            if (search.isMatched()) uniqueMatches++;
-            System.out.printf("PROGRESS: %d MATCHES (%d UNIQUE MATCHES)\nTIME: %.3fs FOR QUESTION AND %.3fs SINCE START\n\n",
-                    matches, uniqueMatches, (System.currentTimeMillis() - previousTime)/1000.0, (System.currentTimeMillis() - startTime)/1000.0);
-            previousTime = System.currentTimeMillis();
+            tags.clear();
         }
-        System.out.printf("PROCESSING COMPLETE\nRESULTS: %d MATCHES (%d UNIQUE MATCHES)\n", matches, uniqueMatches);
+        //System.out.printf("PROCESSING COMPLETE\nRESULTS: %d MATCHES (%d UNIQUE MATCHES)\n", matches.size(), uniqueMatches);
         writer.close();
-        tagsBank.clear();
     }
 
     private static void processArgs(String[] args) {
-        if (args.length == 0 || args.length > 5) {
+        if (args.length == 0 || args.length > 4) {
             System.out.printf("USAGE:\tjava Main [path to Freebase config file] [path to .JSON or .TXT file]\n\t" +
                     "java Main [path to Freebase config file] [path to .JSON or .TXT file] [start index]\n\t" +
                     "java Main [path to Freebase config file] [path to .JSON or .TXT file] [start index] [end index]\n\t" +
@@ -177,27 +146,11 @@ public class Main {
                     rhoThreshold = Double.parseDouble(args[4]);
             }
         }
-        configpath = args[0];
-        filepath = args[1];
+        //configpath = args[0];
+        filepath = args[0];
         if (filepath.contains(".txt")) {
             isRetrieved = true;
             if (filepath.contains("TagMe")) isTagged = true;
-        }
-    }
-
-    private static void readConfigFile() {
-        try {
-            Properties prop = new Properties();
-            InputStream input = new FileInputStream(configpath);
-            prop.load(input);
-            dbURL = prop.getProperty("dbURL");
-            dbUser = prop.getProperty("dbUser");
-            dbPass = prop.getProperty("dbPass");
-            input.close();
-            prop.clear();
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.exit(1);
         }
     }
 }

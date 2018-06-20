@@ -88,20 +88,20 @@ public class Search {
                     if (this.tagTriples == null) // can this happen? an ID has no triple associated with it!
                         continue;
                     this.preds = new Predicates(tagID, this.db);
-                    // this.preds.printPredicate();
-                    // List<NTriple> td = new ArrayList<>();
-                    // td = this.preds.getPredObjects("people.person.spouse_s", td);
+                    this.preds.printPredicate();
+                    List<NTriple> td = new ArrayList<>();
+                    td = this.preds.getPredObjects("people.person.spouse_s", td);
                     /*
                     [Tom Cruise | m.07r1h | people.person.spouse_s | m.02kkm52 | null,...]
                     m.02kkm52 is a marriage node, has people, has start and end and has type
                     */
-                    // if(td != null){
-                        // td = this.preds.sortPredObjects("people.marriage.from", td);
+                    if(td != null){
+                        td = this.preds.sortPredObjects("people.marriage.from", td);
                         /*
                         [null | m.02kkn1l | people.marriage.from | "1987-05-09" | null, ... ]
                         sorted list of all the marriage node sorted based on the people.marriage.from 
                         */
-                    // }
+                    }
 
 
                     /*if (tagTriples.size() > this.sizeLimit){
@@ -198,7 +198,7 @@ public class Search {
                         //     continue;
                         // }
                         // this.input = new String();
-                        topDownDeeper(tagTriple.getObjectID());
+                        topDownDeeper(tagTriple.getObjectID(),tagTriple);
                     }
                     this.tagTriples.clear();
                     }
@@ -213,7 +213,7 @@ public class Search {
         // }
     }
 
-    public void topDownDeeper(String objID){
+    public void topDownDeeper(String objID, NTriple justinCase){
         List<NTriple> tagtagTriples = new ArrayList<>();
         List<NTriple> tagMedTriples = new ArrayList<>();
         Map<String, NTriple> mediatorTagTriples = new HashMap<>();
@@ -248,12 +248,14 @@ public class Search {
         for (NTriple tagtagTriple : tagtagTriples) {
             check = false;
             check = isConnectedToAnswer("TAGID:"+objID, tagtagTriple);
-            if (check){
-                 storeGoodTriples (this.goodSecondTriples ,this.objectIDnames.get(objID), tagtagTriple);
+            if(check){
+                System.out.printf("     The root triple is : %s \n",justinCase.toString());
+                storeGoodTriples (this.goodSecondTriples ,this.objectIDnames.get(objID), tagtagTriple);
             }
-            else if (!check){ 
+            if (!check){
                 check = isConnectedToAnswerMediator("TAGID:"+objID, tagtagTriple);
-                if (check){
+                if(check){
+                    System.out.printf("     The root triple is : %s \n",justinCase.toString());
                     storeGoodTriples (this.goodSecondTriples, this.objectIDnames.get(objID), tagtagTriple);
                 }
             }
@@ -287,6 +289,7 @@ public class Search {
                 //not correct for second layer
                 // System.out.printf("MATCHED1: %s | %s\n", this.tags.get(tag), tagTriple.toString());
                 System.out.printf("The match is : %s \n",this.match);
+                System.out.printf("Match is from triple : %s \n",tagTriple);
                 // System.out.printf("The AIDs are : %s \n",String.join(",", answerIDs));
                 // System.out.printf("The ID i s : %s from %d answers\n",tagTriple.getObjectID(),this.answerIDs.size());
             }
@@ -332,6 +335,7 @@ public class Search {
                 //not correct for second layer
                 // System.out.printf("MATCHED2: %s | %s | %s\n", this.tags.get(tag), tagTriple.toString(), this.mediatorTriple.toReverseString());
                 System.out.printf("The match is : %s \n",this.match);
+                System.out.printf("Match is from triple : %s \n",tagTriple);
                 // System.out.printf("The MIDs are : %s \n",String.join(",", mediatorTriples.keySet()));
                 // System.out.printf("The ID is : %s from %d mediators\n",tagTriple.getObjectID(), this.mediatorTriples.size());
             }

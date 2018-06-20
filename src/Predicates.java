@@ -99,6 +99,42 @@ public class Predicates{
         return -1;
     }
 
+    public int countPredicate (String entry){
+        return this.allPreds.get(entry).size();
+    }
+
+    // a triple is comparable if there is more than one triple with the same predicate. 
+    // AND (objects connected to that triple are either mediators which then have to have predicates which are numbers/dates
+    // OR objects are normal triples and have a predicate that is number/date.
+    public void isTripleComparable(String predicate){
+        if(countPredicate(predicate)> 1){
+            System.out.println("    "+predicate+"       --> " + countPredicate(predicate));
+            // List<NTriple> tagTriples = new ArrayList<>();
+            // tagTriples = db.ID2Triples(this.allPreds.get(predicate).get(0).getObjectID(), tagTriples);
+            // if(tagTriples.size()>0)
+            //     System.out.println("        "+tagTriples);
+        } else {
+            return;
+        }
+        List<NTriple> subjTriples2 = this.allPreds.get(predicate);
+        List<NTriple> objTriples = new ArrayList<>();
+        List<NTriple> objStringTriples = new ArrayList<>();
+
+        // we only need to check for one of them to know if it's possible to sort
+        objTriples = db.ID2Triples(subjTriples2.get(0).getObjectID(), objTriples);
+        objStringTriples = db.ID2Triples(subjTriples2.get(0).getObjectID(), objStringTriples);
+        for (NTriple c: objTriples){
+            if (c.getObjectID() == subjTriples2.get(0).getSubjectID()){
+                continue;
+            }
+            System.out.println(c.getObjectID());
+        }
+        for (NTriple c: objStringTriples){
+            if(c.getObjectID().matches(".*\\d+.*"))
+                System.out.println(c.getObjectID());
+        }
+    }
+
     public void printPredicate (){
         Set<String> objectIDs = new HashSet<>();
         if (this.allPreds == null)
@@ -106,16 +142,9 @@ public class Predicates{
         if (this.allPreds.size() == 0)
             return;
         for (String entry: this.allPreds.keySet()){
-            System.out.println("    "+entry+"       --> " + this.allPreds.get(entry).size());
             objectIDs = new HashSet<>();
             for (NTriple t: this.allPreds.get(entry)){
                 objectIDs.add(t.getObjectID());
-            }
-            if(this.allPreds.get(entry).size() > 1){
-            List<NTriple> tagTriples = new ArrayList<>();
-            tagTriples = db.ID2Triples(this.allPreds.get(entry).get(0).getObjectID(), tagTriples);
-            // if(tagTriples.size()>0)
-                // System.out.println("        "+tagTriples);
             }
         }
     }

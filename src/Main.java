@@ -44,6 +44,17 @@ public class Main {
         } catch (UnsupportedEncodingException e) {
             System.err.println("UnsupportedEncodingException: " + e.getMessage());
         }
+
+        PrintWriter writer2 = null;
+        try{
+            writer2 = new PrintWriter("../outputs/foundputs.txt", "UTF-8");
+        } catch (FileNotFoundException e) {
+            System.err.println("FileNotFoundException: " + e.getMessage());
+        } catch (SecurityException e) {
+            System.err.println("SecurityException: " + e.getMessage());
+        } catch (UnsupportedEncodingException e) {
+            System.err.println("UnsupportedEncodingException: " + e.getMessage());
+        }
         
 
     //---Prep FUNCTIONS---
@@ -149,6 +160,14 @@ public class Main {
                 }
                 System.out.println();
             }
+            else{
+                try{
+                    writer2.println(search.getQuestionPackage(question));
+                } catch (NullPointerException  e) {
+                    System.err.println("NullPointerException: " + e.getMessage());
+                }
+                System.out.println();
+            }
             search.cleanUp();
 
             if (search.isMatched()) uniqueMatches++;
@@ -158,6 +177,7 @@ public class Main {
         }
         System.out.printf("PROCESSING COMPLETE\nRESULTS: %d MATCHES (%d UNIQUE MATCHES)\n", matches, uniqueMatches);
         writer.close();
+        writer2.close();
         tagsBank.clear();
     }
 

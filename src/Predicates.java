@@ -1,11 +1,14 @@
 import java.util.*;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
+import java.util.Date;
+import com.joestelmach.natty.*;
 
 public class Predicates{
 
     private FreebaseDBHandler db;
     private Map<String,List<NTriple>> allPreds = new HashMap<>(); 
+    private Map<String,List<NTriple>> stringPreds = new HashMap<>();
     private String freebaseID;
 
     public Predicates(String freebaseID, FreebaseDBHandler db ){
@@ -19,12 +22,13 @@ public class Predicates{
     private void ID2Predicates () { 
         List<NTriple> tagTriples = new ArrayList<>();
         tagTriples = db.ID2Triples(this.freebaseID, tagTriples);
+
         List<NTriple> temp2 = new ArrayList<>();
 
         if (tagTriples.size() == 0)
             return;
         for (NTriple p: tagTriples){
-            if(allPreds == null)
+            if(this.allPreds == null)
                 return;
             temp2 = this.allPreds.get(p.getPredicate());
             if (temp2 == null)
@@ -99,8 +103,8 @@ public class Predicates{
         return -1;
     }
 
-    public int countPredicate (String entry){
-        return this.allPreds.get(entry).size();
+    public int countPredicate (String predicate){
+        return this.allPreds.get(predicate).size();
     }
 
     // a triple is comparable if there is more than one triple with the same predicate. 
@@ -116,23 +120,38 @@ public class Predicates{
         } else {
             return;
         }
-        List<NTriple> subjTriples2 = this.allPreds.get(predicate);
+        List<NTriple> subjTriples = this.allPreds.get(predicate);
         List<NTriple> objTriples = new ArrayList<>();
         List<NTriple> objStringTriples = new ArrayList<>();
+        List<NTriple> objobjTriples = new ArrayList<>();
 
         // we only need to check for one of them to know if it's possible to sort
-        objTriples = db.ID2Triples(subjTriples2.get(0).getObjectID(), objTriples);
-        objStringTriples = db.ID2Triples(subjTriples2.get(0).getObjectID(), objStringTriples);
+        objTriples = db.ID2Triples(subjTriples.get(0).getObjectID(), objTriples);
+        // System.out.println(objTriples);
+        objStringTriples = db.ID2TriplesFull(subjTriples.get(0).getObjectID(), objStringTriples);
         for (NTriple c: objTriples){
-            if (c.getObjectID() == subjTriples2.get(0).getSubjectID()){
-                continue;
+            objobjTriples = db.ID2TriplesFull(c.getObjectID(),objobjTriples);
+            for (NTriple k: objobjTriples){
+                // if(){ // if the object is a date
+                    System.out.println(k.getObjectID() + " " +k.getPredicate());
+                // }
+
+            System.out.println(k.getObjectID());
+            List<Date> dates =new Parser().parse(k.getObjectID()).get(0).getDates();
+            System.out.println(dates.get(0));
             }
-            System.out.println(c.getObjectID());
         }
-        for (NTriple c: objStringTriples){
-            if(c.getObjectID().matches(".*\\d+.*"))
-                System.out.println(c.getObjectID());
-        }
+        // for (NTriple c: objStringTriples){
+        //     if(c.getObjectID().matches(".*\\d+.*")){
+        //         // System.out.println(c.getObjectID());
+        //     }
+        // }
+    }
+
+    private boolean isDate(String data){
+        if(! data.matches(".*\\d+.*"))
+            return false;
+        return true;
     }
 
     public void printPredicate (){
@@ -142,6 +161,8 @@ public class Predicates{
         if (this.allPreds.size() == 0)
             return;
         for (String entry: this.allPreds.keySet()){
+            // System.out.println("    --------    "+entry);
+            isTripleComparable(entry);
             objectIDs = new HashSet<>();
             for (NTriple t: this.allPreds.get(entry)){
                 objectIDs.add(t.getObjectID());

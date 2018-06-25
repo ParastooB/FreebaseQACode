@@ -213,7 +213,7 @@ public class Search {
         // }
     }
 
-    public void topDownDeeper(String objID, NTriple justinCase){
+    public void topDownDeeper(String objID, NTriple justinCase){ //just in case we found the answer here.
         List<NTriple> tagtagTriples = new ArrayList<>();
         List<NTriple> tagMedTriples = new ArrayList<>();
         Map<String, NTriple> mediatorTagTriples = new HashMap<>();

@@ -98,10 +98,12 @@ public class FreebaseDBHandler extends MySQLHandler {
             return null;
 
         String query = String.format (" SELECT * FROM %s.%s WHERE (`row_id` BETWEEN %d AND %d) AND `<predicate>` LIKE \'%s%%\'" + 
-            " AND `<predicate>` != '%s' AND `<predicate>` != '%s' AND `<predicate>` != '%s'"+ " AND (`<object>` LIKE '%%@en%%' OR `<object>` NOT LIKE '%%@%%')"+
+            " AND `<predicate>` != '%s' AND `<predicate>` != '%s' AND `<predicate>` != '%s' AND `<predicate>` != '%s'" +
+            " AND (`<object>` LIKE '%%@en%%' OR `<object>` NOT LIKE '%%@%%')"+
             " AND `<object>` NOT LIKE '%s%%'; " 
             , DATABASE_NAME, DATADUMP_TABLE_NAME, rowIDs.get(0), rowIDs.get(1), "<http://rdf.freebase.com/ns/" , 
             "<http://rdf.freebase.com/ns/common.topic.topic_equivalent_webpage>" , "<http://rdf.freebase.com/ns/common.topic.description>", 
+            "<http://rdf.freebase.com/ns/common.topic.webpage>" , 
             "<http://rdf.freebase.com/ns/type.object.key>", "<http://rdf.freebase.com/ns/m.");
         queryTable(query);
         query2DResults = doubleQueryResult(2, 3); //index 0 stores predicates and index 1 stores objects

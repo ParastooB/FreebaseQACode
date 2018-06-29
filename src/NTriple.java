@@ -15,8 +15,15 @@ public class NTriple {
 
     public boolean isStringNTriple(){
         if(!this.objectID.startsWith("m.")){
-            objectID = objectID.substring(0,12);
-            return true;
+            String parts[] = objectID.split("\"");
+            if (parts.length > 0){
+                if(parts[1].length() >10){
+                    parts[1] = parts[1].substring(0,10);
+                }
+                objectID = "\""+ parts[1] +"\"";
+            }
+            else
+                objectID = objectID.substring(0,12);
         }
         return false;
     }

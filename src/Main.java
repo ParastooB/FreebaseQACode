@@ -55,6 +55,17 @@ public class Main {
         } catch (UnsupportedEncodingException e) {
             System.err.println("UnsupportedEncodingException: " + e.getMessage());
         }
+
+        PrintWriter writer3 = null;
+        try{
+            writer3 = new PrintWriter("../outputs/predicates.txt", "UTF-8");
+        } catch (FileNotFoundException e) {
+            System.err.println("FileNotFoundException: " + e.getMessage());
+        } catch (SecurityException e) {
+            System.err.println("SecurityException: " + e.getMessage());
+        } catch (UnsupportedEncodingException e) {
+            System.err.println("UnsupportedEncodingException: " + e.getMessage());
+        }
         
 
     //---Prep FUNCTIONS---
@@ -145,6 +156,11 @@ public class Main {
                 continue;
 
         //top-down
+            try{
+                writer3.println(search.sortedPredicates());
+            } catch (NullPointerException  e) {
+                System.err.println("NullPointerException: " + e.getMessage());
+            }
             search.topDown();
             matches = search.getMatchesSize();
             if (matches == 0 && !search.isAnswerContained()){
@@ -178,6 +194,7 @@ public class Main {
         System.out.printf("PROCESSING COMPLETE\nRESULTS: %d MATCHES (%d UNIQUE MATCHES)\n", matches, uniqueMatches);
         writer.close();
         writer2.close();
+        writer3.close();
         tagsBank.clear();
     }
 

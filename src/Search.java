@@ -87,22 +87,6 @@ public class Search {
                     this.tagTriples = this.db.ID2Triples(tagID, this.tagTriples);
                     if (this.tagTriples == null) // can this happen? an ID has no triple associated with it!
                         continue;
-                    this.preds = new Predicates(tagID, this.db);
-                    this.preds.printPredicate();
-                    List<NTriple> td = new ArrayList<>();
-                    td = this.preds.getPredObjects("people.person.spouse_s", td);
-                    /*
-                    [Tom Cruise | m.07r1h | people.person.spouse_s | m.02kkm52 | null,...]
-                    m.02kkm52 is a marriage node, has people, has start and end and has type
-                    */
-                    if(td != null){
-                        td = this.preds.sortPredObjects("people.marriage.from", td);
-                        /*
-                        [null | m.02kkn1l | people.marriage.from | "1987-05-09" | null, ... ]
-                        sorted list of all the marriage node sorted based on the people.marriage.from 
-                        */
-                    }
-
 
                     /*if (tagTriples.size() > this.sizeLimit){
                         tagTriples.clear();
@@ -115,17 +99,17 @@ public class Search {
                     this.tagTripleOthers = this.db.ID2TriplesFull(tagID, this.tagTripleOthers);
                     if (this.tagTripleOthers == null) // can this happen? an ID has no triple associated with it!
                         continue;
-                    for (NTriple t: this.tagTripleOthers) {
-                        if (t.getObjectID().toLowerCase().contains("/"+answer+"/"))
-                            continue;
-                        if (t.getObjectID().toLowerCase().contains(answer)){
-                            System.out.println("    "+t.getPredicate());
-                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                            System.out.println(t.getObjectID());
-                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                            this.foundText = true;
-                        }
-                    }
+                    // for (NTriple t: this.tagTripleOthers) {
+                    //     if (t.getObjectID().toLowerCase().contains("/"+answer+"/"))
+                    //         continue;
+                    //     if (t.getObjectID().toLowerCase().contains(answer)){
+                    //         System.out.println("    "+t.getPredicate());
+                    //         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                    //         System.out.println(t.getObjectID());
+                    //         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                    //         this.foundText = true;
+                    //     }
+                    // }
 
                     for (NTriple tagTriple : this.tagTriples) {
                         check = false;
@@ -190,14 +174,7 @@ public class Search {
                     for (NTriple tagTriple : this.tagTriples) {
                         String temp = this.db.ID2name(tagTriple.getObjectID());
                         storeGoodTriples(this.secondTagNames,temp, tagTriple);
-
-                        // System.out.printf("Should I use %s tagID? (y/n)\n", this.secondTagNames.get(tagTriple.getObjectID()));
-                        // this.input = console.nextLine();
-                        // if (this.input.toLowerCase().equals("n")){
-                        //     this.input = new String();
-                        //     continue;
-                        // }
-                        // this.input = new String();
+                        // System.out.println(tag + " " +tagTriple);
                         topDownDeeper(tagTriple.getObjectID(),tagTriple);
                     }
                     this.tagTriples.clear();
@@ -205,8 +182,8 @@ public class Search {
                 this.tagIDs.clear();
             }
         // System.out.println(this.secondTagNames);
-        printGoodTriples(this.goodSecondTriples);
-        System.out.println("<><><><><><><><><><><><><><><><><><><><><><><><><><>");
+        // printGoodTriples(this.goodSecondTriples);
+        // System.out.println("<><><><><><><><><><><><><><><><><><><><><><><><><><>");
         // printGoodTriples(this.secondTagNames);
         this.secondTagNames.clear();
         this.goodSecondTriples.clear();
@@ -229,31 +206,33 @@ public class Search {
         }
 
         // Search some other predicates other than Name ot Alias or the ones that actually connected to an object
-        this.tagTripleOthers = this.db.ID2TriplesFull(objID, this.tagTripleOthers);
-        if (this.tagTripleOthers == null) // can this happen? an ID has no triple associated with it!
-            return;
-        for (NTriple t: this.tagTripleOthers) {
-            if (t.getObjectID().toLowerCase().contains("/"+answer+"/"))
-                continue;
-            if (t.getObjectID().toLowerCase().contains(answer)){
-                System.out.println("    "+t.getPredicate() + " ID "+ objID);
-                System.out.println("~2~2~2~2~2~2~2~2~2~2~2~2~2~2~2~2~2~2~2~2");
-                System.out.println(t.getObjectID());
-                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                this.foundText = true;
-            }
-        }
+        // this.tagTripleOthers = this.db.ID2TriplesFull(objID, this.tagTripleOthers);
+        // if (this.tagTripleOthers == null) // can this happen? an ID has no triple associated with it!
+        //     return;
+        // for (NTriple t: this.tagTripleOthers) {
+        //     if (t.getObjectID().toLowerCase().contains("/"+answer+"/"))
+        //         continue;
+        //     if (t.getObjectID().toLowerCase().contains(answer)){
+        //         System.out.println("    "+t.getPredicate() + " ID "+ objID);
+        //         System.out.println("~2~2~2~2~2~2~2~2~2~2~2~2~2~2~2~2~2~2~2~2");
+        //         System.out.println(t.getObjectID());
+        //         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        //         this.foundText = true;
+        //     }
+        // }
     
 
         for (NTriple tagtagTriple : tagtagTriples) {
             check = false;
             check = isConnectedToAnswer("TAGID:"+objID, tagtagTriple);
+            // System.out.println(check);
             if(check){
                 System.out.printf("     The root triple is : %s \n",justinCase.toString());
                 storeGoodTriples (this.goodSecondTriples ,this.objectIDnames.get(objID), tagtagTriple);
             }
             if (!check){
                 check = isConnectedToAnswerMediator("TAGID:"+objID, tagtagTriple);
+                // System.out.println(check);
                 if(check){
                     System.out.printf("     The root triple is : %s \n",justinCase.toString());
                     storeGoodTriples (this.goodSecondTriples, this.objectIDnames.get(objID), tagtagTriple);
@@ -266,6 +245,7 @@ public class Search {
 
     // if the object of the tagTriple has an ID matching an answer ID
     private boolean isConnectedToAnswer(String tag, NTriple tagTriple){
+        // System.out.println(tag + " " +tagTriple);
         boolean result = false;
         String tripleSub = tagTriple.getSubjectID();
         String tripleObj = tagTriple.getObjectID();
@@ -310,6 +290,7 @@ public class Search {
 
     //if the object of the tagTriple has an ID matching a mediator
     private boolean isConnectedToAnswerMediator(String tag, NTriple tagTriple){
+        // System.out.println(tag + " " +tagTriple);
         boolean result = false;
         String tripleSub = tagTriple.getSubjectID();
         String tripleObj = tagTriple.getObjectID();
@@ -339,6 +320,7 @@ public class Search {
                 // System.out.printf("The MIDs are : %s \n",String.join(",", mediatorTriples.keySet()));
                 // System.out.printf("The ID is : %s from %d mediators\n",tagTriple.getObjectID(), this.mediatorTriples.size());
             }
+            result = true;
         }
         else{
             String tagObj= tagTriple.getObjectID();
@@ -476,6 +458,35 @@ public class Search {
         for (String tag : tags.keySet()) {
             result = result + (" | " + tag);
             result = result + (" | " + tags.get(tag));
+        }
+        return result;
+    }
+
+    public Map<String, Map<String,Map<String,List<NTriple>>>> sortedPredicates(){
+        Map<String, Map<String,Map<String,List<NTriple>>>> result = new HashMap<>();
+        Map<String,Map<String,List<NTriple>>> temp = new HashMap<>();
+        Map<String,Map<String,List<NTriple>>> temp15 = new HashMap<>();
+        Map<String,List<NTriple>> temp2 = new HashMap<>();
+        result = new HashMap<>();
+        for (String tag : this.tags.keySet()) { // why only the key set???!
+            this.tagIDs = this.db.nameAlias2IDs(tag, this.IDsList, this.tagIDs);
+            for (String tagID : this.tagIDs) {
+                this.tagTriples = this.db.ID2Triples(tagID, this.tagTriples);
+                if (this.tagTriples == null) // can this happen? an ID has no triple associated with it!
+                    continue;
+                this.preds = new Predicates(tagID, this.db);
+                // this.preds.printPredicate();
+                temp = new HashMap<>();
+                temp15 = new HashMap<>();
+                this.preds.comparablePredicate(temp);
+                for (String s: temp.keySet()){
+                    temp2 = new HashMap<>();
+                    temp2 = temp.get(s);
+                    temp15.put(s,temp2);
+                }
+                result.put((tag + ": " + tagID),temp15);
+                this.preds.cleanUp();
+            }
         }
         return result;
     }

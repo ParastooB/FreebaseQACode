@@ -1,11 +1,33 @@
 import java.util.*;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import com.joestelmach.natty.*;
 
 public class MergeSort{
+
+    private static boolean isDate(String data){
+        if(! data.matches(".*\\d+.*")){
+            System.out.println("There is no date in " + data);
+            return false;
+        }
+        else{
+            if(new Parser().parse(data).size() > 0){
+                List<Date> dates =new Parser().parse(data).get(0).getDates();
+                // System.out.println("        " + dates.get(0));
+                return true;
+            }
+            else 
+                return false;
+        }
+    }
+
 	static String extractDate (String date){
         String parts[] = date.split("\"");
-        if(parts[1].length() < 10)
+        if(parts[1].length() == 4)
+            parts[1] = parts[1] + "-01-01";
+        if(parts[1].length() == 7)
             parts[1] = parts[1] + "-01";
         return parts[1];
     }

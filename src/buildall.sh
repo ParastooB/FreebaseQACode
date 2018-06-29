@@ -9,22 +9,25 @@ libs=".:../libs/antlr-runtime-3.5.2.jar:../libs/backport-util-concurrent-3.1.jar
 echo 'javac' $libs 'TagMe.java'
 javac -cp $libs TagMe.java
 
-echo 'javac used "htmlunit-2.27-OSGi.jar,json-simple-1.1.1.jar,mysql-connector-java-5.1.42-bin.jar,natty-0.13.jar" NTriple.java'
+echo 'javac NTriple.java'
 javac -cp $libs NTriple.java
 
-echo 'javac used "htmlunit-2.27-OSGi.jar,json-simple-1.1.1.jar,mysql-connector-java-5.1.42-bin.jar,natty-0.13.jar" MySQLHandler.java'
+echo 'javac MySQLHandler.java'
 javac -cp $libs MySQLHandler.java
 
 #echo 'javac -cp ".:../libs/htmlunit-2.27-OSGi.jar:../libs/json-simple-1.1.1.jar:../libs/mysql-connector-java-5.1.42-bin.jar" MatchesDBHandler.java'
 #javac -cp ".:../libs/htmlunit-2.27-OSGi.jar:../libs/json-simple-1.1.1.jar:../libs/mysql-connector-java-5.1.42-bin.jar" MatchesDBHandler.java
 
-echo 'javac used "htmlunit-2.27-OSGi.jar,json-simple-1.1.1.jar,mysql-connector-java-5.1.42-bin.jar,natty-0.13.jar" FreebaseDBHandler.java'
+echo 'javac FreebaseDBHandler.java'
 javac -cp $libs FreebaseDBHandler.java
 
-echo 'javac used "htmlunit-2.27-OSGi.jar,json-simple-1.1.1.jar,mysql-connector-java-5.1.42-bin.jar,natty-0.13.jar" MergeSort.java'
+echo 'javac MergeSort.java'
 javac -cp $libs MergeSort.java
 
-echo 'javac used "htmlunit-2.27-OSGi.jar,json-simple-1.1.1.jar,mysql-connector-java-5.1.42-bin.jar,natty-0.13.jar" Predicates.java'
+echo 'javac PredicateComparison.java'
+javac -cp $libs PredicateComparison.java
+
+echo 'javac Predicates.java'
 javac -cp $libs Predicates.java
 
 # echo 'javac -cp ".:../libs/htmlunit-2.27-OSGi.jar:../libs/json-simple-1.1.1.jar:../libs/mysql-connector-java-5.1.42-bin.jar" AnswerID.java'
@@ -39,13 +42,13 @@ javac -cp $libs Predicates.java
 # echo 'javac -cp ".:../libs/htmlunit-2.27-OSGi.jar:../libs/json-simple-1.1.1.jar:../libs/mysql-connector-java-5.1.42-bin.jar" Clear.java'
 # javac -cp ".:../libs/htmlunit-2.27-OSGi.jar:../libs/json-simple-1.1.1.jar:../libs/mysql-connector-java-5.1.42-bin.jar" Clear.java
 
-echo 'javac used "htmlunit-2.27-OSGi.jar,json-simple-1.1.1.jar,mysql-connector-java-5.1.42-bin.jar,natty-0.13.jar" Search.java'
+echo 'javac Search.java'
 javac -cp $libs Search.java
 
 # echo 'javac -cp ".:../libs/htmlunit-2.27-OSGi.jar:../libs/json-simple-1.1.1.jar:../libs/mysql-connector-java-5.1.42-bin.jar" DumbMain.java'
 # javac -cp ".:../libs/htmlunit-2.27-OSGi.jar:../libs/json-simple-1.1.1.jar:../libs/mysql-connector-java-5.1.42-bin.jar" DumbMain.java
 
-echo 'javac used "htmlunit-2.27-OSGi.jar,json-simple-1.1.1.jar,mysql-connector-java-5.1.42-bin.jar,natty-0.13.jar" Main.java'
+echo 'javac Main.java'
 javac -cp $libs Main.java
 
 

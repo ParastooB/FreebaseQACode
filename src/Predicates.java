@@ -1,8 +1,4 @@
 import java.util.*;
-import java.text.SimpleDateFormat;
-import java.text.ParseException;
-import java.util.Date;
-import com.joestelmach.natty.*;
 
 public class Predicates{
 
@@ -10,13 +6,15 @@ public class Predicates{
     private Map<String,List<NTriple>> allPreds = new HashMap<>(); 
     private Map<String,List<NTriple>> stringPreds = new HashMap<>();
     private String freebaseID;
+    private String input = new String();
+    private Scanner console = new Scanner(System.in);
+    private Map<String,Map<String,List<NTriple>>> comparablePreds = new HashMap<>();
 
     public Predicates(String freebaseID, FreebaseDBHandler db ){
         this.db = db;
         this.freebaseID = freebaseID;
         ID2Predicates ();
     }
-
 
     //returns all the triples of this ID based on predicate
     private void ID2Predicates () { 
@@ -28,8 +26,6 @@ public class Predicates{
         if (tagTriples.size() == 0)
             return;
         for (NTriple p: tagTriples){
-            if(this.allPreds == null)
-                return;
             temp2 = this.allPreds.get(p.getPredicate());
             if (temp2 == null)
                 temp2 = new ArrayList<>();
@@ -39,17 +35,16 @@ public class Predicates{
         tagTriples.clear();
     }
 
-    public List<NTriple> getPredObjects (String predicate, List<NTriple> objectTriples) { 
-
+    public List<NTriple> getPredObjects (String predicate) { 
         if(!this.allPreds.keySet().contains(predicate))
             return null;
 
-        List<NTriple> temp2 = this.allPreds.get(predicate);
+        List<NTriple> results = this.allPreds.get(predicate);
 
-        if (temp2.size() == 0)
+        if (results.size() == 0)
             return null;
 
-        return temp2;
+        return results;
     }
 
     public List<NTriple> sortPredObjects (String predicate, List<NTriple> triples) { // triples are the initial ones, e.g. all the spouses
@@ -107,66 +102,63 @@ public class Predicates{
         return this.allPreds.get(predicate).size();
     }
 
-    // a triple is comparable if there is more than one triple with the same predicate. 
-    // AND (objects connected to that triple are either mediators which then have to have predicates which are numbers/dates
-    // OR objects are normal triples and have a predicate that is number/date.
-    public void isTripleComparable(String predicate){
-        if(countPredicate(predicate)> 1){
-            System.out.println("    "+predicate+"       --> " + countPredicate(predicate));
-            // List<NTriple> tagTriples = new ArrayList<>();
-            // tagTriples = db.ID2Triples(this.allPreds.get(predicate).get(0).getObjectID(), tagTriples);
-            // if(tagTriples.size()>0)
-            //     System.out.println("        "+tagTriples);
-        } else {
+    public void comparablePredicate(Map<String,Map<String,List<NTriple>>> result) {
+        List<String> results = new ArrayList<>();
+        List<NTriple> sorted = new ArrayList<>();
+        result.clear();
+        if (this.allPreds == null)
             return;
-        }
-        List<NTriple> subjTriples = this.allPreds.get(predicate);
-        List<NTriple> objTriples = new ArrayList<>();
-        List<NTriple> objStringTriples = new ArrayList<>();
-        List<NTriple> objobjTriples = new ArrayList<>();
-
-        // we only need to check for one of them to know if it's possible to sort
-        objTriples = db.ID2Triples(subjTriples.get(0).getObjectID(), objTriples);
-        // System.out.println(objTriples);
-        objStringTriples = db.ID2TriplesFull(subjTriples.get(0).getObjectID(), objStringTriples);
-        for (NTriple c: objTriples){
-            objobjTriples = db.ID2TriplesFull(c.getObjectID(),objobjTriples);
-            for (NTriple k: objobjTriples){
-                // if(){ // if the object is a date
-                    System.out.println(k.getObjectID() + " " +k.getPredicate());
-                // }
-
-            System.out.println(k.getObjectID());
-            List<Date> dates =new Parser().parse(k.getObjectID()).get(0).getDates();
-            System.out.println(dates.get(0));
+        if (this.allPreds.size() == 0)
+            return;
+        for (String entry: this.allPreds.keySet()){
+            if(countPredicate(entry)> 1){
+                results = PredicateComparison.arePredicatesComparable(this.allPreds.get(entry),this.db);
+                if(results.size() > 0){
+                    Map<String,List<NTriple>> temp = new HashMap<>();
+                    result.put(entry,temp);
+                    for(String s: results){
+                        sorted = sortPredObjects (s, getPredObjects (entry));
+                        temp.put(s,sorted);
+                    }
+                }
             }
         }
-        // for (NTriple c: objStringTriples){
-        //     if(c.getObjectID().matches(".*\\d+.*")){
-        //         // System.out.println(c.getObjectID());
-        //     }
-        // }
-    }
-
-    private boolean isDate(String data){
-        if(! data.matches(".*\\d+.*"))
-            return false;
-        return true;
     }
 
     public void printPredicate (){
         Set<String> objectIDs = new HashSet<>();
+        List<String> results = new ArrayList<>();
+        List<NTriple> sorted = new ArrayList<>();
         if (this.allPreds == null)
             return;
         if (this.allPreds.size() == 0)
             return;
         for (String entry: this.allPreds.keySet()){
             // System.out.println("    --------    "+entry);
-            isTripleComparable(entry);
-            objectIDs = new HashSet<>();
-            for (NTriple t: this.allPreds.get(entry)){
-                objectIDs.add(t.getObjectID());
+            if(countPredicate(entry)> 1){
+                // System.out.println("    "+entry+"       --> " + countPredicate(entry));
+                results = PredicateComparison.arePredicatesComparable(this.allPreds.get(entry),this.db);
+                if(results.size() > 0){
+                    System.out.println(entry);
+                    for(String s: results){
+                        System.out.println("    ↪" + s);
+                        sorted = sortPredObjects (s, getPredObjects (entry));
+                        for(NTriple n: sorted){
+                            System.out.println("        "+n);
+                        }
+                    }
+                }
             }
+            // objectIDs = new HashSet<>();
+            // for (NTriple t: this.allPreds.get(entry)){
+            //     objectIDs.add(t.getObjectID());
+            // }
         }
+    }
+
+    public void cleanUp(){
+        this.allPreds.clear();
+        this.comparablePreds.clear();
+        this.stringPreds.clear();
     }
 }

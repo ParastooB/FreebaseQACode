@@ -58,13 +58,12 @@ public class Predicates{
             predTriples = db.ID2TriplesFull(p.getObjectID(), predTriples);
             for(NTriple t: predTriples){
                 if(t.getPredicate().equals(predicate)){
-                    t.isStringNTriple();
-                    results.add(t);
+                    if (t.isStringDateNTriple())
+                        results.add(t);
                 }
             }
             predTriples.clear();
         }
-
         MergeSort.sort(results, 0, results.size()-1);
         return results; //now it's sorted
     }

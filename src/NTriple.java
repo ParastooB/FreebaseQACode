@@ -13,7 +13,7 @@ public class NTriple {
         object = o;
     }
 
-    public boolean isStringNTriple(){
+    public boolean isStringDateNTriple(){
         if(!this.objectID.startsWith("m.")){
             String parts[] = objectID.split("\"");
             if (parts.length > 0){
@@ -24,6 +24,9 @@ public class NTriple {
             }
             else
                 objectID = objectID.substring(0,12);
+            if (objectID.charAt(0) == 'T')
+                return false;
+            return true;
         }
         return false;
     }

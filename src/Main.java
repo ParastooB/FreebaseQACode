@@ -161,29 +161,29 @@ public class Main {
             } catch (NullPointerException  e) {
                 System.err.println("NullPointerException: " + e.getMessage());
             }
-            search.topDown();
-            matches = search.getMatchesSize();
-            if (matches == 0 && !search.isAnswerContained()){
-            // if (matches == 0){
-                try{
-                    writer.println(search.getQuestionPackage(question));
-                } catch (NullPointerException  e) {
-                    System.err.println("NullPointerException: " + e.getMessage());
-                }
-                System.out.printf("No answer but %d AIDs.\n",search.getAnswerIDsSize());
-                if(search.isAnswerInText()){
-                    System.out.println("However the answer was found in the texts associated with the tags");
-                }
-                System.out.println();
-            }
-            else{
-                try{
-                    writer2.println(search.getQuestionPackage(question));
-                } catch (NullPointerException  e) {
-                    System.err.println("NullPointerException: " + e.getMessage());
-                }
-                System.out.println();
-            }
+            // search.topDown();
+            // matches = search.getMatchesSize();
+            // if (matches == 0 && !search.isAnswerContained()){
+            // // if (matches == 0){
+            //     try{
+            //         writer.println(search.getQuestionPackage(question));
+            //     } catch (NullPointerException  e) {
+            //         System.err.println("NullPointerException: " + e.getMessage());
+            //     }
+            //     System.out.printf("No answer but %d AIDs.\n",search.getAnswerIDsSize());
+            //     if(search.isAnswerInText()){
+            //         System.out.println("However the answer was found in the texts associated with the tags");
+            //     }
+            //     System.out.println();
+            // }
+            // else{
+            //     try{
+            //         writer2.println(search.getQuestionPackage(question));
+            //     } catch (NullPointerException  e) {
+            //         System.err.println("NullPointerException: " + e.getMessage());
+            //     }
+            //     System.out.println();
+            // }
             search.cleanUp();
 
             if (search.isMatched()) uniqueMatches++;

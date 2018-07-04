@@ -23,7 +23,8 @@ public class PredicateComparison{
 
         for (NTriple c: objStringTriples){
             if(c.getObjectID().matches("\".*\\d+.*\""+"\\^"+".*")){
-                results.add(c.getPredicate());
+                if(c.getObjectID().charAt(0) > 47 || c.getObjectID().charAt(0) < 58)
+                    results.add(c.getPredicate());
             }
         }
         // we are going 2nd layer deep

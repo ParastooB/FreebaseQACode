@@ -33,6 +33,7 @@ public class MergeSort{
     }
 
     static boolean isEalier (String d1, String d2){ // return true if the first one is ealier
+        try{Thread.sleep(1000);}catch(InterruptedException e){System.out.println(e);}  
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         Date date1 = new Date();
         Date date2 = new Date();

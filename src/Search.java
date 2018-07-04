@@ -479,6 +479,7 @@ public class Search {
                 temp = new HashMap<>();
                 temp15 = new HashMap<>();
                 this.preds.comparablePredicate(temp);
+                this.preds.printPredicate();
                 for (String s: temp.keySet()){
                     temp2 = new HashMap<>();
                     temp2 = temp.get(s);

@@ -158,6 +158,7 @@ public class Main {
         //top-down
             try{
                 writer3.println(search.sortedPredicates());
+                writer3.println("------         END         ----------");
             } catch (NullPointerException  e) {
                 System.err.println("NullPointerException: " + e.getMessage());
             }

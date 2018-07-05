@@ -31,7 +31,7 @@ public class Search {
 
     private Map<String, List<NTriple>> secondTagNames = new HashMap<>(); // ID and Name
     private Map<String, List<NTriple>> goodSecondTriples = new HashMap<>(); // ID and Name
-
+    private Map<String, List<NTriple>> commonTags = new HashMap<>(); // Tag and Tag Triples
 
     public Search(String answer, FreebaseDBHandler db, Map<String, String> tags) {
         this.answer = answer;
@@ -85,6 +85,16 @@ public class Search {
                 System.out.println("This many tag ID "+tagIDs.size());
                 for (String tagID : this.tagIDs) {
                     this.tagTriples = this.db.ID2Triples(tagID, this.tagTriples);
+                    List<NTriple> temp = new ArrayList<>();
+                    if(this.commonTags.get(tag) == null){
+                        this.commonTags.put(tag,this.tagTriples);
+                    }
+                    else{
+                        temp = this.commonTags.get(tag);
+                        temp.addAll(this.tagTriples);
+                        this.commonTags.put(tag,temp);
+                    }
+                    this.commonTags.put(tag,this.tagTriples);
                     if (this.tagTriples == null) // can this happen? an ID has no triple associated with it!
                         continue;
 
@@ -404,6 +414,7 @@ public class Search {
         this.objectIDnames.clear();
         System.gc(); //prompts Java's garbage collector to clean up data structures
         this.matches.clear();
+        this.commonTags.clear();
     }
 
     public boolean isMatched(){
@@ -469,6 +480,7 @@ public class Search {
         Map<String,List<NTriple>> temp2 = new HashMap<>();
         result = new HashMap<>();
         for (String tag : this.tags.keySet()) { // why only the key set???!
+            System.out.println("- - - - - - - - - - - - - - -"+tag+"- - - - - - - - - - - - - - -");
             this.tagIDs = this.db.nameAlias2IDs(tag, this.IDsList, this.tagIDs);
             for (String tagID : this.tagIDs) {
                 this.tagTriples = this.db.ID2Triples(tagID, this.tagTriples);
@@ -490,5 +502,17 @@ public class Search {
             }
         }
         return result;
+    }
+
+    public List<NTriple> commonList(String tag1, String tag2){ // the tags
+        List<NTriple> one = this.commonTags.get(tag1);
+        List<NTriple> two = this.commonTags.get(tag2);
+        List<NTriple> results = new ArrayList<>();
+        for (NTriple x : one){
+            if (two.contains(x)){
+                results.add(x);
+            }
+        }
+        return results;
     }
 }

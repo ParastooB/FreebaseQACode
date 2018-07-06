@@ -31,7 +31,7 @@ public class Search {
 
     private Map<String, List<NTriple>> secondTagNames = new HashMap<>(); // ID and Name
     private Map<String, List<NTriple>> goodSecondTriples = new HashMap<>(); // ID and Name
-    private Map<String, List<NTriple>> commonTags = new HashMap<>(); // Tag and Tag Triples
+    private Map<String, Map<String, List<NTriple>>> commonTags = new HashMap<>(); // Tag and Tag Triples
 
     public Search(String answer, FreebaseDBHandler db, Map<String, String> tags) {
         this.answer = answer;
@@ -76,6 +76,7 @@ public class Search {
         if (this.input.toLowerCase().equals("y")){
             this.input = new String();
             for (String tag : this.tags.keySet()) { // why only the key set???!
+                this.commonTags.put(tag, new HashMap<>());
 
                 this.tagIDs = this.db.nameAlias2IDs(tag, this.IDsList, this.tagIDs);
                 // this.IDsList.clear();
@@ -85,16 +86,7 @@ public class Search {
                 System.out.println("This many tag ID "+tagIDs.size());
                 for (String tagID : this.tagIDs) {
                     this.tagTriples = this.db.ID2Triples(tagID, this.tagTriples);
-                    List<NTriple> temp = new ArrayList<>();
-                    if(this.commonTags.get(tag) == null){
-                        this.commonTags.put(tag,this.tagTriples);
-                    }
-                    else{
-                        temp = this.commonTags.get(tag);
-                        temp.addAll(this.tagTriples);
-                        this.commonTags.put(tag,temp);
-                    }
-                    this.commonTags.put(tag,this.tagTriples);
+
                     if (this.tagTriples == null) // can this happen? an ID has no triple associated with it!
                         continue;
 
@@ -122,6 +114,16 @@ public class Search {
                     // }
 
                     for (NTriple tagTriple : this.tagTriples) {
+
+                        if(this.commonTags.get(tag).containsKey(tagTriple.getObjectID())){
+                            if (this.commonTags.get(tag).get(tagTriple.getObjectID()) == null){
+                               this.commonTags.get(tag).put(tagTriple.getObjectID(),new ArrayList<>());
+                            }
+                            this.commonTags.get(tag).get(tagTriple.getObjectID()).add(tagTriple);
+                        }
+                        else{
+                            this.commonTags.get(tag).put(tagTriple.getObjectID(),new ArrayList<>());
+                        }
                         check = false;
                         // System.out.println("Is this a good triple? (y/n)");
                         // this.input = console.nextLine();
@@ -139,7 +141,6 @@ public class Search {
             }
         }
         this.tagTripleOthers.clear();
-
         this.input = new String();
 
     // PopUp Question
@@ -505,12 +506,14 @@ public class Search {
     }
 
     public List<NTriple> commonList(String tag1, String tag2){ // the tags
-        List<NTriple> one = this.commonTags.get(tag1);
-        List<NTriple> two = this.commonTags.get(tag2);
+        Set<String> one = this.commonTags.get(tag1).keySet();
+        System.out.println(one);
+        Set<String> two = this.commonTags.get(tag2).keySet();
+        System.out.println(two);
         List<NTriple> results = new ArrayList<>();
-        for (NTriple x : one){
-            if (two.contains(x)){
-                results.add(x);
+        for (String x : one){
+            if (two.contains()){
+                results.add(this.commonTags.get(tag2).get(x));
             }
         }
         return results;

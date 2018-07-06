@@ -116,6 +116,7 @@ public class Main {
 
     // loop on questions
         for (int i = startIndex; i < endIndex; i++) {
+            List<String> temp = new ArrayList<>();
             question = questionBank.get(i);
             answer = answerBank.get(i);
             // System.out.printf("QUESTION %d. %s (%s)\n", i+1, question, answer);
@@ -151,40 +152,45 @@ public class Main {
 
         //bottom-up
             search = new Search(answer,db,tags);
+            for (String x: tags.keySet()){
+                temp.add(x);
+            }
             search.bottomUp();
             if (!search.isInFB()) //answer doesn't exist in Freebase
                 continue;
 
         //top-down
-            try{
-                writer3.println(search.sortedPredicates());
-                writer3.println("------         END         ----------");
-            } catch (NullPointerException  e) {
-                System.err.println("NullPointerException: " + e.getMessage());
+            // try{
+            //     writer3.println(search.sortedPredicates());
+            //     writer3.println("------         END         ----------");
+            // } catch (NullPointerException  e) {
+            //     System.err.println("NullPointerException: " + e.getMessage());
+            // }
+            search.topDown();
+            matches = search.getMatchesSize();
+            if (matches == 0 && !search.isAnswerContained()){
+            // if (matches == 0){
+                try{
+                    writer.println(search.getQuestionPackage(question));
+                } catch (NullPointerException  e) {
+                    System.err.println("NullPointerException: " + e.getMessage());
+                }
+                System.out.printf("No answer but %d AIDs.\n",search.getAnswerIDsSize());
+                if(search.isAnswerInText()){
+                    System.out.println("However the answer was found in the texts associated with the tags");
+                }
+                System.out.println();
             }
-            // search.topDown();
-            // matches = search.getMatchesSize();
-            // if (matches == 0 && !search.isAnswerContained()){
-            // // if (matches == 0){
-            //     try{
-            //         writer.println(search.getQuestionPackage(question));
-            //     } catch (NullPointerException  e) {
-            //         System.err.println("NullPointerException: " + e.getMessage());
-            //     }
-            //     System.out.printf("No answer but %d AIDs.\n",search.getAnswerIDsSize());
-            //     if(search.isAnswerInText()){
-            //         System.out.println("However the answer was found in the texts associated with the tags");
-            //     }
-            //     System.out.println();
-            // }
-            // else{
-            //     try{
-            //         writer2.println(search.getQuestionPackage(question));
-            //     } catch (NullPointerException  e) {
-            //         System.err.println("NullPointerException: " + e.getMessage());
-            //     }
-            //     System.out.println();
-            // }
+            else{
+                try{
+                    writer2.println(search.getQuestionPackage(question));
+                } catch (NullPointerException  e) {
+                    System.err.println("NullPointerException: " + e.getMessage());
+                }
+                System.out.println();
+            }
+            System.out.println(search.commonList(temp.get(0),temp.get(1)));
+            temp.clear();
             search.cleanUp();
 
             if (search.isMatched()) uniqueMatches++;

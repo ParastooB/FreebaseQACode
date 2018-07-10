@@ -116,7 +116,6 @@ public class Main {
 
     // loop on questions
         for (int i = startIndex; i < endIndex; i++) {
-            List<String> temp = new ArrayList<>();
             question = questionBank.get(i);
             answer = answerBank.get(i);
             // System.out.printf("QUESTION %d. %s (%s)\n", i+1, question, answer);
@@ -152,9 +151,6 @@ public class Main {
 
         //bottom-up
             search = new Search(answer,db,tags);
-            for (String x: tags.keySet()){
-                temp.add(x);
-            }
             search.bottomUp();
             if (!search.isInFB()) //answer doesn't exist in Freebase
                 continue;
@@ -189,8 +185,6 @@ public class Main {
                 }
                 System.out.println();
             }
-            System.out.println(search.commonList(temp.get(0),temp.get(1)));
-            temp.clear();
             search.cleanUp();
 
             if (search.isMatched()) uniqueMatches++;

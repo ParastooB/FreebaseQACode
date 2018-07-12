@@ -6,13 +6,13 @@ public class Search {
     // This is for every single question. 
     private String answer;
     private FreebaseDBHandler db;
+    private Commons cm;
     private Predicates preds;
     private boolean exists, matched, check, foundText = false, contained = false;
     private int sizeLimit = 100000 , sizeLimit2 = 50000;
 
     private Set<String> answerIDs = new HashSet<>();
     private List<String> IDsList = new ArrayList<>(); //placeholder list for nameAlias2IDs method
-    private List<NTriple> answerTriples = new ArrayList<>();
     private Map<String, NTriple> mediatorTriples = new HashMap<>();
 
     // Store the names in a seperate table, just so we don't have to search again for repeated ID's
@@ -21,7 +21,7 @@ public class Search {
     private Set<String> tagIDs = new HashSet<>();
     private List<NTriple> tagTriples = new ArrayList<>();
     // The other tag triples which are connected to strings not objects
-    private List<NTriple> tagTripleOthers = new ArrayList<>();
+    private List<NTriple> otherTagTriples = new ArrayList<>();
 
     private NTriple mediatorTriple;
     //matches are saved uniquely based on subject, predicate, mediatorPredicate, object
@@ -36,7 +36,6 @@ public class Search {
 
     // private Map<String, List<NTriple>> secondTagNames = new HashMap<>(); // Store the triples that 
     // private Map<String, List<NTriple>> goodSecondTriples = new HashMap<>(); // ObjectName and Triple
-    private Map<String, Map<String, List<NTriple>>> commonTags = new HashMap<>(); // Tag --> Object ID --> Triples
     private Map<String, List<NTriple>> commonPredicates = new HashMap<>(); // Predicate --> Triples
 
     public Search(String answer, FreebaseDBHandler db, Map<String, String> tags) {
@@ -53,6 +52,7 @@ public class Search {
 
     public void bottomUp(){
         //prepares all freebase IDs with a name or alias matching the answer
+        List<NTriple> answerTriples = new ArrayList<>();
         this.answerIDs = this.db.nameAlias2IDs(this.answer, this.IDsList, this.answerIDs);
         if (this.answerIDs.size() == 0){
             System.out.println("Skipping because answer not in freebase"); //prints an empty line for spacing
@@ -63,39 +63,46 @@ public class Search {
         this.exists = true;
 
         for (String answerID : this.answerIDs) {
-            this.answerTriples = this.db.ID2Triples(answerID, this.answerTriples);
-            if (this.answerTriples == null) // can this ever happen?
+            answerTriples = this.db.ID2Triples(answerID, answerTriples);
+            if (answerTriples == null) // can this ever happen?
                 continue;
-            for (NTriple answerTriple : this.answerTriples) {
+            for (NTriple answerTriple : answerTriples) {
                 if (this.db.isIDMediator(answerTriple.getObjectID()))
                     this.mediatorTriples.put(answerTriple.getObjectID(), answerTriple);
             }
-            this.answerTriples.clear();
+            answerTriples.clear();
         }
     }
 
 // Top Down Search
     public void topDown(){
-        Set<String> tagIDValues = new HashSet<>();
+        Set<String> tagIDValues = new HashSet<>(); //not only keys
+
+        List<String> temp = new ArrayList<>();
+        for (String x: this.tags.keySet()){
+            temp.add(x);
+        }
+        cm = new Commons(db, tags);
+        cm.commonMap(this.commonPredicates,temp.get(0), temp.get(1));
+
     // PopUp Question First layer
         System.out.println("Should I search first layer? (y/n)");
         this.input = console.nextLine();
         if (this.input.toLowerCase().equals("y")){
             this.input = new String();
             for (String tag : this.tags.keySet()) {
-                this.commonTags.put(tag, new HashMap<>());
 
                 this.tagIDs = this.db.nameAlias2IDs(tag, this.IDsList, this.tagIDs);
 
                 // why only the key set???!
-                /* this.IDsList.clear();
-                 tagIDValues = this.db.nameAlias2IDs(this.tags.get(tag), this.IDsList, tagIDValues);
-                 this.tagIDs.addAll(tagIDValues); */
+                /*this.IDsList.clear();
+                tagIDValues = this.db.nameAlias2IDs(this.tags.get(tag), this.IDsList, tagIDValues);
+                this.tagIDs.addAll(tagIDValues);
+                tagIDValues.clear();*/
 
                 System.out.println("This many tag ID "+tagIDs.size());
                 for (String tagID : this.tagIDs) {
                     this.tagTriples = this.db.ID2Triples(tagID, this.tagTriples);
-
                     if (this.tagTriples == null) // can this happen? an ID has no triple associated with it!
                         continue;
 
@@ -107,39 +114,27 @@ public class Search {
                 // PopUp Question
 
                     // Search some other predicates other than Name ot Alias or the ones that actually connected to an object
-                    this.tagTripleOthers = this.db.ID2TriplesFull(tagID, this.tagTripleOthers);
-                    if (this.tagTripleOthers == null) // can this happen? an ID has no triple associated with it!
+                    /*this.otherTagTriples = this.db.ID2TriplesFull(tagID, this.otherTagTriples);
+                    if (this.otherTagTriples == null) // can this happen? an ID has no triple associated with it!
                         continue;
-                    // for (NTriple t: this.tagTripleOthers) {
-                    //     if (t.getObjectID().toLowerCase().contains("/"+answer+"/"))
-                    //         continue;
-                    //     if (t.getObjectID().toLowerCase().contains(answer)){
-                    //         System.out.println("    "+t.getPredicate());
-                    //         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                    //         System.out.println(t.getObjectID());
-                    //         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-                    //         this.foundText = true;
-                    //     }
-                    // }
+                    for (NTriple t: this.otherTagTriples) {
+                        if (t.getObjectID().toLowerCase().contains("/"+answer+"/"))
+                            continue;
+                        if (t.getObjectID().toLowerCase().contains(answer)){
+                            System.out.println("    "+t.getPredicate());
+                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                            System.out.println(t.getObjectID());
+                            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                            this.foundText = true;
+                        }
+                    }
+                    this.otherTagTriples.clear(); */
 
                     for (NTriple tagTriple : this.tagTriples) {
-
-                        if(this.commonTags.get(tag).containsKey(tagTriple.getObjectID())){
-                            if (this.commonTags.get(tag).get(tagTriple.getObjectID()) == null){
-                               this.commonTags.get(tag).put(tagTriple.getObjectID(),new ArrayList<>());
-                            }
-                            this.commonTags.get(tag).get(tagTriple.getObjectID()).add(tagTriple);
-                        }
-                        else{
-                            this.commonTags.get(tag).put(tagTriple.getObjectID(),new ArrayList<>());
-                            this.commonTags.get(tag).get(tagTriple.getObjectID()).add(tagTriple);
+                        if(this.commonPredicates.containsKey(tagTriple.getPredicate())){
+                            System.out.println(tagTriple);
                         }
                         // check = false;
-                        // // System.out.println("Is this a good triple? (y/n)");
-                        // // this.input = console.nextLine();
-                        // // if (this.input.toLowerCase().equals("n")){
-                        // //     continue;
-                        // // }
                         // check = isConnectedToAnswer(tag, tagTriple);
 
                         // if (!check) 
@@ -149,17 +144,11 @@ public class Search {
                 }
                 this.tagIDs.clear();
             }
-            List<String> temp = new ArrayList<>();
-            for (String x: this.tags.keySet()){
-                temp.add(x);
-            }
-            List<NTriple> commonTagTriples = commonMap(temp.get(0), temp.get(1));
-            commonTagTriples.clear();
+            this.commonPredicates.clear();
         }
-        this.tagTripleOthers.clear();
         this.input = new String();
 
-    // PopUp Question Second layer
+/*    // PopUp Question Second layer
         System.out.println("Should we go deeper? (y/n)");
         this.input = console.nextLine();
         if (this.input.toLowerCase().equals("n")){
@@ -184,7 +173,7 @@ public class Search {
                 tagIDValues = this.db.nameAlias2IDs(this.tags.get(tag), this.IDsList, tagIDValues);
                 this.tagIDs.addAll(tagIDValues); // Add also the values of tags!
 
-                System.out.println( "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" +this.tagIDs.size() + " this many tagIDs");
+                System.out.println( "%%%%%%%%%%%%%%%%%%%" +this.tagIDs.size() + " this many tagIDs");
                 for (String tagID : this.tagIDs) {
                     // System.out.printf("Do you want to see object types? (y/n)\n");
                     // this.input = console.nextLine();
@@ -211,12 +200,11 @@ public class Search {
 
         // printGoodTriples(this.secondTagNames);
         // this.secondTagNames.clear();
-        this.secondMatches.clear();
         // this.goodSecondTriples.clear();
-        // }
+        // }*/
     }
 
-    public void topDownDeeper(String objID, NTriple justinCase){ //just in case we found the answer here.
+/*    public void topDownDeeper(String objID, NTriple justinCase){ //just in case we found the answer here.
         List<NTriple> tagtagTriples = new ArrayList<>();
         List<NTriple> tagMedTriples = new ArrayList<>();
         Map<String, NTriple> mediatorTagTriples = new HashMap<>();
@@ -228,10 +216,10 @@ public class Search {
             return;
 
         // Search some other predicates other than Name ot Alias or the ones that actually connected to an object
-        // this.tagTripleOthers = this.db.ID2TriplesFull(objID, this.tagTripleOthers);
-        // if (this.tagTripleOthers == null) // can this happen? an ID has no triple associated with it!
+        // this.otherTagTriples = this.db.ID2TriplesFull(objID, this.otherTagTriples);
+        // if (this.otherTagTriples == null) // can this happen? an ID has no triple associated with it!
         //     return;
-        // for (NTriple t: this.tagTripleOthers) {
+        // for (NTriple t: this.otherTagTriples) {
         //     if (t.getObjectID().toLowerCase().contains("/"+answer+"/"))
         //         continue;
         //     if (t.getObjectID().toLowerCase().contains(answer)){
@@ -266,11 +254,11 @@ public class Search {
                 }
             }
         }
-        this.tagTripleOthers.clear();
+        this.otherTagTriples.clear();
         tagtagTriples.clear();
         tagMedTriples.clear();
         mediatorTagTriples.clear();
-    }
+    }*/
 
     // if the object of the tagTriple has an ID matching an answer ID
     private boolean isConnectedToAnswer(String tag, NTriple tagTriple){
@@ -373,8 +361,7 @@ public class Search {
             List<NTriple> temp = new ArrayList<>();
             temp.add(triple);
             triples.put(name,temp);
-            }
-            else{
+            }else{
                 triples.get(name).add(triple);
             }
     }
@@ -394,8 +381,7 @@ public class Search {
 
     private static Map<String, NTriple> deepCopyMap(Map<String, NTriple> original){
         Map<String, NTriple> copy = new HashMap<String, NTriple>();
-        for (Map.Entry<String, NTriple> entry : original.entrySet())
-        {
+        for (Map.Entry<String, NTriple> entry : original.entrySet()){
             copy.put(entry.getKey(), entry.getValue());
         }
         return copy;
@@ -403,8 +389,7 @@ public class Search {
 
     private static Set<String> deepCopySet(Set<String> original){
         Set<String> copy = new HashSet<String>();
-        for (String entry : original)
-        {
+        for (String entry : original){
             copy.add(entry);
         }
         return copy;
@@ -414,10 +399,8 @@ public class Search {
         List<String> copy = new ArrayList<String>();
         Set<List<String>> copy2 = new HashSet<List<String>>();
 
-        for (List<String> entry2 : original)
-        {
-            for (String entry : entry2)
-            {
+        for (List<String> entry2 : original){
+            for (String entry : entry2){
                 copy.add(entry);
             }
             copy2.add(copy);
@@ -433,7 +416,7 @@ public class Search {
         this.objectIDnames.clear();
         System.gc(); //prompts Java's garbage collector to clean up data structures
         this.matches.clear();
-        this.commonTags.clear();
+        this.secondMatches.clear();
     }
 
     public Map<String, Map<String,Map<String,List<NTriple>>>> sortedPredicates(){
@@ -465,30 +448,6 @@ public class Search {
             }
         }
         return result;
-    }
-
-    public List<NTriple> commonMap(String tag1, String tag2){ // the tags
-        Set<String> one = this.commonTags.get(tag1).keySet();
-        // System.out.println(one);
-        Set<String> two = this.commonTags.get(tag2).keySet();
-        // System.out.println(two);
-        List<NTriple> results = new ArrayList<>();
-        for (String x : one){
-            if (two.contains(x)){
-                results.addAll(this.commonTags.get(tag2).get(x));
-                results.addAll(this.commonTags.get(tag1).get(x));
-                String tempPred = this.commonTags.get(tag2).get(x).get(0).getPredicate();
-                if(this.commonPredicates.containsKey(tempPred)){
-                    this.commonPredicates.get(tempPred).addAll(this.commonTags.get(tag2).get(x));
-                    this.commonPredicates.get(tempPred).addAll(this.commonTags.get(tag1).get(x));
-                }else{
-                    this.commonPredicates.put(tempPred,new ArrayList<>());
-                    this.commonPredicates.get(tempPred).addAll(this.commonTags.get(tag2).get(x));
-                    this.commonPredicates.get(tempPred).addAll(this.commonTags.get(tag1).get(x));
-                }
-            }
-        }
-        return results;
     }
 
     public boolean isMatched(){

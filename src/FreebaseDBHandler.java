@@ -84,6 +84,10 @@ public class FreebaseDBHandler extends MySQLHandler {
         query2DResults = doubleQueryResult(2, 3); //index 0 stores predicates and index 1 stores objects
         for (int i = 0; i < query2DResults.get(1).size(); i++) {
             if (query2DResults.get(1).get(i).contains("<http://rdf.freebase.com/ns/m.")){ //only adds objectIDs that are freebase IDs
+                if(query2DResults.get(0).get(i).contains("<http://rdf.freebase.com/ns/freebase.")){
+                    // System.out.println(query2DResults.get(0).get(i));
+                    continue;
+                }
                 triples.add(new NTriple(null, freebaseID, query2DResults.get(0).get(i), query2DResults.get(1).get(i), null));
                 //null values to be filled out in the main method only when it's a match
             }

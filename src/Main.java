@@ -156,12 +156,12 @@ public class Main {
                 continue;
 
         //top-down
-            // try{
-            //     writer3.println(search.sortedPredicates());
-            //     writer3.println("------         END         ----------");
-            // } catch (NullPointerException  e) {
-            //     System.err.println("NullPointerException: " + e.getMessage());
-            // }
+            try{
+                writer3.println(search.sortedPredicates());
+                writer3.println("------         END         ----------");
+            } catch (NullPointerException  e) {
+                System.err.println("NullPointerException: " + e.getMessage());
+            }
             search.topDown();
             matches = search.getMatchesSize();
             if (matches == 0 && !search.isAnswerContained()){

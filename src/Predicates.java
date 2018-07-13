@@ -64,7 +64,7 @@ public class Predicates{
             }
             predTriples.clear();
         }
-        MergeSort.sort(results, 0, results.size()-1);
+        // MergeSort.sort(results, 0, results.size()-1);
         return results; //now it's sorted
     }
 

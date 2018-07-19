@@ -7,3 +7,5 @@
 data.zip
 config1.properties
 /src/*.class
+/outputs/*
+/questions/*

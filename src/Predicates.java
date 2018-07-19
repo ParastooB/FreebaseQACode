@@ -56,6 +56,8 @@ public class Predicates{
 
         for(NTriple p: triples){
             predTriples = db.ID2TriplesFull(p.getObjectID(), predTriples);
+            if(predTriples == null)
+                return null;
             for(NTriple t: predTriples){
                 if(t.getPredicate().equals(predicate)){
                     if (t.isStringDateNTriple())

@@ -119,7 +119,7 @@ public class Main {
             question = questionBank.get(i);
             answer = answerBank.get(i);
             // System.out.printf("QUESTION %d. %s (%s)\n", i+1, question, answer);
-            System.out.printf("------------------------------QUESTION %d -----------------------------\n", i+1);
+            System.out.printf("------------------------------QUESTION %d -----------------------------\n", i+1607);
             System.out.println(question + "\n The answer is: " + answer);
 	    
             //skips the QA pair if Q or A is null
@@ -151,17 +151,18 @@ public class Main {
 
         //bottom-up
             search = new Search(answer,db,tags);
+            search.commonTags();
             search.bottomUp();
             if (!search.isInFB()) //answer doesn't exist in Freebase
                 continue;
 
         //top-down
-            try{
-                writer3.println(search.sortedPredicates());
-                writer3.println("------         END         ----------");
-            } catch (NullPointerException  e) {
-                System.err.println("NullPointerException: " + e.getMessage());
-            }
+            // try{
+            //     writer3.println(search.sortedPredicates());
+            //     writer3.println("------         END         ----------");
+            // } catch (NullPointerException  e) {
+            //     System.err.println("NullPointerException: " + e.getMessage());
+            // }
             search.topDown();
             matches = search.getMatchesSize();
             if (matches == 0 && !search.isAnswerContained()){

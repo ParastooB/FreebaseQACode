@@ -10,8 +10,7 @@ public class Commons {
     private Map<String, String> tags = new HashMap<>(); 
     private Set<String> tagIDs = new HashSet<>();
     private List<NTriple> tagTriples = new ArrayList<>();
-
-    private Map<String, List<NTriple>> commonPredicates = new HashMap<>(); // Predicate --> Triples
+    private Map<String, String> goodTagIDs = new HashMap<>(); //(tagID, tag)
 
     public Commons(FreebaseDBHandler db, Map<String, String> tags) {
         this.db = db;
@@ -45,78 +44,50 @@ public class Commons {
         }
     }
 
-    private Map<String, List<NTriple>> commonMapTwo(String tag1, String tag2){ // the tags
+    private Set<String> commonSetTwo(String tag1, String tag2){ // the tags
         Map<String, Map<String, List<NTriple>>> commonTags = new HashMap<>(); 
-        Map<String, List<NTriple>> commonPredicates = new HashMap<>();
+        // Map<String, List<NTriple>> commonPredicates = new HashMap<>();
+        Set<String> preds = new HashSet<>();
         commonTwo(commonTags);
         Set<String> one = commonTags.get(tag1).keySet();
         Set<String> two = commonTags.get(tag2).keySet();
         for (String x : one){
             if (two.contains(x)){
-                // System.out.println(commonTags.get(tag1).get(x));
-                // System.out.println(commonTags.get(tag2).get(x));
-                String tempPred = commonTags.get(tag2).get(x).get(0).getPredicate();
-                if(commonPredicates.containsKey(tempPred)){
-                    commonPredicates.get(tempPred).addAll(commonTags.get(tag2).get(x));
-                    commonPredicates.get(tempPred).addAll(commonTags.get(tag1).get(x));
-                }else{
-                    commonPredicates.put(tempPred,new ArrayList<>());
-                    commonPredicates.get(tempPred).addAll(commonTags.get(tag2).get(x));
-                    commonPredicates.get(tempPred).addAll(commonTags.get(tag1).get(x));
+                String tempPred1 = commonTags.get(tag1).get(x).get(0).getPredicate();
+                String tempPred2 = commonTags.get(tag2).get(x).get(0).getPredicate();
+                preds.add(tempPred1);
+                preds.add(tempPred2);
+                List<NTriple> temp = commonTags.get(tag1).get(x);
+                for(NTriple t: temp){
+                    this.goodTagIDs.put(t.getSubjectID(),tag1);
                 }
+                temp = commonTags.get(tag2).get(x);
+                for(NTriple t: temp){
+                    this.goodTagIDs.put(t.getSubjectID(),tag2);
+                }
+                // if(commonPredicates.containsKey(tempPred1)){
+                //     //commonPredicates.get(tempPred1).addAll(commonTags.get(tag2).get(x));
+                //     commonPredicates.get(tempPred1).addAll(commonTags.get(tag1).get(x));
+                // }else{
+                //     commonPredicates.put(tempPred1,new ArrayList<>());
+                //     //commonPredicates.get(tempPred1).addAll(commonTags.get(tag2).get(x));
+                //     commonPredicates.get(tempPred1).addAll(commonTags.get(tag1).get(x));
+                // }
+                // if(commonPredicates.containsKey(tempPred2)){
+                //     commonPredicates.get(tempPred2).addAll(commonTags.get(tag2).get(x));
+                //     //commonPredicates.get(tempPred2).addAll(commonTags.get(tag1).get(x));
+                // }else{
+                //     commonPredicates.put(tempPred2,new ArrayList<>());
+                //     commonPredicates.get(tempPred2).addAll(commonTags.get(tag2).get(x));
+                //     //commonPredicates.get(tempPred2).addAll(commonTags.get(tag1).get(x));
+                // }
             }
         }
         commonTags.clear();
-        return commonPredicates;
+        return preds;
     }
 
-    private void links (List<String> result, String tag1, String tag2){
-        Set<String> answerIDs = new HashSet<>();
-        Set<String> tagIDs = new HashSet<>();
-        List<String> IDsList = new ArrayList<>();
-        Map<String, NTriple> mediatorTriples = new HashMap<>();
-        List<NTriple> answerTriples = new ArrayList<>();
-        List<NTriple> tagTriples = new ArrayList<>();
-        NTriple mediatorTriple;
-        answerIDs = this.db.nameAlias2IDs(tag2, IDsList, answerIDs);
-        if (answerIDs.size() == 0){
-            return;
-        }
-        for (String answerID : answerIDs) {
-            answerTriples = this.db.ID2Triples(answerID, answerTriples);
-            if (answerTriples == null) // can this ever happen?
-                continue;
-            for (NTriple answerTriple : answerTriples) {
-                if (this.db.isIDMediator(answerTriple.getObjectID()))
-                    mediatorTriples.put(answerTriple.getObjectID(), answerTriple);
-            }
-            answerTriples.clear();
-        }
-
-        tagIDs = this.db.nameAlias2IDs(tag1, IDsList, tagIDs);
-        for (String tagID : tagIDs) {
-            tagTriples = this.db.ID2Triples(tagID, tagTriples);
-            if (tagTriples == null)
-                continue;
-            for (NTriple tagTriple : tagTriples) {
-                if (answerIDs.contains(tagTriple.getObjectID())) { 
-                    tagTriple.setSubject(tag1);
-                    tagTriple.setObject(tag2);
-                    result.add(tagTriple.getPredicate());
-                }
-                else if (mediatorTriples.containsKey(tagTriple.getObjectID())) {
-                    tagTriple.setSubject(tag1);
-                    mediatorTriple = mediatorTriples.get(tagTriple.getObjectID());
-                    mediatorTriple.setSubject(tag2);
-                    result.add(tagTriple.getPredicate());
-                }
-            }
-            tagTriples.clear();
-        }
-        tagIDs.clear();
-    }
-
-    public void CommonMap(List<NTriple> finalresult){
+/*    public void CommonMap(List<NTriple> finalresult){
         List<Map<String, List<NTriple>>> result = new ArrayList<>();
         Map<String, List<NTriple>> garb = new HashMap<>();
         List<String> result2 = new ArrayList<>();
@@ -143,10 +114,10 @@ public class Commons {
         garb.clear();
         temp.clear();
         result.clear();
-    }
+    }*/
 
     public void commonPredicatesSet(Set<String> finalresult){
-        Map<String, List<NTriple>> garb = new HashMap<>();
+        Set<String> garb = new HashSet<>();
         List<String> temp = new ArrayList<>();
         for (String x: this.tags.keySet()){
             temp.add(x);
@@ -157,9 +128,9 @@ public class Commons {
             for (int j = i + 1; j < s; j ++){
                 System.out.println(temp.get(i)+" - vs. - "+temp.get(j));
                 // finalresult.addAll(result2);
-                garb = commonMapTwo(temp.get(i), temp.get(j));
-                System.out.println(garb.keySet());
-                for (String p: garb.keySet()){
+                garb = commonSetTwo(temp.get(i), temp.get(j));
+                System.out.println(garb);
+                for (String p: garb){
                     finalresult.add(p);
                     // System.out.println("    "+ p + " --> " + garb.get(p).size());
                     // count = count + garb.get(p).size();
@@ -168,5 +139,11 @@ public class Commons {
         }
         garb.clear();
         temp.clear();
+    }
+
+    public void goodIDs(Map<String, String> finalresult){
+        for (String x: this.goodTagIDs.keySet()){
+            finalresult.put(x,this.goodTagIDs.get(x));
+        }
     }
 }

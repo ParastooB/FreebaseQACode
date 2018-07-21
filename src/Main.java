@@ -56,16 +56,16 @@ public class Main {
             System.err.println("UnsupportedEncodingException: " + e.getMessage());
         }
 
-        PrintWriter writer3 = null;
-        try{
-            writer3 = new PrintWriter("../outputs/predicates.txt", "UTF-8");
-        } catch (FileNotFoundException e) {
-            System.err.println("FileNotFoundException: " + e.getMessage());
-        } catch (SecurityException e) {
-            System.err.println("SecurityException: " + e.getMessage());
-        } catch (UnsupportedEncodingException e) {
-            System.err.println("UnsupportedEncodingException: " + e.getMessage());
-        }
+        // PrintWriter writer3 = null;
+        // try{
+        //     writer3 = new PrintWriter("../outputs/predicates.txt", "UTF-8");
+        // } catch (FileNotFoundException e) {
+        //     System.err.println("FileNotFoundException: " + e.getMessage());
+        // } catch (SecurityException e) {
+        //     System.err.println("SecurityException: " + e.getMessage());
+        // } catch (UnsupportedEncodingException e) {
+        //     System.err.println("UnsupportedEncodingException: " + e.getMessage());
+        // }
         
 
     //---Prep FUNCTIONS---
@@ -119,7 +119,7 @@ public class Main {
             question = questionBank.get(i);
             answer = answerBank.get(i);
             // System.out.printf("QUESTION %d. %s (%s)\n", i+1, question, answer);
-            System.out.printf("------------------------------QUESTION %d -----------------------------\n", i+1607);
+            System.out.printf("------------------------------QUESTION %d -----------------------------\n", i+1);
             System.out.println(question + "\n The answer is: " + answer);
 	    
             //skips the QA pair if Q or A is null
@@ -151,8 +151,8 @@ public class Main {
 
         //bottom-up
             search = new Search(answer,db,tags);
-            search.commonTags();
             search.bottomUp();
+            search.commonTags();
             if (!search.isInFB()) //answer doesn't exist in Freebase
                 continue;
 
@@ -163,7 +163,7 @@ public class Main {
             // } catch (NullPointerException  e) {
             //     System.err.println("NullPointerException: " + e.getMessage());
             // }
-            search.topDown();
+            // search.topDown();
             matches = search.getMatchesSize();
             if (matches == 0 && !search.isAnswerContained()){
             // if (matches == 0){
@@ -196,7 +196,7 @@ public class Main {
         System.out.printf("PROCESSING COMPLETE\nRESULTS: %d MATCHES (%d UNIQUE MATCHES)\n", matches, uniqueMatches);
         writer.close();
         writer2.close();
-        writer3.close();
+        // writer3.close();
         tagsBank.clear();
     }
 

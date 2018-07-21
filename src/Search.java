@@ -81,6 +81,23 @@ public class Search {
 	public void commonTags(){
         cm = new Commons(db, tags);
         cm.commonPredicatesSet(this.commonPreds);
+        Map<String, String> goodTagIDs = new HashMap<>();
+        cm.goodIDs(goodTagIDs);
+        for (String tagID : goodTagIDs.keySet()) {
+            this.tagTriples = this.db.ID2Triples(tagID, this.tagTriples);
+            if (this.tagTriples == null) // can this happen? an ID has no triple associated with it!
+                continue;
+            for (NTriple tagTriple : this.tagTriples) {
+                if(this.commonPreds.contains(tagTriple.getPredicate())){
+                    check = false;
+                    check = isConnectedToAnswer(goodTagIDs.get(tagID), tagTriple);
+                    if (!check) 
+                        check = isConnectedToAnswerMediator(goodTagIDs.get(tagID), tagTriple);
+                }
+            }
+        }
+        this.commonPreds.clear();
+        goodTagIDs.clear();
 	}
 
 // Top Down Search
@@ -132,13 +149,10 @@ public class Search {
                     // this.otherTagTriples.clear(); 
 
                     for (NTriple tagTriple : this.tagTriples) {
-
-                        if(this.commonPreds.contains(tagTriple.getPredicate())){
-                            check = false;
-                            check = isConnectedToAnswer(tag, tagTriple);
-                            if (!check) 
-                                check = isConnectedToAnswerMediator(tag, tagTriple);
-                        }
+                        check = false;
+                        check = isConnectedToAnswer(tag, tagTriple);
+                        if (!check) 
+                            check = isConnectedToAnswerMediator(tag, tagTriple);
 						// if(this.sortablePredicates == null){
 						// 	System.out.println("No sortable predicates");
 						// 	continue;

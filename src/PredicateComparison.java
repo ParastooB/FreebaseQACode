@@ -28,7 +28,7 @@ public class PredicateComparison{
             }
         }
         // we are going 2nd layer deep
-        // This will answer a question like how was the oldest person Tom Cruise was married to
+        // This will answer a question like who was the oldest person Tom Cruise was married to
         /*for (NTriple c: objTriples){
             objobjTriples = db.ID2TriplesFull(c.getObjectID(),objobjTriples);
         	if(c.getObjectID().equals(subjTriples.get(0).getSubjectID()))

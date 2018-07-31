@@ -67,7 +67,7 @@ public class Predicates{
             predTriples.clear();
         }
         // MergeSort.sort(results, 0, results.size()-1);
-        return results; //now it's sorted
+        return results; //not sorted for now
     }
 
     public NTriple argMax (String predicate, List<NTriple> triples) { 

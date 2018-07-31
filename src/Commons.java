@@ -17,10 +17,8 @@ public class Commons {
         this.tags = tags;
     }
 
-    private void commonTwo(Map<String, Map<String, List<NTriple>>> commonTags){
-        Set<String> tagIDValues = new HashSet<>(); //not only keys
-        for (String tag : this.tags.keySet()) {
-            commonTags.put(tag, new HashMap<>());
+    private void commonObjectsTwo(Map<String, Map<String, List<NTriple>>> commonTags){
+        for (String tag : commonTags.keySet()) {
             this.tagIDs = this.db.nameAlias2IDs(tag, this.IDsList, this.tagIDs);
             for (String tagID : this.tagIDs) {
                 this.tagTriples = this.db.ID2Triples(tagID, this.tagTriples);
@@ -45,10 +43,12 @@ public class Commons {
     }
 
     private Set<String> commonSetTwo(String tag1, String tag2){ // the tags
-        Map<String, Map<String, List<NTriple>>> commonTags = new HashMap<>(); 
+        Map<String, Map<String, List<NTriple>>> commonTags = new HashMap<>();
+        commonTags.put(tag1, new HashMap<>());
+        commonTags.put(tag2, new HashMap<>());  
         // Map<String, List<NTriple>> commonPredicates = new HashMap<>();
         Set<String> preds = new HashSet<>();
-        commonTwo(commonTags);
+        commonObjectsTwo(commonTags);
         Set<String> one = commonTags.get(tag1).keySet();
         Set<String> two = commonTags.get(tag2).keySet();
         for (String x : one){
@@ -129,7 +129,7 @@ public class Commons {
                 System.out.println(temp.get(i)+" - vs. - "+temp.get(j));
                 // finalresult.addAll(result2);
                 garb = commonSetTwo(temp.get(i), temp.get(j));
-                System.out.println(garb);
+                System.out.println("    Predicates of common objects:  "+garb);
                 for (String p: garb){
                     finalresult.add(p);
                     // System.out.println("    "+ p + " --> " + garb.get(p).size());
@@ -145,5 +145,13 @@ public class Commons {
         for (String x: this.goodTagIDs.keySet()){
             finalresult.put(x,this.goodTagIDs.get(x));
         }
+    }
+
+    public void cleanUp(){
+    this.IDsList = new ArrayList<>(); //placeholder list for nameAlias2IDs method
+    this.tags = new HashMap<>(); 
+    this.tagIDs = new HashSet<>();
+    this.tagTriples = new ArrayList<>();
+    this.goodTagIDs = new HashMap<>(); //(tagID, tag)
     }
 }

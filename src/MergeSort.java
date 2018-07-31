@@ -7,52 +7,19 @@ import com.joestelmach.natty.*;
 
 public class MergeSort{
 
-    private static boolean isDate(String data){
-        if(! data.matches(".*\\d+.*")){
-            System.out.println("There is no date in " + data);
-            return false;
-        }
-        else{
-            if(new Parser().parse(data).size() > 0){
-                List<Date> dates =new Parser().parse(data).get(0).getDates();
-                // System.out.println("        " + dates.get(0));
-                return true;
-            }
-            else 
-                return false;
+    public static void sort(List<NTriple> arr, int l, int r){
+        if (l < r){
+            // Find the middle point
+            int m = (l+r)/2;
+            // Sort first and second halves
+            sort(arr, l, m);
+            sort(arr , m+1, r);
+            // Merge the sorted halves
+            merge(arr, l, m, r);
         }
     }
 
-	static String extractDate (String date){
-        String parts[] = date.split("\"");
-        if(parts[1].length() == 4)
-            parts[1] = parts[1] + "-01-01";
-        if(parts[1].length() == 7)
-            parts[1] = parts[1] + "-01";
-        return parts[1];
-    }
-
-    static boolean isEalier (String d1, String d2){ // return true if the first one is ealier
-        try{Thread.sleep(1000);}catch(InterruptedException e){System.out.println(e);}  
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        Date date1 = new Date();
-        Date date2 = new Date();
-
-        try{
-            date1 = format.parse(d1);
-            date2 = format.parse(d2);
-        }catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        if (date1.compareTo(date2) <= 0) {
-            return true;
-        }
-        return false;
-
-    }
-
-    static void merge(List<NTriple> arr, int l, int m, int r){
+    private static void merge(List<NTriple> arr, int l, int m, int r){
         // Find sizes of two subarrays to be merged
         int nl = m - l + 1;
         int nr = r - m;
@@ -92,23 +59,36 @@ public class MergeSort{
             k++;
         }
     }
- 
-    // Main function that sorts arr[l..r] using
-    // merge()
-    static void sort(List<NTriple> arr, int l, int r){
-        if (l < r){
-            // Find the middle point
-            int m = (l+r)/2;
-            // Sort first and second halves
-            sort(arr, l, m);
-            sort(arr , m+1, r);
-            // Merge the sorted halves
-            merge(arr, l, m, r);
-        }
+
+    private static String extractDate (String date){
+        String parts[] = date.split("\"");
+        if(parts[1].length() == 4)
+            parts[1] = parts[1] + "-01-01";
+        if(parts[1].length() == 7)
+            parts[1] = parts[1] + "-01";
+        return parts[1];
     }
 
-    static boolean isLessThan(NTriple a, NTriple b){
-        // return 
+    private static boolean isEalier (String d1, String d2){ // return true if the first one is ealier
+        try{Thread.sleep(1000);}catch(InterruptedException e){System.out.println(e);}  
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        Date date1 = new Date();
+        Date date2 = new Date();
+
+        try{
+            date1 = format.parse(d1);
+            date2 = format.parse(d2);
+        }catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        if (date1.compareTo(date2) <= 0) {
+            return true;
+        }
+        return false;
+
+    }
+    private static boolean isLessThan(NTriple a, NTriple b){
         String one = extractDate(a.getObjectID());
         String two = extractDate(b.getObjectID());
         return (isEalier(one,two));

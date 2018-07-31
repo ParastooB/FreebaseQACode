@@ -152,20 +152,27 @@ public class Main {
         //bottom-up
             search = new Search(answer,db,tags);
             search.bottomUp();
-            search.commonTags();
             if (!search.isInFB()) //answer doesn't exist in Freebase
                 continue;
 
+            search.commonTags();
+            // if (search.isMatched()){
+            //     continue;
+            // }
+            // search.sortablePredicates();
+            // if (matches != 0){
+            //     continue;
+            // }
         //top-down
             // try{
-            //     writer3.println(search.sortedPredicates());
+            //     writer3.println(search.sortablePredicates());
             //     writer3.println("------         END         ----------");
             // } catch (NullPointerException  e) {
             //     System.err.println("NullPointerException: " + e.getMessage());
             // }
             // search.topDown();
             matches = search.getMatchesSize();
-            if (matches == 0 && !search.isAnswerContained()){
+            if (search.isMatched() && !search.isAnswerContained()){
             // if (matches == 0){
                 try{
                     writer.println(search.getQuestionPackage(question));

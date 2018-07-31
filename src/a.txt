@@ -1,0 +1,167 @@
+java -cp .:../libs/antlr-runtime-3.5.2.jar:../libs/backport-util-concurrent-3.1.jar:../libs/commons-codec-1.5.jar:../libs/commons-lang-2.6.jar:../libs/commons-logging-1.1.1.jar:../libs/groovy-all-1.6.9.jar:../libs/htmlunit-2.27-OSGi.jar:../libs/ical4j-1.0.2.jar:../libs/json-simple-1.1.1.jar:../libs/mysql-connector-java-5.1.42-bin.jar:../libs/natty-0.13.jar:../libs/quartz-1.8.4.jar:../libs/slf4j-api-1.7.10.jar:../libs/slf4j-nop-1.7.10.jar Main ../config1.properties ../questions/test-TagMe.txt
+------------------------------QUESTION 1 -----------------------------
+0191 is the telephone code for which British city?
+ The answer is: newcastle
+TAGS: {british=British, 0191=0191}
+british - vs. - 0191
+    Predicates of common objects:  []
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+
+PROGRESS: 0 MATCHES (0 UNIQUE MATCHES)
+TIME: 2.076s FOR QUESTION AND 2.076s SINCE START
+
+------------------------------QUESTION 2 -----------------------------
+0.6214 mile is how many metres?
+ The answer is: 1000
+TAGS: {metre=metres, mile=mile}
+metre - vs. - mile
+    Predicates of common objects:  [common.topic.notable_types]
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+
+PROGRESS: 0 MATCHES (0 UNIQUE MATCHES)
+TIME: 0.758s FOR QUESTION AND 2.834s SINCE START
+
+------------------------------QUESTION 3 -----------------------------
+0800 1111 is the number of a helpline founded in 1986 by a TV personality. In the 2009 General election she lost her deposit fighting the Luton South seat, after campaigning against corruption by MPs over their expenses. Who is she?
+ The answer is: esther rantzen
+TAGS: {luton=Luton, luton south=Luton South, indian general election, 2009=2009 General election, luton south (uk parliament constituency)=Luton South}
+luton - vs. - luton south
+    Predicates of common objects:  [common.topic.notable_types, common.licensed_object.license, type.content.media_type]
+luton - vs. - indian general election, 2009
+    Predicates of common objects:  []
+luton - vs. - luton south (uk parliament constituency)
+    Predicates of common objects:  []
+luton south - vs. - indian general election, 2009
+    Predicates of common objects:  []
+luton south - vs. - luton south (uk parliament constituency)
+    Predicates of common objects:  []
+indian general election, 2009 - vs. - luton south (uk parliament constituency)
+    Predicates of common objects:  []
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+
+PROGRESS: 0 MATCHES (0 UNIQUE MATCHES)
+TIME: 0.664s FOR QUESTION AND 3.498s SINCE START
+
+------------------------------QUESTION 4 -----------------------------
+100.4 Smooth Radio, and 105.4 Century FM, etc, are based where?
+ The answer is: salford quays
+TAGS: {smooth north west=100.4 Smooth Radio, heart north west=105.4 Century FM}
+smooth north west - vs. - heart north west
+    Predicates of common objects:  [common.topic.notable_types, broadcast.broadcast.area_served, broadcast.radio_station.owner]
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+
+PROGRESS: 0 MATCHES (0 UNIQUE MATCHES)
+TIME: 0.138s FOR QUESTION AND 3.637s SINCE START
+
+------------------------------QUESTION 5 -----------------------------
+11 November is marked in many countries as Remembrance Day, Poppy Day, Armistice Day or Veterans Day to commemorate the sacrifices of members of the armed forces and civilians in time of war. Why has that date been selected?
+ The answer is: aftermath of world war i
+TAGS: {remembrance day=Poppy Day, armistice day=Armistice Day, veterans day=Veterans Day}
+remembrance day - vs. - armistice day
+    Predicates of common objects:  [common.topic.notable_types, common.topic.webpage, time.holiday.type_of_holiday, common.topic.article, base.schemastaging.holiday_extra.observance_rule, common.topic.image, time.holiday.day_of_year, music.composition.form, music.release.format, music.composition.language]
+remembrance day - vs. - veterans day
+    Predicates of common objects:  [common.topic.notable_types, common.topic.webpage, time.holiday.type_of_holiday, common.topic.article, common.topic.image, base.schemastaging.holiday_extra.observance_rule, time.holiday.day_of_year, music.release.format, type.content.media_type]
+armistice day - vs. - veterans day
+    Predicates of common objects:  [common.topic.notable_types, common.topic.webpage, music.album.release_type, time.holiday.type_of_holiday, common.topic.article, base.skosbase.skos_concept.in_scheme, base.schemastaging.holiday_extra.observance_rule, common.topic.image, time.holiday.day_of_year, music.release.format]
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+
+PROGRESS: 0 MATCHES (0 UNIQUE MATCHES)
+TIME: 17.965s FOR QUESTION AND 21.602s SINCE START
+
+------------------------------QUESTION 6 -----------------------------
+1962 saw the first trans-Atlantic satellite broadcast via which satellite?
+ The answer is: telstar
+TAGS: {satellite television=satellite broadcast}
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+
+PROGRESS: 0 MATCHES (0 UNIQUE MATCHES)
+TIME: 2.157s FOR QUESTION AND 23.759s SINCE START
+
+------------------------------QUESTION 7 -----------------------------
+1970’s TV. What was the forename of Reggie Perrin’s incompetent brother-in-law?
+ The answer is: the jimmy
+TAGS: {reggie perrin=Reggie Perrin}
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+
+PROGRESS: 0 MATCHES (0 UNIQUE MATCHES)
+TIME: 0.039s FOR QUESTION AND 23.798s SINCE START
+
+------------------------------QUESTION 8 -----------------------------
+1976, Olympic Gold medallist, Alwin Schockemohle, was a top class sportsman in which sport?
+ The answer is: equestrianism
+TAGS: {alwin schockemöhle=Alwin Schockemohle, gold medal=Gold}
+alwin schockemöhle - vs. - gold medal
+    Predicates of common objects:  []
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+
+PROGRESS: 0 MATCHES (0 UNIQUE MATCHES)
+TIME: 0.120s FOR QUESTION AND 23.918s SINCE START
+
+------------------------------QUESTION 9 -----------------------------
+1986 saw the 900th anniversary of which famous English book?
+ The answer is: domesday book
+TAGS: {english=English}
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+
+PROGRESS: 0 MATCHES (0 UNIQUE MATCHES)
+TIME: 0.062s FOR QUESTION AND 23.981s SINCE START
+
+------------------------------QUESTION 10 -----------------------------
+19th Century Hungarian-born newspaper proprietor, whose first name was Joseph, had which award named after him?
+ The answer is: pulitzer prize
+TAGS: {ferdinand de lesseps=Ferdinand de Lesseps, french=French, suez=Suez, joseph=Joseph, suez canal=Suez canal}
+ferdinand de lesseps - vs. - french
+    Predicates of common objects:  [common.topic.notable_types, language.human_language.main_country, people.person.gender, people.person.nationality]
+ferdinand de lesseps - vs. - suez
+    Predicates of common objects:  [film.film.starring, film.film_character.portrayed_in_films]
+ferdinand de lesseps - vs. - joseph
+    Predicates of common objects:  [common.topic.notable_types, common.licensed_object.license, music.release.region, people.person.gender, people.person.nationality, type.content.media_type]
+ferdinand de lesseps - vs. - suez canal
+    Predicates of common objects:  [base.kwebbase.kwtopic.connections_to, base.kwebbase.kwtopic.connections_from]
+french - vs. - suez
+    Predicates of common objects:  [tv.tv_program.country_of_origin, common.topic.notable_types, film.film.language, base.rosetta.local_name.languoid, music.release.region, film.film.country, base.rosetta.local_name.locale, people.person.languages, music.composition.form, music.composition.language]
+french - vs. - joseph
+    Predicates of common objects:  [common.topic.notable_types, music.album.release_type, base.rosetta.local_name.languoid, people.person.gender, music.release.region, base.rosetta.local_name.locale, people.person.languages, people.person.nationality, opera.opera.language, film.film.country, music.composition.form, music.composition.language, music.release.format, people.person.profession]
+french - vs. - suez canal
+    Predicates of common objects:  [common.topic.notable_types]
+suez - vs. - joseph
+    Predicates of common objects:  [location.location.containedby, common.topic.notable_types, film.film.language, opera.opera.language, people.deceased_person.place_of_death, film.film.genre, film.film.country, people.person.nationality, music.composition.form, music.composition.language, book.book_edition.place_of_publication]
+suez - vs. - suez canal
+    Predicates of common objects:  [location.location.containedby, common.topic.notable_types]
+joseph - vs. - suez canal
+    Predicates of common objects:  [common.topic.notable_types, location.location.containedby, people.deceased_person.place_of_death]
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+
+PROGRESS: 0 MATCHES (0 UNIQUE MATCHES)
+TIME: 52.323s FOR QUESTION AND 76.304s SINCE START
+
+------------------------------QUESTION 11 -----------------------------
+1. The A is the outermost of the large, bright ones. 2. The B is the largest, brightest, and most massive. 3. The C is wide but faint and located inward of the B. 4. The D is the innermost and is also very faint. 5. The E is the second outermost and is extremely wide. 6. The F is the outermost discrete one and very active. 7. The G is very thin and faint and is halfway between the F and the E. What are we talking about?
+ The answer is: rings of saturn
+TAGS: {b4=B. 4, c=C, d=D}
+b4 - vs. - c
+    Predicates of common objects:  [tv.tv_program.country_of_origin, common.topic.notable_types, film.film.language, biology.gene.chromosome, biology.gene.genome, tv.tv_program.languages, people.person.nationality]
+b4 - vs. - d
+    Predicates of common objects:  [tv.tv_program.country_of_origin, common.topic.notable_types, music.release.region, pipeline.task.status, tv.tv_program.languages, people.person.languages]
+c - vs. - d
+    Predicates of common objects:  [common.topic.notable_types, common.image.size, music.album.release_type, common.licensed_object.license, music.release_track.release, type.content.language, people.person.gender, common.webpage.topic, computer.programming_language.dialects, type.object.permission, music.album.artist, people.person.languages, type.content.uploaded_by, people.person.place_of_birth, film.film.language, film.film.country, film.film.genre, tv.tv_program.genre, tv.tv_program.languages, film.film.featured_film_locations, computer.programming_language.influenced_by, type.type.domain, music.recording.artist, people.person.ethnicity, film.content_rating.country, metropolitan_transit.transit_line.transit_system, music.release.region, people.person.nationality, music.artist.genre, book.written_work.author, media_common.netflix_title.netflix_genres, music.recording.producer, film.content_rating.film_rating_system, common.webpage.category, cvg.computer_game_rating.rating_system, computer.programming_language.influenced, computer.programming_language.language_paradigms, music.recording.releases, people.person.profession, music.release.format, type.content.media_type]

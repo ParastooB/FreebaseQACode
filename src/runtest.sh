@@ -5,5 +5,5 @@ libs=".:../libs/antlr-runtime-3.5.2.jar:../libs/backport-util-concurrent-3.1.jar
 # echo java -cp ".:../libs/htmlunit-2.27-OSGi.jar:../libs/json-simple-1.1.1.jar:../libs/mysql-connector-java-5.1.42-bin.jar" Main ../config1.properties ../questions/test.txt
 # java -cp ".:../libs/htmlunit-2.27-OSGi.jar:../libs/json-simple-1.1.1.jar:../libs/mysql-connector-java-5.1.42-bin.jar" Main ../config1.properties ../questions/test.txt
 
-echo java -cp $libs Main ../config1.properties ../questions/test-TagMe.txt
-java -cp $libs Main ../config1.properties ../questions/test-TagMe.txt
+echo java -cp $libs Main ../config1.properties ../questions/test-TagMe.txt $1 $2
+java -cp $libs Main ../config1.properties ../questions/test-TagMe.txt $1 $2

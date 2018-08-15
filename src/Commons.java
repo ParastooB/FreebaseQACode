@@ -6,25 +6,22 @@ public class Commons {
     // This is for every single question. 
     private FreebaseDBHandler db;
     private Predicates preds;
-    private List<String> IDsList = new ArrayList<>(); //placeholder list for nameAlias2IDs method
     private Map<String, String> tags = new HashMap<>(); 
-    private Set<String> tagIDs = new HashSet<>();
-    private List<NTriple> tagTriples = new ArrayList<>();
     private Map<String, String> goodTagIDs = new HashMap<>(); //(tagID, tag)
 
-    public Commons(FreebaseDBHandler db, Map<String, String> tags) {
+    public Commons(FreebaseDBHandler db) {
         this.db = db;
-        this.tags = tags;
     }
 
-    private void commonObjectsTwo(Map<String, Map<String, List<NTriple>>> commonTags){
+    private void commonObjectsTwo(Map<String, Map<String, List<NTriple>>> commonTags, Set<String> tagIDs, List<NTriple> tagTriples){
+        List<String> IDsList = new ArrayList<>();
         for (String tag : commonTags.keySet()) {
-            this.tagIDs = this.db.nameAlias2IDs(tag, this.IDsList, this.tagIDs);
-            for (String tagID : this.tagIDs) {
-                this.tagTriples = this.db.ID2Triples(tagID, this.tagTriples);
-                if (this.tagTriples == null) // can this happen? an ID has no triple associated with it!
+            tagIDs = this.db.nameAlias2IDs(tag, IDsList, tagIDs);
+            for (String tagID : tagIDs) {
+                tagTriples = this.db.ID2Triples(tagID, tagTriples);
+                if (tagTriples == null) // can this happen? an ID has no triple associated with it!
                     continue;
-                for (NTriple tagTriple : this.tagTriples) {
+                for (NTriple tagTriple : tagTriples) {
                     if(commonTags.get(tag).containsKey(tagTriple.getObjectID())){
                         if (commonTags.get(tag).get(tagTriple.getObjectID()) == null){
                            commonTags.get(tag).put(tagTriple.getObjectID(),new ArrayList<>());
@@ -36,19 +33,21 @@ public class Commons {
                         commonTags.get(tag).get(tagTriple.getObjectID()).add(tagTriple);
                     }
                 }
-                this.tagTriples.clear();
+                tagTriples.clear();
             }
-            this.tagIDs.clear();
+            tagIDs.clear();
         }
     }
 
     private Set<String> commonSetTwo(String tag1, String tag2){ // the tags
         Map<String, Map<String, List<NTriple>>> commonTags = new HashMap<>();
+        Set<String> tagIDs = new HashSet<>();
+        List<NTriple> tagTriples = new ArrayList<>();
         commonTags.put(tag1, new HashMap<>());
         commonTags.put(tag2, new HashMap<>());  
         // Map<String, List<NTriple>> commonPredicates = new HashMap<>();
         Set<String> preds = new HashSet<>();
-        commonObjectsTwo(commonTags);
+        commonObjectsTwo(commonTags, tagIDs, tagTriples);
         Set<String> one = commonTags.get(tag1).keySet();
         Set<String> two = commonTags.get(tag2).keySet();
         for (String x : one){
@@ -83,7 +82,7 @@ public class Commons {
                 // }
             }
         }
-        commonTags.clear();
+        // commonTags.clear();
         return preds;
     }
 
@@ -116,10 +115,10 @@ public class Commons {
         result.clear();
     }*/
 
-    public void commonPredicatesSet(Set<String> finalresult){
+    public void commonPredicatesSet(Set<String> finalresult, Map<String, String> tags){
         Set<String> garb = new HashSet<>();
         List<String> temp = new ArrayList<>();
-        for (String x: this.tags.keySet()){
+        for (String x: tags.keySet()){
             temp.add(x);
         }
         int s = temp.size();
@@ -129,29 +128,22 @@ public class Commons {
                 System.out.println(temp.get(i)+" - vs. - "+temp.get(j));
                 // finalresult.addAll(result2);
                 garb = commonSetTwo(temp.get(i), temp.get(j));
-                System.out.println("    Predicates of common objects:  "+garb);
-                for (String p: garb){
+                System.out.println("    Predicates of common objects:  " + garb);
+                for (String p: garb) {
                     finalresult.add(p);
                     // System.out.println("    "+ p + " --> " + garb.get(p).size());
                     // count = count + garb.get(p).size();
                 }
             }
         }
-        garb.clear();
-        temp.clear();
+        // garb.clear();
+        // temp.clear();
     }
 
     public void goodIDs(Map<String, String> finalresult){
         for (String x: this.goodTagIDs.keySet()){
             finalresult.put(x,this.goodTagIDs.get(x));
         }
-    }
-
-    public void cleanUp(){
-    this.IDsList = new ArrayList<>(); //placeholder list for nameAlias2IDs method
-    this.tags = new HashMap<>(); 
-    this.tagIDs = new HashSet<>();
-    this.tagTriples = new ArrayList<>();
-    this.goodTagIDs = new HashMap<>(); //(tagID, tag)
+        // this.goodTagIDs.clear()
     }
 }

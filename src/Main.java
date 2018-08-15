@@ -154,15 +154,12 @@ public class Main {
             search.bottomUp();
             if (!search.isInFB()) //answer doesn't exist in Freebase
                 continue;
-
-            search.commonTags();
-            // if (search.isMatched()){
-            //     continue;
-            // }
-            // search.sortablePredicates();
-            // if (matches != 0){
-            //     continue;
-            // }
+            if (!search.isMatched()){
+                search.commonTags();
+            }
+            if (!search.isMatched()){
+               search.sortablePredicates();
+            }
         //top-down
             // try{
             //     writer3.println(search.sortablePredicates());
@@ -170,10 +167,11 @@ public class Main {
             // } catch (NullPointerException  e) {
             //     System.err.println("NullPointerException: " + e.getMessage());
             // }
-            // search.topDown();
+            // if (!search.isMatched()){
+            //     search.topDown();
+            // }
             matches = search.getMatchesSize();
-            if (search.isMatched() && !search.isAnswerContained()){
-            // if (matches == 0){
+            if (!search.isMatched() && !search.isAnswerContained()){
                 try{
                     writer.println(search.getQuestionPackage(question));
                 } catch (NullPointerException  e) {

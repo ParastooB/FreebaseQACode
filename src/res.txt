@@ -1,0 +1,1627 @@
+------------------------------QUESTION 1 -----------------------------
+0191 is the telephone code for which British city?
+ The answer is: newcastle
+TAGS: {british=British, 0191=0191}
+british - vs. - 0191
+    Predicates of common objects:  []
++ + + goodTagIDs: 0
+Layer one triples: 0
+Layer two triples: 0
+Layer three triples: 0
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+Layer one triples: 0
+Layer two triples: 0
+Layer three triples: 0
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+            No answers were found using the Sorting Predicates Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+No answer but 77 AIDs.
+
+PROGRESS: 0 MATCHES (0 UNIQUE MATCHES)
+TIME: 5.579s FOR QUESTION AND 5.579s SINCE START
+
+------------------------------QUESTION 2 -----------------------------
+0.6214 mile is how many metres?
+ The answer is: 1000
+TAGS: {metre=metres, mile=mile}
+metre - vs. - mile
+    Predicates of common objects:  [common.topic.notable_types]
++ + + goodTagIDs: 9
+Layer one triples: 45
+Layer two triples: 1000
+Layer three triples: 358746
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+film.film_art_director.films_art_directed
+    ↪film.film.initial_release_date
+        null | m.05m_cy0 | film.film.initial_release_date | "1961-07-31" | null
+        null | m.06zpkts | film.film.initial_release_date | "1965-08-06" | null
+        null | m.0b_xrc3 | film.film.initial_release_date | "1958" | null
+film.film_production_designer.films_production_designed
+    ↪film.film.initial_release_date
+        null | m.0bv_dzy | film.film.initial_release_date | "1992" | null
+        null | m.04j0qgc | film.film.initial_release_date | "1966" | null
+        null | m.0cw56h | film.film.initial_release_date | "2002-10-31" | null
+        null | m.0ddc4zh | film.film.initial_release_date | "1967" | null
+        null | m.0nhhhtz | film.film.initial_release_date | "1998-06-01" | null
+        null | m.0c1kylj | film.film.initial_release_date | "1958-12-01" | null
+people.person.nationality
+    ↪location.dated_location.date_founded
+        null | m.077qn | location.dated_location.date_founded | "2006-06-05" | null
+        null | m.01hs96 | location.dated_location.date_founded | "1918" | null
+3 sortable predicates, listed below:
+[film.film_art_director.films_art_directed, film.film_production_designer.films_production_designed, people.person.nationality]
+music.artist.album
+    ↪music.album.release_date
+        null | m.0qdk0d2 | music.album.release_date | "2012-04-09" | null
+        null | m.01q3mnv | music.album.release_date | "2000-08-29" | null
+        null | m.0fx7tn2 | music.album.release_date | "2009-08-10" | null
+4 sortable predicates, listed below:
+[film.film_art_director.films_art_directed, film.film_production_designer.films_production_designed, music.artist.album, people.person.nationality]
+Layer one triples: 28
+Layer two triples: 2446
+The match is : [Drama, film.film_genre.films_in_this_genre, null, 1000] 
+Match is from triple : Drama | m.02822 | film.film_genre.films_in_this_genre | m.010r134t | 1000 
+     The 2nd layer triple is : Black Pearls | m.0b_xrc3 | film.film.genre | m.02822 | Drama 
+             The root triple is : mile | m.0bv_f1n | film.film_art_director.films_art_directed | m.0b_xrc3 | Black Pearls 
+The match is : [Album, music.album_release_type.albums, null, 1000] 
+Match is from triple : Album | m.02lx2r | music.album_release_type.albums | m.03jmq3s | 1000 
+     The 2nd layer triple is : Dairy Plant | m.0fx7tn2 | music.album.release_type | m.02lx2r | Album 
+             The root triple is : mile | m.01q3mps | music.artist.album | m.0fx7tn2 | Dairy Plant 
+Layer three triples: 1204865
+
+PROGRESS: 2 MATCHES (1 UNIQUE MATCHES)
+TIME: 26.694s FOR QUESTION AND 32.273s SINCE START
+
+------------------------------QUESTION 3 -----------------------------
+0800 1111 is the number of a helpline founded in 1986 by a TV personality. In the 2009 General election she lost her deposit fighting the Luton South seat, after campaigning against corruption by MPs over their expenses. Who is she?
+ The answer is: esther rantzen
+TAGS: {luton=Luton, luton south=Luton South, indian general election, 2009=2009 General election, luton south (uk parliament constituency)=Luton South}
+luton - vs. - luton south
+    Predicates of common objects:  [common.topic.notable_types, common.licensed_object.license, type.content.media_type]
+luton - vs. - indian general election, 2009
+    Predicates of common objects:  []
+luton - vs. - luton south (uk parliament constituency)
+    Predicates of common objects:  []
+luton south - vs. - indian general election, 2009
+    Predicates of common objects:  []
+luton south - vs. - luton south (uk parliament constituency)
+    Predicates of common objects:  []
+indian general election, 2009 - vs. - luton south (uk parliament constituency)
+    Predicates of common objects:  []
++ + + goodTagIDs: 4
+Layer one triples: 20
+Layer two triples: 288
+Layer three triples: 192005
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+location.location.containedby
+    ↪location.dated_location.date_founded
+        null | m.07ssc | location.dated_location.date_founded | "1707-05-01" | null
+1 sortable predicates, listed below:
+[location.location.containedby]
+location.location.containedby
+    ↪location.dated_location.date_founded
+        null | m.09c7w0 | location.dated_location.date_founded | "1776-07-04" | null
+        null | m.0nr6r | location.dated_location.date_founded | "1851" | null
+        null | m.03s0w | location.dated_location.date_founded | "1846-12-28" | null
+1 sortable predicates, listed below:
+[location.location.containedby]
+location.location.people_born_here
+    ↪people.person.date_of_birth
+        null | m.03f4pbt | people.person.date_of_birth | "1946" | null
+        null | m.0qb56tm | people.person.date_of_birth | "1990-02-24" | null
+2 sortable predicates, listed below:
+[location.location.containedby, location.location.people_born_here]
+film.film.film_festivals
+    ↪time.event.end_date
+        null | m.0y7q_vm | time.event.end_date | "2013-09-28" | null
+        null | m.0y63ngc | time.event.end_date | "2013-11-17" | null
+        null | m.01069p53 | time.event.end_date | "2014-04-16" | null
+        null | m.0109dpl2 | time.event.end_date | "2014-08-03" | null
+        null | m.0_rby4r | time.event.end_date | "2014-03-30" | null
+        null | m.0y57qf4 | time.event.end_date | "2013-10-20" | null
+    ↪time.event.start_date
+        null | m.0y7q_vm | time.event.start_date | "2013-09-20" | null
+        null | m.0y63ngc | time.event.start_date | "2013-11-06" | null
+        null | m.01069p53 | time.event.start_date | "2014-04-03" | null
+        null | m.0109dpl2 | time.event.start_date | "2014-07-25" | null
+        null | m.0_rby4r | time.event.start_date | "2014-03-06" | null
+        null | m.0y57qf4 | time.event.start_date | "2013-10-09" | null
+film.film.release_date_s
+    ↪film.film_regional_release_date.release_date
+        null | m.0_lpjyt | film.film_regional_release_date.release_date | "2013-11-10" | null
+        null | m.0_lpjzf | film.film_regional_release_date.release_date | "2013-11-26" | null
+        null | m.0_lpjv0 | film.film_regional_release_date.release_date | "2013-09-25" | null
+        null | m.010d56pf | film.film_regional_release_date.release_date | "2014-04-08" | null
+        null | m.0_lpjvn | film.film_regional_release_date.release_date | "2013-09-27" | null
+        null | m.0_lpjx_ | film.film_regional_release_date.release_date | "2013-10-18" | null
+        null | m.0_lpjwb | film.film_regional_release_date.release_date | "2013-10-10" | null
+film.film.country
+    ↪location.dated_location.date_founded
+        null | m.035qy | location.dated_location.date_founded | "1821-03-25" | null
+        null | m.0345h | location.dated_location.date_founded | "1871-01-18" | null
+5 sortable predicates, listed below:
+[location.location.containedby, film.film.release_date_s, film.film.film_festivals, film.film.country, location.location.people_born_here]
+location.location.contains
+    ↪organization.organization.date_founded
+        null | m.0d6ltb | organization.organization.date_founded | "1966" | null
+location.location.people_born_here
+    ↪people.person.date_of_birth
+        null | m.03nq7r8 | people.person.date_of_birth | "1966-12-12" | null
+        null | m.05q43vv | people.person.date_of_birth | "1989-12-18" | null
+        null | m.0h1fr96 | people.person.date_of_birth | "1947-04-27" | null
+        null | m.043qz7l | people.person.date_of_birth | "1990-01-31" | null
+        null | m.03_k8 | people.person.date_of_birth | "1706-01-28" | null
+        null | m.0zdsp1y | people.person.date_of_birth | "1938-03-28" | null
+        null | m.04q9hp1 | people.person.date_of_birth | "1992-10-14" | null
+        null | m.0g5qgxj | people.person.date_of_birth | "1964" | null
+        null | m.0587g9 | people.person.date_of_birth | "1942-11-10" | null
+        null | m.09s_tn | people.person.date_of_birth | "1968" | null
+        null | m.027_q6q | people.person.date_of_birth | "1982-10-03" | null
+        null | m.0kf7wbp | people.person.date_of_birth | "1982-08-16" | null
+        null | m.0gg8bw0 | people.person.date_of_birth | "1941-07-19" | null
+        null | m.0pbxp9h | people.person.date_of_birth | "1982-06-19" | null
+        null | m.0h1ccbh | people.person.date_of_birth | "1963-03-16" | null
+        null | m.026j8kh | people.person.date_of_birth | "1986-11-20" | null
+        null | m.0bbtj67 | people.person.date_of_birth | "1969" | null
+        null | m.06vnb6 | people.person.date_of_birth | "1962-07-29" | null
+        null | m.05mzkfd | people.person.date_of_birth | "1992-11-22" | null
+        null | m.0h_bczf | people.person.date_of_birth | "1993-07-01" | null
+        null | m.03yf5r8 | people.person.date_of_birth | "1969-12-17" | null
+        null | m.02g1jh | people.person.date_of_birth | "1962-01-23" | null
+        null | m.03d2l1_ | people.person.date_of_birth | "1924-10-05" | null
+        null | m.0ksq5c | people.person.date_of_birth | "1969-04-12" | null
+        null | m.06608nr | people.person.date_of_birth | "1881-04-17" | null
+        null | m.0138n4tg | people.person.date_of_birth | "1996-11-24" | null
+        null | m.07sc430 | people.person.date_of_birth | "1963-11-19" | null
+        null | m.064q55v | people.person.date_of_birth | "1970-05-28" | null
+        null | m.0k0f18l | people.person.date_of_birth | "1915-04-18" | null
+        null | m.0fkzb0 | people.person.date_of_birth | "1896-04-08" | null
+        null | m.026yb80 | people.person.date_of_birth | "1979-02-02" | null
+        null | m.061jzh | people.person.date_of_birth | "1965-03-26" | null
+        null | m.0h1ht5z | people.person.date_of_birth | "1982-11-27" | null
+        null | m.0jwtg9x | people.person.date_of_birth | "1944-03-02" | null
+        null | m.047g3gs | people.person.date_of_birth | "1961-05-28" | null
+        null | m.0k38sl | people.person.date_of_birth | "1973-10-10" | null
+        null | m.05vsk4p | people.person.date_of_birth | "1945-10-30" | null
+        null | m.0cl2jy | people.person.date_of_birth | "1939-01-01" | null
+        null | m.02692k_ | people.person.date_of_birth | "1971-11-26" | null
+        null | m.03wbppm | people.person.date_of_birth | "1966-10-19" | null
+        null | m.05zt9h6 | people.person.date_of_birth | "1968-08-06" | null
+        null | m.0d1qgr | people.person.date_of_birth | "1971" | null
+        null | m.0c03b5n | people.person.date_of_birth | "1985-10-26" | null
+        null | m.02rbnm1 | people.person.date_of_birth | "1906" | null
+        null | m.0fvqyn | people.person.date_of_birth | "1984-11-01" | null
+        null | m.04q0vsw | people.person.date_of_birth | "1987" | null
+        null | m.0ds73_5 | people.person.date_of_birth | "1937-05-16" | null
+        null | m.0g5rh22 | people.person.date_of_birth | "1992-09-23" | null
+        null | m.02mtfh | people.person.date_of_birth | "1956-01-17" | null
+        null | m.0f9gg7 | people.person.date_of_birth | "1970-03-08" | null
+        null | m.0b4qf8 | people.person.date_of_birth | "1977-04-17" | null
+        null | m.0812gx | people.person.date_of_birth | "1956-08-14" | null
+        null | m.0k_nmw | people.person.date_of_birth | "1976-01-16" | null
+        null | m.0343_2 | people.person.date_of_birth | "1939-08-25" | null
+        null | m.080q71k | people.person.date_of_birth | "1987-03-09" | null
+        null | m.026j8v2 | people.person.date_of_birth | "1985-11-30" | null
+        null | m.0gp579 | people.person.date_of_birth | "1976-03-05" | null
+        null | m.0h55rzv | people.person.date_of_birth | "1976" | null
+        null | m.05zn8lz | people.person.date_of_birth | "1964-11-25" | null
+        null | m.09v4316 | people.person.date_of_birth | "1989-11-16" | null
+        null | m.05zmsky | people.person.date_of_birth | "1964-12-10" | null
+        null | m.0pdcf_t | people.person.date_of_birth | "1994-05-01" | null
+        null | m.0d64sb | people.person.date_of_birth | "1973" | null
+        null | m.06w7rpk | people.person.date_of_birth | "1961-03-09" | null
+        null | m.0k9cw7_ | people.person.date_of_birth | "1951-03-18" | null
+        null | m.05zlffc | people.person.date_of_birth | "1969" | null
+        null | m.0g56d_5 | people.person.date_of_birth | "1994-03-23" | null
+        null | m.0fgbyt | people.person.date_of_birth | "1989-06-26" | null
+        null | m.0chql3 | people.person.date_of_birth | "1911-12-14" | null
+        null | m.08kzk_ | people.person.date_of_birth | "1965-02-03" | null
+        null | m.04n4dr9 | people.person.date_of_birth | "1985-07-30" | null
+        null | m.04zwm51 | people.person.date_of_birth | "1987-08-19" | null
+        null | m.06w9rz8 | people.person.date_of_birth | "1936-10-02" | null
+        null | m.026qh69 | people.person.date_of_birth | "1922-12-26" | null
+        null | m.0gkxbnl | people.person.date_of_birth | "1912-09-04" | null
+        null | m.02vnh98 | people.person.date_of_birth | "1980" | null
+        null | m.01szwq | people.person.date_of_birth | "1952-12-06" | null
+        null | m.09k57w | people.person.date_of_birth | "1976-05-23" | null
+        null | m.03h5mq7 | people.person.date_of_birth | "1976-07-07" | null
+        null | m.0b_rxl | people.person.date_of_birth | "1946-02-27" | null
+        null | m.0z2pz04 | people.person.date_of_birth | "1992-04-07" | null
+        null | m.051zz88 | people.person.date_of_birth | "1895-10-19" | null
+        null | m.0fl1q1 | people.person.date_of_birth | "1946-05-20" | null
+        null | m.0bwgz0d | people.person.date_of_birth | "1981-10-10" | null
+        null | m.09l8wj | people.person.date_of_birth | "1982-09-28" | null
+        null | m.027lncv | people.person.date_of_birth | "1898-04-28" | null
+        null | m.0j9y5j8 | people.person.date_of_birth | "1985-12-28" | null
+        null | m.06w45nd | people.person.date_of_birth | "1947-09-24" | null
+        null | m.0_1jntw | people.person.date_of_birth | "1995-04-25" | null
+        null | m.0n53wjs | people.person.date_of_birth | "1951-03-09" | null
+        null | m.0_ylc4w | people.person.date_of_birth | "1994-12-04" | null
+        null | m.01ll_yw | people.person.date_of_birth | "1954-09-20" | null
+        null | m.012hq99q | people.person.date_of_birth | "1905-04-12" | null
+        null | m.012w4fmn | people.person.date_of_birth | "1995-10-31" | null
+        null | m.0j2b6ch | people.person.date_of_birth | "1920-02-26" | null
+        null | m.0136znwr | people.person.date_of_birth | "1978-12" | null
+        null | m.0276_7v | people.person.date_of_birth | "1980-12-08" | null
+        null | m.04yg9fp | people.person.date_of_birth | "1936-05-06" | null
+        null | m.03nq4y6 | people.person.date_of_birth | "1926-01-16" | null
+        null | m.0115j984 | people.person.date_of_birth | "1998-04-22" | null
+        null | m.0t_fh2d | people.person.date_of_birth | "1973-09-25" | null
+        null | m.0268w7y | people.person.date_of_birth | "1974" | null
+        null | m.0gffq0l | people.person.date_of_birth | "1968-02-15" | null
+        null | m.04f0d5s | people.person.date_of_birth | "1888-04-24" | null
+        null | m.04dzgkp | people.person.date_of_birth | "1984-12" | null
+        null | m.06w49n3 | people.person.date_of_birth | "1947-09-21" | null
+        null | m.06w859y | people.person.date_of_birth | "1878" | null
+        null | m.0407qft | people.person.date_of_birth | "1978-08-26" | null
+        null | m.02x2q52 | people.person.date_of_birth | "1966" | null
+        null | m.0j27wsk | people.person.date_of_birth | "1878" | null
+        null | m.0f_f78 | people.person.date_of_birth | "1985-02-09" | null
+        null | m.0g9g96 | people.person.date_of_birth | "1983-12-20" | null
+        null | m.0c6mcb | people.person.date_of_birth | "1962-07-25" | null
+        null | m.0gssh | people.person.date_of_birth | "1920-04-05" | null
+        null | m.026fccc | people.person.date_of_birth | "1965-05-09" | null
+        null | m.04z_br3 | people.person.date_of_birth | "1991-03-12" | null
+        null | m.05p17kl | people.person.date_of_birth | "1974-10-22" | null
+        null | m.0275l_t | people.person.date_of_birth | "1965-09-02" | null
+        null | m.026j8sc | people.person.date_of_birth | "1986-12-19" | null
+        null | m.03mfp95 | people.person.date_of_birth | "1940" | null
+        null | m.08hl1f | people.person.date_of_birth | "1943-04-07" | null
+        null | m.08f695 | people.person.date_of_birth | "1946-12-30" | null
+        null | m.0vpj_fp | people.person.date_of_birth | "1981-08-05" | null
+        null | m.05j76g | people.person.date_of_birth | "1958-12-21" | null
+        null | m.0dzpzv | people.person.date_of_birth | "1968-06-22" | null
+        null | m.0nbn25t | people.person.date_of_birth | "1992-10-25" | null
+        null | m.07n756 | people.person.date_of_birth | "1958" | null
+        null | m.06w28jf | people.person.date_of_birth | "1880" | null
+        null | m.0277mbt | people.person.date_of_birth | "1985-12-02" | null
+        null | m.094zxw | people.person.date_of_birth | "1982-04-25" | null
+        null | m.03h4lwr | people.person.date_of_birth | "1951-10-12" | null
+        null | m.02ww98m | people.person.date_of_birth | "1981-11-23" | null
+        null | m.0h1bjrf | people.person.date_of_birth | "1932-02-22" | null
+        null | m.04g0dz6 | people.person.date_of_birth | "1944-11-29" | null
+        null | m.04_0tq7 | people.person.date_of_birth | "1927-02-06" | null
+        null | m.02pjwk2 | people.person.date_of_birth | "1969-08-01" | null
+        null | m.04kyn8 | people.person.date_of_birth | "1930-04-20" | null
+        null | m.06zbtc | people.person.date_of_birth | "1956" | null
+        null | m.0gvs6ns | people.person.date_of_birth | "1979-05-01" | null
+        null | m.026sz09 | people.person.date_of_birth | "1976-01-27" | null
+        null | m.04fzl50 | people.person.date_of_birth | "1990-06-05" | null
+        null | m.03qflr2 | people.person.date_of_birth | "1959-10-26" | null
+        null | m.087l__ | people.person.date_of_birth | "1961-07-24" | null
+        null | m.03hg9ms | people.person.date_of_birth | "1972-01-21" | null
+        null | m.0gyrjnb | people.person.date_of_birth | "1861-03-18" | null
+        null | m.03fsgf | people.person.date_of_birth | "1951-09-04" | null
+        null | m.0gvqxfq | people.person.date_of_birth | "1965-05-17" | null
+        null | m.043mxc_ | people.person.date_of_birth | "1970" | null
+        null | m.04w47m | people.person.date_of_birth | "1933-09-04" | null
+        null | m.054vd8 | people.person.date_of_birth | "1958" | null
+        null | m.02rz23t | people.person.date_of_birth | "1964-10-02" | null
+        null | m.0gsvl2 | people.person.date_of_birth | "1938-03-09" | null
+        null | m.05h52dj | people.person.date_of_birth | "1973-07-12" | null
+        null | m.0h3xgvr | people.person.date_of_birth | "1942-07-18" | null
+        null | m.02qwr9l | people.person.date_of_birth | "1973-10-26" | null
+        null | m.0gj94wl | people.person.date_of_birth | "1978-12-28" | null
+organization.organization_scope.organizations_with_this_scope
+    ↪organization.organization.date_founded
+        null | m.010f41zn | organization.organization.date_founded | "1993" | null
+7 sortable predicates, listed below:
+[location.location.containedby, location.location.contains, film.film.release_date_s, film.film.film_festivals, film.film.country, location.location.people_born_here, organization.organization_scope.organizations_with_this_scope]
+government.political_district.representatives
+    ↪government.government_position_held.from
+        null | m.04nr937 | government.government_position_held.from | "2005-05-05" | null
+8 sortable predicates, listed below:
+[location.location.containedby, location.location.contains, film.film.release_date_s, film.film.film_festivals, film.film.country, location.location.people_born_here, organization.organization_scope.organizations_with_this_scope, government.political_district.representatives]
+government.general_election.includes_general_elections
+    ↪time.event.start_date
+        null | m.063_1dp | time.event.start_date | "2009" | null
+        null | m.05zhngf | time.event.start_date | "2009" | null
+        null | m.06425n7 | time.event.start_date | "2009" | null
+        null | m.0641dkv | time.event.start_date | "2009" | null
+        null | m.063_gw2 | time.event.start_date | "2009" | null
+        null | m.063_vxb | time.event.start_date | "2009" | null
+        null | m.0641s6z | time.event.start_date | "2009" | null
+        null | m.0642hj_ | time.event.start_date | "2009" | null
+        null | m.063zm3p | time.event.start_date | "2009" | null
+        null | m.063zdr5 | time.event.start_date | "2009" | null
+        null | m.063zffj | time.event.start_date | "2009" | null
+        null | m.063z5m_ | time.event.start_date | "2009" | null
+        null | m.063zb83 | time.event.start_date | "2009" | null
+        null | m.06420vq | time.event.start_date | "2009" | null
+        null | m.0641_g0 | time.event.start_date | "2009" | null
+        null | m.064266t | time.event.start_date | "2009" | null
+        null | m.064108d | time.event.start_date | "2009" | null
+        null | m.063_01g | time.event.start_date | "2009" | null
+        null | m.0640mjq | time.event.start_date | "2009" | null
+        null | m.05zlhgw | time.event.start_date | "2009" | null
+        null | m.063_rbm | time.event.start_date | "2009" | null
+        null | m.0641h5z | time.event.start_date | "2009" | null
+        null | m.063_57c | time.event.start_date | "2009" | null
+government.general_election.contests
+    ↪time.event.start_date
+        null | m.06409m1 | time.event.start_date | "2009" | null
+        null | m.063z06n | time.event.start_date | "2009" | null
+        null | m.063zgdg | time.event.start_date | "2009" | null
+        null | m.063ydqm | time.event.start_date | "2009" | null
+        null | m.0640qgs | time.event.start_date | "2009" | null
+        null | m.0642dtb | time.event.start_date | "2009" | null
+        null | m.064112y | time.event.start_date | "2009" | null
+        null | m.0640hj5 | time.event.start_date | "2009" | null
+        null | m.063z6n_ | time.event.start_date | "2009" | null
+10 sortable predicates, listed below:
+[location.location.containedby, location.location.contains, government.general_election.includes_general_elections, film.film.release_date_s, film.film.film_festivals, film.film.country, government.general_election.contests, location.location.people_born_here, organization.organization_scope.organizations_with_this_scope, government.political_district.representatives]
+Layer one triples: 468
+Layer two triples: 194185
+Layer three triples: 4427050
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+            No answers were found using the Sorting Predicates Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+No answer but 9 AIDs.
+
+PROGRESS: 0 MATCHES (1 UNIQUE MATCHES)
+TIME: 3145.591s FOR QUESTION AND 3177.865s SINCE START
+
+------------------------------QUESTION 4 -----------------------------
+100.4 Smooth Radio, and 105.4 Century FM, etc, are based where?
+ The answer is: salford quays
+TAGS: {smooth north west=100.4 Smooth Radio, heart north west=105.4 Century FM}
+smooth north west - vs. - heart north west
+    Predicates of common objects:  [common.topic.notable_types, broadcast.broadcast.area_served, broadcast.radio_station.owner]
++ + + goodTagIDs: 2
+Layer one triples: 14
+Layer two triples: 3134
+The match is : [Greater Manchester, location.location.contains, null, salford quays] 
+Match is from triple : Greater Manchester | m.0kqb0 | location.location.contains | m.0383zv | salford quays 
+     The 2nd layer triple is : North West England | m.0dz63 | location.location.contains | m.0kqb0 | Greater Manchester 
+             The root triple is : heart north west | m.03t5h1 | broadcast.broadcast.area_served | m.0dz63 | North West England 
+Layer three triples: 784051
+
+PROGRESS: 1 MATCHES (2 UNIQUE MATCHES)
+TIME: 19.499s FOR QUESTION AND 3197.364s SINCE START
+
+------------------------------QUESTION 5 -----------------------------
+11 November is marked in many countries as Remembrance Day, Poppy Day, Armistice Day or Veterans Day to commemorate the sacrifices of members of the armed forces and civilians in time of war. Why has that date been selected?
+ The answer is: aftermath of world war i
+TAGS: {remembrance day=Poppy Day, armistice day=Armistice Day, veterans day=Veterans Day}
+remembrance day - vs. - armistice day
+    Predicates of common objects:  [common.topic.notable_types, common.topic.webpage, time.holiday.type_of_holiday, common.topic.article, base.schemastaging.holiday_extra.observance_rule, common.topic.image, time.holiday.day_of_year, music.composition.form, music.release.format, music.composition.language]
+remembrance day - vs. - veterans day
+    Predicates of common objects:  [common.topic.notable_types, common.topic.webpage, time.holiday.type_of_holiday, common.topic.article, common.topic.image, base.schemastaging.holiday_extra.observance_rule, time.holiday.day_of_year, music.release.format, type.content.media_type]
+armistice day - vs. - veterans day
+    Predicates of common objects:  [common.topic.notable_types, common.topic.webpage, music.album.release_type, time.holiday.type_of_holiday, common.topic.article, base.skosbase.skos_concept.in_scheme, base.schemastaging.holiday_extra.observance_rule, common.topic.image, time.holiday.day_of_year, music.release.format]
++ + + goodTagIDs: 87
+Layer one triples: 618
+Layer two triples: 2053205
+Layer three triples: 17424122
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+book.book.editions
+    ↪book.book_edition.publication_date
+        null | m.05q0362 | book.book_edition.publication_date | "1999-05" | null
+        null | m.05q3ngl | book.book_edition.publication_date | "1993-03" | null
+        null | m.05q3ngs | book.book_edition.publication_date | "1994-08" | null
+        null | m.0c77kl7 | book.book_edition.publication_date | "1993" | null
+        null | m.05q3ngp | book.book_edition.publication_date | "1993-07" | null
+1 sortable predicates, listed below:
+[book.book.editions]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.0flxsgl | music.release.release_date | "2009-09-14" | null
+        null | m.0fmjk6z | music.release.release_date | "2009-09-14" | null
+        null | m.0fdxm3p | music.release.release_date | "2009-09-11" | null
+2 sortable predicates, listed below:
+[book.book.editions, music.recording.releases]
+music.composition.composer
+    ↪people.person.date_of_birth
+        null | m.01bczm | people.person.date_of_birth | "1959-11-05" | null
+        null | m.0b7thy | people.person.date_of_birth | "1952-05-31" | null
+3 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.recording.releases]
+music.composition.composer
+    ↪people.person.date_of_birth
+        null | m.054vd8 | people.person.date_of_birth | "1958" | null
+        null | m.028vgb | people.person.date_of_birth | "1952-08-25" | null
+3 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.recording.releases]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.032fn_g | music.release.release_date | "2003-10-20" | null
+        null | m.038tn33 | music.release.release_date | "1993" | null
+        null | m.0307c9y | music.release.release_date | "1996-03-25" | null
+3 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.recording.releases]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.033fy3s | music.release.release_date | "2002" | null
+        null | m.036ddvg | music.release.release_date | "1994" | null
+3 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.recording.releases]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.033n3tk | music.release.release_date | "1988" | null
+        null | m.0f_qbj8 | music.release.release_date | "1988" | null
+        null | m.0fv27c9 | music.release.release_date | "1988" | null
+3 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.recording.releases]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.032mz0z | music.release.release_date | "1982" | null
+        null | m.0gbc3mp | music.release.release_date | "1993" | null
+3 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.recording.releases]
+base.schemastaging.holiday_extra.observance_rule
+    ↪base.schemastaging.holiday_observance_rule.date_established
+        null | m.0102tqvm | base.schemastaging.holiday_observance_rule.date_established | "1932-11-11" | null
+        null | m.0102tqpw | base.schemastaging.holiday_observance_rule.date_established | "1919-11-11" | null
+4 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, base.schemastaging.holiday_extra.observance_rule, music.recording.releases]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.035z4qn | music.release.release_date | "1994" | null
+        null | m.039h139 | music.release.release_date | "2000" | null
+        null | m.01jg6f6 | music.release.release_date | "2002" | null
+        null | m.0f1nthn | music.release.release_date | "2003-02-24" | null
+4 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, base.schemastaging.holiday_extra.observance_rule, music.recording.releases]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.0ff6qw4 | music.release.release_date | "1995" | null
+        null | m.0329fkw | music.release.release_date | "1991" | null
+4 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, base.schemastaging.holiday_extra.observance_rule, music.recording.releases]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.032v55p | music.release.release_date | "1987-03-31" | null
+        null | m.0f5b561 | music.release.release_date | "1987" | null
+4 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, base.schemastaging.holiday_extra.observance_rule, music.recording.releases]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.0g30j3s | music.release.release_date | "1982" | null
+        null | m.0g2pl1y | music.release.release_date | "1982" | null
+4 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, base.schemastaging.holiday_extra.observance_rule, music.recording.releases]
+music.album.releases
+    ↪music.release.release_date
+        null | m.0g29t1_ | music.release.release_date | "2007" | null
+        null | m.0vchjsq | music.release.release_date | "1987" | null
+music.album.artist
+    ↪music.artist.active_start
+        null | m.0dn2f6v | music.artist.active_start | "2002-04-01" | null
+        null | m.01n8sk7 | music.artist.active_start | "1978" | null
+6 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.album.releases, base.schemastaging.holiday_extra.observance_rule, music.album.artist, music.recording.releases]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.0fgv8wg | music.release.release_date | "1986-07-14" | null
+        null | m.01jg7qy | music.release.release_date | "1986" | null
+        null | m.0fw3gc0 | music.release.release_date | "1986" | null
+6 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.album.releases, base.schemastaging.holiday_extra.observance_rule, music.album.artist, music.recording.releases]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.03bdhj_ | music.release.release_date | "2006-09-22" | null
+        null | m.0ff7g6h | music.release.release_date | "2005-02-04" | null
+        null | m.0f9hz3v | music.release.release_date | "2006-09-11" | null
+        null | m.0f1n6v8 | music.release.release_date | "2006-09-18" | null
+6 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.album.releases, base.schemastaging.holiday_extra.observance_rule, music.album.artist, music.recording.releases]
+music.composition.composer
+    ↪people.deceased_person.date_of_death
+        null | m.06vgb2 | people.deceased_person.date_of_death | "2001-12-16" | null
+    ↪people.person.date_of_birth
+        null | m.06vgb2 | people.person.date_of_birth | "1958-04-11" | null
+        null | m.082vm_ | people.person.date_of_birth | "1957-02-13" | null
+        null | m.02qz4y_ | people.person.date_of_birth | "1961-03-11" | null
+music.composition.lyricist
+    ↪people.person.date_of_birth
+        null | m.082vm_ | people.person.date_of_birth | "1957-02-13" | null
+        null | m.02qz4y_ | people.person.date_of_birth | "1961-03-11" | null
+        null | m.06vgb2 | people.person.date_of_birth | "1958-04-11" | null
+7 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.album.releases, base.schemastaging.holiday_extra.observance_rule, music.album.artist, music.recording.releases, music.composition.lyricist]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.033q9ld | music.release.release_date | "1997" | null
+        null | m.0fgw5cb | music.release.release_date | "1995" | null
+7 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.album.releases, base.schemastaging.holiday_extra.observance_rule, music.album.artist, music.recording.releases, music.composition.lyricist]
+base.schemastaging.holiday_extra.observance_rule
+    ↪base.schemastaging.holiday_observance_rule.date_established
+        null | m.0102tqvm | base.schemastaging.holiday_observance_rule.date_established | "1932-11-11" | null
+        null | m.0102tqpw | base.schemastaging.holiday_observance_rule.date_established | "1919-11-11" | null
+7 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.album.releases, base.schemastaging.holiday_extra.observance_rule, music.album.artist, music.recording.releases, music.composition.lyricist]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.0fbksxk | music.release.release_date | "1988-05-01" | null
+        null | m.03228jq | music.release.release_date | "1981" | null
+7 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.album.releases, base.schemastaging.holiday_extra.observance_rule, music.album.artist, music.recording.releases, music.composition.lyricist]
+music.recording.releases
+    ↪music.release.release_date
+        null | m.01j2k_n | music.release.release_date | "2004-07-06" | null
+        null | m.033wz6b | music.release.release_date | "1972-03" | null
+7 sortable predicates, listed below:
+[music.composition.composer, book.book.editions, music.album.releases, base.schemastaging.holiday_extra.observance_rule, music.album.artist, music.recording.releases, music.composition.lyricist]
+Layer one triples: 220
+Layer two triples: 35
+Layer three triples: 1913
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+            No answers were found using the Sorting Predicates Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+No answer but 2 AIDs.
+
+PROGRESS: 0 MATCHES (2 UNIQUE MATCHES)
+TIME: 23834.065s FOR QUESTION AND 27031.429s SINCE START
+
+------------------------------QUESTION 6 -----------------------------
+1962 saw the first trans-Atlantic satellite broadcast via which satellite?
+ The answer is: telstar
+TAGS: {satellite television=satellite broadcast}
++ + + goodTagIDs: 0
+Layer one triples: 0
+Layer two triples: 0
+Layer three triples: 0
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+business.industry.companies
+    ↪organization.organization.date_founded
+        null | m.02mdsj | organization.organization.date_founded | "1990" | null
+        null | m.02khm_ | organization.organization.date_founded | "1984" | null
+        null | m.07t2f3 | organization.organization.date_founded | "2007-05-16" | null
+        null | m.02x97yc | organization.organization.date_founded | "2007-02-01" | null
+        null | m.0b71x1 | organization.organization.date_founded | "2004" | null
+        null | m.0ctq8v | organization.organization.date_founded | "2004" | null
+        null | m.03c2fy | organization.organization.date_founded | "1997-09-10" | null
+        null | m.09v2712 | organization.organization.date_founded | "2009" | null
+        null | m.0687pd | organization.organization.date_founded | "2001" | null
+1 sortable predicates, listed below:
+[business.industry.companies]
+Layer one triples: 20
+Layer two triples: 455
+Layer three triples: 174167
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+            No answers were found using the Sorting Predicates Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+No answer but 407 AIDs.
+
+PROGRESS: 0 MATCHES (2 UNIQUE MATCHES)
+TIME: 40.253s FOR QUESTION AND 27071.682s SINCE START
+
+------------------------------QUESTION 7 -----------------------------
+1970’s TV. What was the forename of Reggie Perrin’s incompetent brother-in-law?
+ The answer is: the jimmy
+TAGS: {reggie perrin=Reggie Perrin}
++ + + goodTagIDs: 0
+Layer one triples: 0
+Layer two triples: 0
+Layer three triples: 0
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+tv.tv_program.program_creator
+    ↪people.person.date_of_birth
+        null | m.07w4bx | people.person.date_of_birth | "1935-03-13" | null
+        null | m.08gyc0 | people.person.date_of_birth | "1958-07-29" | null
+tv.tv_program.episodes
+    ↪tv.tv_series_episode.air_date
+        null | m.0kwvc1d | tv.tv_series_episode.air_date | "2010-10-14" | null
+        null | m.0kwvc66 | tv.tv_series_episode.air_date | "2010-11-11" | null
+        null | m.0kwvc09 | tv.tv_series_episode.air_date | "2009-05-29" | null
+        null | m.0kwvbyw | tv.tv_series_episode.air_date | "2009-05-15" | null
+        null | m.0kwvc21 | tv.tv_series_episode.air_date | "2010-10-21" | null
+        null | m.0kwvc5f | tv.tv_series_episode.air_date | "2010-11-04" | null
+        null | m.0kwvbvj | tv.tv_series_episode.air_date | "2009-05-08" | null
+        null | m.0kwvbzx | tv.tv_series_episode.air_date | "2009-05-22" | null
+        null | m.0kwvc75 | tv.tv_series_episode.air_date | "2010-11-18" | null
+        null | m.0kwvc4d | tv.tv_series_episode.air_date | "2010-10-28" | null
+        null | m.0kwvbt2 | tv.tv_series_episode.air_date | "2009-04-24" | null
+        null | m.0kwvbtz | tv.tv_series_episode.air_date | "2009-05-01" | null
+2 sortable predicates, listed below:
+[tv.tv_program.program_creator, tv.tv_program.episodes]
+Layer one triples: 28
+Layer two triples: 229
+Layer three triples: 663445
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+            No answers were found using the Sorting Predicates Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+No answer but 1 AIDs.
+
+PROGRESS: 0 MATCHES (2 UNIQUE MATCHES)
+TIME: 9.871s FOR QUESTION AND 27081.553s SINCE START
+
+------------------------------QUESTION 8 -----------------------------
+1976, Olympic Gold medallist, Alwin Schockemohle, was a top class sportsman in which sport?
+ The answer is: equestrianism
+TAGS: {alwin schockemöhle=Alwin Schockemohle, gold medal=Gold}
+alwin schockemöhle - vs. - gold medal
+    Predicates of common objects:  []
++ + + goodTagIDs: 0
+Layer one triples: 0
+Layer two triples: 0
+Layer three triples: 0
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+award.award.category
+    ↪award.award_category.date_established
+        null | m.0gxr1t6 | award.award_category.date_established | "1839" | null
+        null | m.0gxr1t0 | award.award_category.date_established | "1831" | null
+1 sortable predicates, listed below:
+[award.award.category]
+music.album.releases
+    ↪music.release.release_date
+        null | m.035phcj | music.release.release_date | "2004-10-25" | null
+        null | m.0f205kv | music.release.release_date | "2004-10-26" | null
+        null | m.01l1_pp | music.release.release_date | "2004-11-24" | null
+        null | m.010twjjg | music.release.release_date | "2004" | null
+        null | m.0fxtnvp | music.release.release_date | "2004-10-26" | null
+2 sortable predicates, listed below:
+[award.award.category, music.album.releases]
+book.publishing_company.books_published
+    ↪book.book_edition.publication_date
+        null | m.05pz1mk | book.book_edition.publication_date | "1968" | null
+        null | m.05p_sy4 | book.book_edition.publication_date | "1980-05" | null
+        null | m.05pzzcb | book.book_edition.publication_date | "1981-06-12" | null
+        null | m.05qjs1l | book.book_edition.publication_date | "1985-04" | null
+        null | m.05pyh76 | book.book_edition.publication_date | "1976" | null
+        null | m.05q34f2 | book.book_edition.publication_date | "1985-04" | null
+        null | m.05pz1lq | book.book_edition.publication_date | "1955-10" | null
+        null | m.05p_n1q | book.book_edition.publication_date | "1964-03" | null
+        null | m.05p_v6q | book.book_edition.publication_date | "1975-10" | null
+        null | m.05q2bqg | book.book_edition.publication_date | "1991" | null
+        null | m.05pz1lx | book.book_edition.publication_date | "1957-01" | null
+        null | m.05qjskj | book.book_edition.publication_date | "1976-06" | null
+        null | m.05qjxns | book.book_edition.publication_date | "1983" | null
+        null | m.05p_18x | book.book_edition.publication_date | "1961-10" | null
+        null | m.05qjq01 | book.book_edition.publication_date | "1987-02" | null
+        null | m.05p_9z6 | book.book_edition.publication_date | "1980-02" | null
+        null | m.04t_bpf | book.book_edition.publication_date | "1983" | null
+        null | m.05p_j53 | book.book_edition.publication_date | "1967" | null
+        null | m.05q24pn | book.book_edition.publication_date | "1990" | null
+        null | m.05pz1m2 | book.book_edition.publication_date | "1963-03" | null
+        null | m.05pymsv | book.book_edition.publication_date | "1968" | null
+        null | m.05q393s | book.book_edition.publication_date | "1958-04" | null
+        null | m.05p_78j | book.book_edition.publication_date | "1975-10" | null
+        null | m.05p_9zh | book.book_edition.publication_date | "1982-04" | null
+        null | m.05q3m5x | book.book_edition.publication_date | "1960-11" | null
+        null | m.05pz1m8 | book.book_edition.publication_date | "1958" | null
+        null | m.05pz1lt | book.book_edition.publication_date | "1960-01" | null
+        null | m.05pyxqf | book.book_edition.publication_date | "1975" | null
+        null | m.05p_yj9 | book.book_edition.publication_date | "1972-12" | null
+        null | m.05qbtvn | book.book_edition.publication_date | "1992" | null
+        null | m.05pz0z7 | book.book_edition.publication_date | "1982" | null
+        null | m.05qjk63 | book.book_edition.publication_date | "1962-08" | null
+        null | m.05q4pjy | book.book_edition.publication_date | "1968" | null
+        null | m.05q2d7d | book.book_edition.publication_date | "1990" | null
+        null | m.05pzb10 | book.book_edition.publication_date | "1952" | null
+        null | m.05pyclc | book.book_edition.publication_date | "1978" | null
+        null | m.05pz1mg | book.book_edition.publication_date | "1966" | null
+        null | m.0ggj42m | book.book_edition.publication_date | "1972" | null
+        null | m.05q31bc | book.book_edition.publication_date | "1964" | null
+        null | m.05pz6zt | book.book_edition.publication_date | "1982-11" | null
+        null | m.05pyr8q | book.book_edition.publication_date | "1950-06" | null
+        null | m.05q02qj | book.book_edition.publication_date | "1962-02" | null
+        null | m.05qjhyl | book.book_edition.publication_date | "1981-06" | null
+        null | m.05qjxnp | book.book_edition.publication_date | "1994" | null
+        null | m.05qb38j | book.book_edition.publication_date | "1989" | null
+        null | m.05pyt9h | book.book_edition.publication_date | "1975" | null
+        null | m.05pyylg | book.book_edition.publication_date | "1983-10" | null
+        null | m.05pz1mc | book.book_edition.publication_date | "1967" | null
+        null | m.05p_9z9 | book.book_edition.publication_date | "1984-03" | null
+        null | m.05pym0m | book.book_edition.publication_date | "1972-04" | null
+        null | m.05q3hnf | book.book_edition.publication_date | "1997" | null
+        null | m.05pzlqb | book.book_edition.publication_date | "1977" | null
+        null | m.05q2pdr | book.book_edition.publication_date | "1959-01" | null
+        null | m.05p_n1x | book.book_edition.publication_date | "1958-03" | null
+        null | m.05py82q | book.book_edition.publication_date | "1964" | null
+        null | m.06byc97 | book.book_edition.publication_date | "1962" | null
+        null | m.05q2hw9 | book.book_edition.publication_date | "1956" | null
+        null | m.05p_n1m | book.book_edition.publication_date | "1959-11" | null
+        null | m.0gghw_r | book.book_edition.publication_date | "1973-07-01" | null
+        null | m.05p_7x3 | book.book_edition.publication_date | "1971-05" | null
+        null | m.05pz03x | book.book_edition.publication_date | "1967" | null
+        null | m.05pzb1z | book.book_edition.publication_date | "1954" | null
+        null | m.05q2v5h | book.book_edition.publication_date | "1985-10" | null
+        null | m.04xt5ch | book.book_edition.publication_date | "1990" | null
+        null | m.05qjx8n | book.book_edition.publication_date | "1990" | null
+        null | m.05q2cy7 | book.book_edition.publication_date | "1997" | null
+        null | m.05q3969 | book.book_edition.publication_date | "1979" | null
+        null | m.05p_kp7 | book.book_edition.publication_date | "1978" | null
+        null | m.05p_vzv | book.book_edition.publication_date | "1976-02" | null
+        null | m.05q01y3 | book.book_edition.publication_date | "1973-03" | null
+        null | m.05q2fzw | book.book_edition.publication_date | "1992" | null
+        null | m.05qjygc | book.book_edition.publication_date | "1992" | null
+        null | m.05p_09p | book.book_edition.publication_date | "1970-11" | null
+        null | m.05pyqcc | book.book_edition.publication_date | "1962-03" | null
+        null | m.05pz5b7 | book.book_edition.publication_date | "1959-02" | null
+        null | m.05pyxl3 | book.book_edition.publication_date | "1980-06" | null
+        null | m.05q36r5 | book.book_edition.publication_date | "1967" | null
+        null | m.05qbk5m | book.book_edition.publication_date | "1974-05" | null
+        null | m.05q0kws | book.book_edition.publication_date | "1964" | null
+        null | m.05pzjm9 | book.book_edition.publication_date | "1976" | null
+        null | m.05pz1m5 | book.book_edition.publication_date | "1965" | null
+        null | m.05pzdby | book.book_edition.publication_date | "1979" | null
+        null | m.05p___4 | book.book_edition.publication_date | "1960-04" | null
+        null | m.05p_3jf | book.book_edition.publication_date | "1970-10" | null
+        null | m.05p_xyn | book.book_edition.publication_date | "1963-02" | null
+        null | m.05q392v | book.book_edition.publication_date | "1964" | null
+        null | m.05pzvwc | book.book_edition.publication_date | "1974-06" | null
+        null | m.05pz0zb | book.book_edition.publication_date | "1980" | null
+        null | m.05p_zpx | book.book_edition.publication_date | "1975-02" | null
+        null | m.05pzssh | book.book_edition.publication_date | "1972-08" | null
+        null | m.05q4j7h | book.book_edition.publication_date | "1953" | null
+        null | m.05pz1l_ | book.book_edition.publication_date | "1957-08" | null
+        null | m.05pyvmd | book.book_edition.publication_date | "1971-08" | null
+        null | m.05p_zlt | book.book_edition.publication_date | "1962-02" | null
+        null | m.05pyd50 | book.book_edition.publication_date | "1973-11" | null
+        null | m.05q480k | book.book_edition.publication_date | "1978" | null
+        null | m.05q2_cg | book.book_edition.publication_date | "1987-12" | null
+        null | m.05pzb6r | book.book_edition.publication_date | "1986-09" | null
+        null | m.05qjq1n | book.book_edition.publication_date | "1961-09" | null
+        null | m.0ggkr6m | book.book_edition.publication_date | "1969" | null
+        null | m.05py668 | book.book_edition.publication_date | "1960" | null
+        null | m.05q404s | book.book_edition.publication_date | "1980-12" | null
+        null | m.05q3417 | book.book_edition.publication_date | "1985-10" | null
+        null | m.05pyym0 | book.book_edition.publication_date | "1965" | null
+        null | m.05qcyfy | book.book_edition.publication_date | "1996" | null
+        null | m.05q0n1f | book.book_edition.publication_date | "1968" | null
+        null | m.05pyr95 | book.book_edition.publication_date | "1972-06" | null
+        null | m.05pytdl | book.book_edition.publication_date | "1981-02" | null
+        null | m.05p_kck | book.book_edition.publication_date | "1974-12" | null
+        null | m.05q393w | book.book_edition.publication_date | "1951" | null
+        null | m.05q4j7y | book.book_edition.publication_date | "1950" | null
+        null | m.05q482_ | book.book_edition.publication_date | "1978" | null
+        null | m.05q4r24 | book.book_edition.publication_date | "1979" | null
+        null | m.05p_4p5 | book.book_edition.publication_date | "1973-05" | null
+        null | m.05pz55n | book.book_edition.publication_date | "1967" | null
+        null | m.0ggj46d | book.book_edition.publication_date | "1972" | null
+        null | m.05pyt9d | book.book_edition.publication_date | "1980-06" | null
+        null | m.05pyclg | book.book_edition.publication_date | "1970-11" | null
+        null | m.05p_hkq | book.book_edition.publication_date | "1968-10" | null
+        null | m.05q2l73 | book.book_edition.publication_date | "1964" | null
+        null | m.05pyvj6 | book.book_edition.publication_date | "1973-02" | null
+        null | m.05q2xb3 | book.book_edition.publication_date | "1962" | null
+        null | m.05q02gg | book.book_edition.publication_date | "1975-12" | null
+        null | m.05p_9nk | book.book_edition.publication_date | "1982-08" | null
+        null | m.0ggj5g6 | book.book_edition.publication_date | "1971-12" | null
+        null | m.05q4s_r | book.book_edition.publication_date | "1965" | null
+        null | m.05pzy3h | book.book_edition.publication_date | "1956" | null
+        null | m.05pychg | book.book_edition.publication_date | "1991" | null
+        null | m.04xt5b5 | book.book_edition.publication_date | "1994" | null
+        null | m.05q02ld | book.book_edition.publication_date | "1966" | null
+        null | m.05q09b6 | book.book_edition.publication_date | "1954-07" | null
+3 sortable predicates, listed below:
+[award.award.category, music.album.releases, book.publishing_company.books_published]
+Layer one triples: 292
+Layer two triples: 1324
+Layer three triples: 275873
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+            No answers were found using the Sorting Predicates Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+No answer but 1 AIDs.
+
+PROGRESS: 0 MATCHES (2 UNIQUE MATCHES)
+TIME: 19.967s FOR QUESTION AND 27101.521s SINCE START
+
+------------------------------QUESTION 9 -----------------------------
+1986 saw the 900th anniversary of which famous English book?
+ The answer is: domesday book
+TAGS: {english=English}
++ + + goodTagIDs: 0
+Layer one triples: 0
+Layer two triples: 0
+Layer three triples: 0
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+                No answers were found using the Common Tags Method
+*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*/\*
+music.recording.releases
+    ↪music.release.release_date
+        null | m.03zh7vs | music.release.release_date | "1984" | null
+        null | m.03bdr2h | music.release.release_date | "1984" | null
+        null | m.0fghw97 | music.release.release_date | "1991-01-29" | null
+1 sortable predicates, listed below:
+[music.recording.releases]
+location.location.containedby
+    ↪location.dated_location.date_founded
+        null | m.0mqd9 | location.dated_location.date_founded | "1837" | null
+        null | m.07b_l | location.dated_location.date_founded | "1845-12-29" | null
+2 sortable predicates, listed below:
+[location.location.containedby, music.recording.releases]
+location.location.containedby
+    ↪location.dated_location.date_founded
+        null | m.081mh | location.dated_location.date_founded | "1863-06-20" | null
+        null | m.09c7w0 | location.dated_location.date_founded | "1776-07-04" | null
+        null | m.0mlkl | location.dated_location.date_founded | "1858" | null
+2 sortable predicates, listed below:
+[location.location.containedby, music.recording.releases]
+education.field_of_study.students_majoring
+    ↪education.education.end_date
+        null | m.0zfwq6q | education.education.end_date | "1965" | null
+        null | m.0n1fmt7 | education.education.end_date | "1930" | null
+        null | m.064zxys | education.education.end_date | "1916" | null
+        null | m.02wn5sj | education.education.end_date | "1975" | null
+        null | m.0zw39nt | education.education.end_date | "1974" | null
+        null | m.02wnbdx | education.education.end_date | "1960" | null
+        null | m.0zl2wys | education.education.end_date | "1977" | null
+        null | m.0zvxyfr | education.education.end_date | "1973" | null
+        null | m.04hsn_g | education.education.end_date | "1985" | null
+        null | m.0zncnc9 | education.education.end_date | "1974" | null
+        null | m.0_d7nmt | education.education.end_date | "1965" | null
+        null | m.0n0nwy4 | education.education.end_date | "1973" | null
+        null | m.0105_j8z | education.education.end_date | "1948" | null
+        null | m.0108p5cf | education.education.end_date | "1943" | null
+        null | m.010btg46 | education.education.end_date | "1940" | null
+        null | m.04lpc7b | education.education.end_date | "1976" | null
+        null | m.0zc_ynb | education.education.end_date | "1972" | null
+        null | m.0_krdq8 | education.education.end_date | "1953" | null
+        null | m.0ztqqjd | education.education.end_date | "1969" | null
+        null | m.02wpq9n | education.education.end_date | "1998" | null
+        null | m.05npqjm | education.education.end_date | "1942" | null
+        null | m.0102td10 | education.education.end_date | "1951" | null
+        null | m.03p77b3 | education.education.end_date | "1923" | null
+        null | m.0bd2zmp | education.education.end_date | "1966" | null
+        null | m.0n1krkr | education.education.end_date | "1967" | null
+        null | m.0107j68k | education.education.end_date | "1984" | null
+        null | m.09vj83s | education.education.end_date | "1979" | null
+        null | m.0zw738v | education.education.end_date | "1970" | null
+        null | m.02wp84y | education.education.end_date | "1932" | null
+        null | m.010gb203 | education.education.end_date | "1915" | null
+        null | m.0zn30dp | education.education.end_date | "1944" | null
+        null | m.04hdc8c | education.education.end_date | "1967" | null
+        null | m.0n1kvck | education.education.end_date | "1937" | null
+        null | m.03p7766 | education.education.end_date | "1947" | null
+        null | m.0zvxq4w | education.education.end_date | "1976" | null
+        null | m.0_1hwq9 | education.education.end_date | "2008" | null
+        null | m.02wn7f1 | education.education.end_date | "1962" | null
+        null | m.02wmtjd | education.education.end_date | "1950" | null
+        null | m.0_r2wyc | education.education.end_date | "2011-04" | null
+        null | m.010bfzj2 | education.education.end_date | "1931" | null
+        null | m.0n0fdl0 | education.education.end_date | "1979" | null
+        null | m.0105_ttm | education.education.end_date | "1924" | null
+        null | m.0n0v_ms | education.education.end_date | "1966" | null
+        null | m.0104nxtm | education.education.end_date | "1949" | null
+        null | m.010l54dv | education.education.end_date | "1994" | null
+        null | m.0_ynmdf | education.education.end_date | "1942" | null
+        null | m.0zf91fm | education.education.end_date | "1989" | null
+        null | m.0105_ysz | education.education.end_date | "1954" | null
+        null | m.02wmthg | education.education.end_date | "1953" | null
+        null | m.02wpv2w | education.education.end_date | "1975" | null
+        null | m.01077p0m | education.education.end_date | "1949" | null
+        null | m.0n0wnnn | education.education.end_date | "1972" | null
+        null | m.0svzsb8 | education.education.end_date | "1998" | null
+        null | m.010566d1 | education.education.end_date | "2002" | null
+        null | m.0101j0hj | education.education.end_date | "1958" | null
+        null | m.05nlzhm | education.education.end_date | "1962" | null
+        null | m.02wp71w | education.education.end_date | "1960" | null
+        null | m.0k3m0f3 | education.education.end_date | "2005" | null
+        null | m.02wnn_w | education.education.end_date | "1967" | null
+        null | m.02wms1x | education.education.end_date | "1952" | null
+        null | m.0n0gcc3 | education.education.end_date | "1977" | null
+        null | m.0zfl_35 | education.education.end_date | "1983-12" | null
+        null | m.02wmzcr | education.education.end_date | "1940" | null
+        null | m.04hd8sg | education.education.end_date | "1950" | null
+        null | m.0zwjbm2 | education.education.end_date | "1976" | null
+        null | m.0_qyb6m | education.education.end_date | "1963" | null
+        null | m.0w5cmb2 | education.education.end_date | "1971" | null
+        null | m.02wpmlc | education.education.end_date | "1924" | null
+        null | m.0101kk2d | education.education.end_date | "1949" | null
+        null | m.04hwy7p | education.education.end_date | "1960" | null
+        null | m.02dfq82 | education.education.end_date | "1986" | null
+        null | m.0znf905 | education.education.end_date | "1972" | null
+        null | m.0zlpyw6 | education.education.end_date | "1975" | null
+        null | m.0svttq0 | education.education.end_date | "1950" | null
+        null | m.04hldyf | education.education.end_date | "1949" | null
+        null | m.0n123dq | education.education.end_date | "1946" | null
+        null | m.0zhv9kt | education.education.end_date | "1978" | null
+        null | m.04hcp54 | education.education.end_date | "1991" | null
+        null | m.04yt05d | education.education.end_date | "1969" | null
+        null | m.0n11sby | education.education.end_date | "1974" | null
+        null | m.0_mw4w6 | education.education.end_date | "1956" | null
+        null | m.010nwgb_ | education.education.end_date | "1960" | null
+        null | m.0n1hmyt | education.education.end_date | "1976" | null
+        null | m.02wnc82 | education.education.end_date | "1976" | null
+        null | m.0_yv_g3 | education.education.end_date | "1954" | null
+        null | m.02wpwww | education.education.end_date | "1938" | null
+        null | m.012r5h55 | education.education.end_date | "1960" | null
+        null | m.0_f_3t1 | education.education.end_date | "1947" | null
+        null | m.0_vq6df | education.education.end_date | "1959" | null
+        null | m.010fxvgx | education.education.end_date | "1932" | null
+        null | m.0_y79lm | education.education.end_date | "1950" | null
+        null | m.01047cbk | education.education.end_date | "1938" | null
+        null | m.0zp4nf9 | education.education.end_date | "1976" | null
+        null | m.0107h97y | education.education.end_date | "1934" | null
+        null | m.062ytbv | education.education.end_date | "1928" | null
+        null | m.02wpmkj | education.education.end_date | "1942" | null
+        null | m.02wnbg6 | education.education.end_date | "1985" | null
+        null | m.04hqcr6 | education.education.end_date | "1974" | null
+        null | m.05yyj80 | education.education.end_date | "1970" | null
+        null | m.02wnz0y | education.education.end_date | "1929" | null
+        null | m.0w5ltb4 | education.education.end_date | "1963" | null
+        null | m.04q19pg | education.education.end_date | "1939" | null
+        null | m.0n1jtc4 | education.education.end_date | "1983" | null
+        null | m.0sw37pd | education.education.end_date | "1964" | null
+        null | m.0hgtf9p | education.education.end_date | "1949" | null
+        null | m.0_mxmf1 | education.education.end_date | "1962" | null
+        null | m.0664mr1 | education.education.end_date | "1941" | null
+        null | m.0zbsvfy | education.education.end_date | "1985-11" | null
+        null | m.0zvxvjl | education.education.end_date | "1958" | null
+        null | m.0h3ylmw | education.education.end_date | "1947" | null
+        null | m.0_mf72k | education.education.end_date | "1968" | null
+        null | m.0107wml3 | education.education.end_date | "1935" | null
+        null | m.0_t0lgz | education.education.end_date | "1960" | null
+        null | m.02wn7pd | education.education.end_date | "1994" | null
+        null | m.0101fsl4 | education.education.end_date | "1973" | null
+        null | m.0_yzpbd | education.education.end_date | "1954" | null
+        null | m.0zw62k4 | education.education.end_date | "1963" | null
+        null | m.02wpxfw | education.education.end_date | "1937" | null
+        null | m.0zwwym3 | education.education.end_date | "1955" | null
+        null | m.04hd6_4 | education.education.end_date | "1930" | null
+        null | m.0_1hxb7 | education.education.end_date | "2006" | null
+        null | m.010ld4s8 | education.education.end_date | "1999" | null
+        null | m.0zw35my | education.education.end_date | "1971-10" | null
+        null | m.0fpl0n3 | education.education.end_date | "1980" | null
+        null | m.0n0nd60 | education.education.end_date | "1965" | null
+        null | m.02wncfq | education.education.end_date | "1972" | null
+        null | m.0101djw4 | education.education.end_date | "1888" | null
+        null | m.04hr5yg | education.education.end_date | "1932" | null
+        null | m.0j7vqwr | education.education.end_date | "1950" | null
+        null | m.010b2j1x | education.education.end_date | "1938" | null
+        null | m.0znxmxj | education.education.end_date | "1965" | null
+        null | m.02wncqb | education.education.end_date | "1968" | null
+        null | m.0zf8mry | education.education.end_date | "1988" | null
+        null | m.04hffl_ | education.education.end_date | "1967" | null
+        null | m.0_9x4l2 | education.education.end_date | "1951" | null
+        null | m.0zwx77j | education.education.end_date | "1965" | null
+        null | m.0n1n0l8 | education.education.end_date | "2003" | null
+        null | m.0102tp64 | education.education.end_date | "1934" | null
+        null | m.05yykmz | education.education.end_date | "1973" | null
+        null | m.0zt1r3b | education.education.end_date | "1960" | null
+        null | m.04lpgm_ | education.education.end_date | "1971" | null
+        null | m.0jzrs2n | education.education.end_date | "1948" | null
+        null | m.07yh05p | education.education.end_date | "1977" | null
+        null | m.0_qy7n3 | education.education.end_date | "1951" | null
+        null | m.0_t7p6x | education.education.end_date | "1951" | null
+        null | m.059r1nx | education.education.end_date | "1956" | null
+        null | m.0v9_3j7 | education.education.end_date | "1991-02" | null
+        null | m.05yzblx | education.education.end_date | "1966" | null
+        null | m.04hfp_d | education.education.end_date | "1986" | null
+        null | m.010bfzhf | education.education.end_date | "1930" | null
+        null | m.0_f_bh9 | education.education.end_date | "1965" | null
+        null | m.0zvw8z_ | education.education.end_date | "1968" | null
+        null | m.0_z7gpx | education.education.end_date | "1939" | null
+        null | m.0101lf8x | education.education.end_date | "1950" | null
+        null | m.010g6b5l | education.education.end_date | "1915" | null
+        null | m.0zj2gd7 | education.education.end_date | "1981" | null
+        null | m.02wnpyl | education.education.end_date | "1962" | null
+        null | m.0667j38 | education.education.end_date | "1966" | null
+        null | m.0_y720_ | education.education.end_date | "1952" | null
+        null | m.0_hgmn8 | education.education.end_date | "1967" | null
+        null | m.0n0z1tf | education.education.end_date | "1983" | null
+        null | m.0_f_fnd | education.education.end_date | "1941" | null
+        null | m.01077bzy | education.education.end_date | "1947" | null
+        null | m.0znvn30 | education.education.end_date | "1969" | null
+        null | m.0zmv3qt | education.education.end_date | "1975" | null
+        null | m.011xdkp9 | education.education.end_date | "2000" | null
+        null | m.02wns62 | education.education.end_date | "1941" | null
+        null | m.0105xy0t | education.education.end_date | "1968" | null
+        null | m.0n1grkc | education.education.end_date | "1965" | null
+        null | m.0dlqgrm | education.education.end_date | "1962" | null
+        null | m.0svw6qv | education.education.end_date | "1922" | null
+        null | m.0j7t6lt | education.education.end_date | "1949" | null
+        null | m.0zt519t | education.education.end_date | "1969" | null
+        null | m.0zwhvn9 | education.education.end_date | "1971" | null
+        null | m.02wnqj5 | education.education.end_date | "1956-06" | null
+        null | m.010g7mdx | education.education.end_date | "1920" | null
+        null | m.0n45w_n | education.education.end_date | "1967" | null
+        null | m.0n14q3q | education.education.end_date | "1955" | null
+        null | m.0zf3_v4 | education.education.end_date | "1974" | null
+        null | m.0_f_9d4 | education.education.end_date | "1955" | null
+        null | m.0_qxhhj | education.education.end_date | "1958" | null
+        null | m.0_z5vt_ | education.education.end_date | "1953" | null
+        null | m.0_ghsw0 | education.education.end_date | "1938" | null
+        null | m.0n1k7rg | education.education.end_date | "1928" | null
+        null | m.02wmrp7 | education.education.end_date | "1920" | null
+        null | m.0_hhpp_ | education.education.end_date | "1960" | null
+        null | m.02wn28l | education.education.end_date | "2003" | null
+        null | m.0_hfyzz | education.education.end_date | "1945" | null
+        null | m.0cpk9gj | education.education.end_date | "1930" | null
+        null | m.0_hg629 | education.education.end_date | "1953" | null
+        null | m.05y_5hq | education.education.end_date | "1971" | null
+        null | m.0_r7hkf | education.education.end_date | "1964" | null
+        null | m.0n1hwfn | education.education.end_date | "1970" | null
+        null | m.04hwz3s | education.education.end_date | "1974" | null
+        null | m.0n0nlp6 | education.education.end_date | "1972" | null
+        null | m.0n19h_7 | education.education.end_date | "1939" | null
+        null | m.012n89x8 | education.education.end_date | "2009-07" | null
+        null | m.0zgvq2c | education.education.end_date | "1972" | null
+        null | m.0102ng_k | education.education.end_date | "1952" | null
+        null | m.07y4fqg | education.education.end_date | "1935" | null
+        null | m.0w5mx40 | education.education.end_date | "1999" | null
+        null | m.01057dtq | education.education.end_date | "1964" | null
+        null | m.0_mgy5h | education.education.end_date | "1961" | null
+        null | m.02wnmvy | education.education.end_date | "1913-06" | null
+        null | m.0n1m8gr | education.education.end_date | "1960" | null
+        null | m.0_z7gz9 | education.education.end_date | "1948" | null
+        null | m.0106p2qc | education.education.end_date | "1935" | null
+        null | m.0ncd4v7 | education.education.end_date | "2007" | null
+        null | m.0jzrlj9 | education.education.end_date | "1961" | null
+        null | m.02wpv8h | education.education.end_date | "1940" | null
+        null | m.04hwrk3 | education.education.end_date | "1947" | null
+        null | m.0103rwww | education.education.end_date | "1952" | null
+        null | m.010580pn | education.education.end_date | "1942" | null
+        null | m.0667h61 | education.education.end_date | "1960" | null
+        null | m.0zs_p5z | education.education.end_date | "1958" | null
+        null | m.0_6n157 | education.education.end_date | "1966" | null
+        null | m.0zmts4w | education.education.end_date | "1976" | null
+        null | m.0z_dfpd | education.education.end_date | "1939" | null
+        null | m.0zgg69k | education.education.end_date | "1975" | null
+        null | m.04hch33 | education.education.end_date | "1967" | null
+        null | m.0w5916b | education.education.end_date | "1962" | null
+        null | m.0jzrqp2 | education.education.end_date | "1969" | null
+        null | m.0107x31x | education.education.end_date | "1949" | null
+        null | m.04hcgb1 | education.education.end_date | "1960" | null
+        null | m.04hx2pp | education.education.end_date | "1959" | null
+        null | m.064zvgv | education.education.end_date | "2008-06" | null
+        null | m.0101ldxk | education.education.end_date | "1946" | null
+        null | m.04hd74f | education.education.end_date | "1935" | null
+        null | m.04hwzdh | education.education.end_date | "1960" | null
+        null | m.02wnfp2 | education.education.end_date | "1959" | null
+        null | m.0n18514 | education.education.end_date | "1972" | null
+        null | m.0zgh28k | education.education.end_date | "1971" | null
+        null | m.0w5fnxv | education.education.end_date | "1934" | null
+        null | m.0_x4_bs | education.education.end_date | "1936" | null
+        null | m.0_w57lm | education.education.end_date | "1930" | null
+        null | m.02wp95y | education.education.end_date | "1993" | null
+        null | m.0wrdp05 | education.education.end_date | "1998" | null
+        null | m.0svz2_v | education.education.end_date | "1954" | null
+        null | m.0zf5ngl | education.education.end_date | "1977" | null
+        null | m.0z_7qk_ | education.education.end_date | "1954" | null
+        null | m.011kyw8b | education.education.end_date | "2011" | null
+        null | m.0_g5_8x | education.education.end_date | "1959" | null
+        null | m.0100_k16 | education.education.end_date | "1953" | null
+        null | m.02wnx48 | education.education.end_date | "1972" | null
+        null | m.0zbsr1c | education.education.end_date | "1986" | null
+        null | m.01077fjm | education.education.end_date | "1934" | null
+        null | m.03p7kq9 | education.education.end_date | "1927" | null
+        null | m.0z_fkbs | education.education.end_date | "1949" | null
+        null | m.0_xh7z6 | education.education.end_date | "1948" | null
+        null | m.04hp2th | education.education.end_date | "1962" | null
+        null | m.0n0k55t | education.education.end_date | "1941" | null
+        null | m.02wn1xh | education.education.end_date | "1971" | null
+        null | m.0_m6hrc | education.education.end_date | "1967" | null
+        null | m.010g7pf8 | education.education.end_date | "1936" | null
+        null | m.01072kn0 | education.education.end_date | "1926" | null
+        null | m.0gtzg61 | education.education.end_date | "1975" | null
+        null | m.0zc_q53 | education.education.end_date | "1988" | null
+        null | m.0zd9rlt | education.education.end_date | "1984" | null
+        null | m.0n1lgfh | education.education.end_date | "1981" | null
+        null | m.010db8z2 | education.education.end_date | "1939" | null
+        null | m.0n0lhns | education.education.end_date | "1935" | null
+        null | m.02wpqyq | education.education.end_date | "1959" | null
+        null | m.02wns_0 | education.education.end_date | "1964" | null
+        null | m.0704ckn | education.education.end_date | "1950" | null
+        null | m.0n1mkxd | education.education.end_date | "1952" | null
+        null | m.0n464jv | education.education.end_date | "1979" | null
+        null | m.0jzrqkl | education.education.end_date | "1982" | null
+        null | m.0n0ppwl | education.education.end_date | "1983" | null
+        null | m.09vjglz | education.education.end_date | "1942" | null
+        null | m.0n0sz_n | education.education.end_date | "1914" | null
+        null | m.0zgn_n8 | education.education.end_date | "1971" | null
+        null | m.04hbpmv | education.education.end_date | "2004" | null
+        null | m.0n1l6bh | education.education.end_date | "1957" | null
+        null | m.010b2q0s | education.education.end_date | "1931" | null
+        null | m.07y4fh9 | education.education.end_date | "1969" | null
+        null | m.0n15vft | education.education.end_date | "1949" | null
+        null | m.0n45jqq | education.education.end_date | "1968" | null
+        null | m.0_mxd_f | education.education.end_date | "1966" | null
+        null | m.012l9pj4 | education.education.end_date | "2007-05" | null
+        null | m.0zn8pqn | education.education.end_date | "1947" | null
+        null | m.0n162b2 | education.education.end_date | "1980" | null
+        null | m.0_lz3wn | education.education.end_date | "1963" | null
+        null | m.0znx_rm | education.education.end_date | "1969" | null
+        null | m.012bg7r9 | education.education.end_date | "2005-12" | null
+        null | m.0_grfm9 | education.education.end_date | "1960" | null
+        null | m.0zwwk9x | education.education.end_date | "1963" | null
+        null | m.010lcjqj | education.education.end_date | "1997" | null
+        null | m.0_9gf1y | education.education.end_date | "1992" | null
+        null | m.0_bp1t3 | education.education.end_date | "1969" | null
+        null | m.0n1mqpq | education.education.end_date | "1942" | null
+        null | m.0_vvdd4 | education.education.end_date | "1949" | null
+        null | m.0n0lgtp | education.education.end_date | "1923" | null
+        null | m.0105_wfn | education.education.end_date | "1948" | null
+        null | m.0_l_12d | education.education.end_date | "1963" | null
+        null | m.0gy3cq8 | education.education.end_date | "1992" | null
+        null | m.02wplcg | education.education.end_date | "1924" | null
+        null | m.010102pf | education.education.end_date | "1955" | null
+        null | m.0_f_3n8 | education.education.end_date | "1931" | null
+        null | m.0667kts | education.education.end_date | "1942" | null
+        null | m.0zt26fn | education.education.end_date | "1965" | null
+        null | m.0_gj0rh | education.education.end_date | "1960" | null
+        null | m.0_qykf6 | education.education.end_date | "1952" | null
+        null | m.0k3m0dv | education.education.end_date | "1994" | null
+        null | m.09j52hw | education.education.end_date | "1952" | null
+        null | m.0c1qgfn | education.education.end_date | "1987" | null
+        null | m.04lpcnt | education.education.end_date | "1933" | null
+        null | m.0zs_fl_ | education.education.end_date | "1949" | null
+        null | m.0_z7ny_ | education.education.end_date | "1932" | null
+        null | m.0zvtqb9 | education.education.end_date | "1965" | null
+        null | m.0n1jmhs | education.education.end_date | "1987" | null
+        null | m.0yc9tkp | education.education.end_date | "1956" | null
+        null | m.04hddr5 | education.education.end_date | "1943" | null
+        null | m.01077w9d | education.education.end_date | "1940" | null
+        null | m.0n1m2r_ | education.education.end_date | "1948" | null
+3 sortable predicates, listed below:
+[location.location.containedby, education.field_of_study.students_majoring, music.recording.releases]
+film.film.country
+    ↪location.dated_location.date_founded
+        null | m.03rk0 | location.dated_location.date_founded | "1947-08-15" | null
+        null | m.07ssc | location.dated_location.date_founded | "1707-05-01" | null
+4 sortable predicates, listed below:
+[location.location.containedby, education.field_of_study.students_majoring, film.film.country, music.recording.releases]
+language.human_language.countries_spoken_in
+    ↪location.dated_location.date_founded
+        null | m.06q1r | location.dated_location.date_founded | "0843" | null
+language.human_language.writing_system
+    ↪language.language_writing_system.used_from
+        null | m.04n0p | language.language_writing_system.used_from | "-0699" | null
+        null | m.03f1hs | language.language_writing_system.used_from | "0150" | null
+6 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, education.field_of_study.students_majoring, film.film.country, language.human_language.writing_system, music.recording.releases]
+location.location.containedby
+    ↪location.dated_location.date_founded
+        null | m.03v1s | location.dated_location.date_founded | "1816-12-11" | null
+        null | m.09c7w0 | location.dated_location.date_founded | "1776-07-04" | null
+        null | m.0ntl8 | location.dated_location.date_founded | "1818" | null
+location.statistical_region.population
+    ↪measurement_unit.dated_integer.year
+        null | m.0k6q2k5 | measurement_unit.dated_integer.year | "2011" | null
+        null | m.0hkrq2x | measurement_unit.dated_integer.year | "2000" | null
+        null | m.0hkrq0y | measurement_unit.dated_integer.year | "1991" | null
+        null | m.0hkrq33 | measurement_unit.dated_integer.year | "2001" | null
+        null | m.0hkrq3t | measurement_unit.dated_integer.year | "2004" | null
+        null | m.0hkrq14 | measurement_unit.dated_integer.year | "1992" | null
+        null | m.0hkrq1l | measurement_unit.dated_integer.year | "1994" | null
+        null | m.0hkrq1c | measurement_unit.dated_integer.year | "1993" | null
+        null | m.0hkrq27 | measurement_unit.dated_integer.year | "1997" | null
+        null | m.0hkrq2g | measurement_unit.dated_integer.year | "1998" | null
+        null | m.0hkrq40 | measurement_unit.dated_integer.year | "2005" | null
+        null | m.0hkrq2p | measurement_unit.dated_integer.year | "1999" | null
+        null | m.0jt8tgz | measurement_unit.dated_integer.year | "2009" | null
+        null | m.0hkrq47 | measurement_unit.dated_integer.year | "2006" | null
+        null | m.0hkrq4p | measurement_unit.dated_integer.year | "2008" | null
+        null | m.0hkrq3c | measurement_unit.dated_integer.year | "2002" | null
+        null | m.0hkrq4g | measurement_unit.dated_integer.year | "2007" | null
+        null | m.0hkrq0q | measurement_unit.dated_integer.year | "1990" | null
+        null | m.0k6q2jz | measurement_unit.dated_integer.year | "2010" | null
+        null | m.0hkrq3l | measurement_unit.dated_integer.year | "2003" | null
+        null | m.0hkrq1t | measurement_unit.dated_integer.year | "1995" | null
+        null | m.0hkrq20 | measurement_unit.dated_integer.year | "1996" | null
+location.location.people_born_here
+    ↪people.person.date_of_birth
+        null | m.0fjzxc | people.person.date_of_birth | "1936-12-31" | null
+        null | m.03kvhr | people.person.date_of_birth | "1900-06-07" | null
+8 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, location.statistical_region.population, education.field_of_study.students_majoring, film.film.country, language.human_language.writing_system, location.location.people_born_here, music.recording.releases]
+location.location.containedby
+    ↪location.dated_location.date_founded
+        null | m.05fkf | location.dated_location.date_founded | "1789-11-21" | null
+        null | m.09c7w0 | location.dated_location.date_founded | "1776-07-04" | null
+        null | m.0n414 | location.dated_location.date_founded | "1851" | null
+8 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, location.statistical_region.population, education.field_of_study.students_majoring, film.film.country, language.human_language.writing_system, location.location.people_born_here, music.recording.releases]
+location.location.containedby
+    ↪location.dated_location.date_founded
+        null | m.07b_l | location.dated_location.date_founded | "1845-12-29" | null
+        null | m.0mrvs | location.dated_location.date_founded | "1837" | null
+8 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, location.statistical_region.population, education.field_of_study.students_majoring, film.film.country, language.human_language.writing_system, location.location.people_born_here, music.recording.releases]
+location.location.containedby
+    ↪location.dated_location.date_founded
+        null | m.07b_l | location.dated_location.date_founded | "1845-12-29" | null
+        null | m.0d1xh | location.dated_location.date_founded | "1836" | null
+8 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, location.statistical_region.population, education.field_of_study.students_majoring, film.film.country, language.human_language.writing_system, location.location.people_born_here, music.recording.releases]
+film.film.film_festivals
+    ↪time.event.end_date
+        null | m.0109vt8b | time.event.end_date | "2014-09-18" | null
+        null | m.0105w19t | time.event.end_date | "2014-09-14" | null
+    ↪time.event.start_date
+        null | m.0109vt8b | time.event.start_date | "2014-09-11" | null
+        null | m.0105w19t | time.event.start_date | "2014-09-04" | null
+9 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, location.statistical_region.population, education.field_of_study.students_majoring, film.film.country, film.film.film_festivals, language.human_language.writing_system, location.location.people_born_here, music.recording.releases]
+music.recording.artist
+    ↪people.person.date_of_birth
+        null | m.01rqsft | people.person.date_of_birth | "1963" | null
+        null | m.07q63x | people.person.date_of_birth | "1959-07-15" | null
+10 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, location.statistical_region.population, music.recording.artist, education.field_of_study.students_majoring, film.film.country, film.film.film_festivals, language.human_language.writing_system, location.location.people_born_here, music.recording.releases]
+music.recording.artist
+    ↪music.artist.active_start
+        null | m.0fqcc72 | music.artist.active_start | "2009" | null
+10 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, location.statistical_region.population, music.recording.artist, education.field_of_study.students_majoring, film.film.country, film.film.film_festivals, language.human_language.writing_system, location.location.people_born_here, music.recording.releases]
+location.location.containedby
+    ↪location.dated_location.date_founded
+        null | m.0mlyj | location.dated_location.date_founded | "1861" | null
+        null | m.081yw | location.dated_location.date_founded | "1889-11-11" | null
+10 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, location.statistical_region.population, music.recording.artist, education.field_of_study.students_majoring, film.film.country, film.film.film_festivals, language.human_language.writing_system, location.location.people_born_here, music.recording.releases]
+location.location.containedby
+    ↪location.dated_location.date_founded
+        null | m.09c7w0 | location.dated_location.date_founded | "1776-07-04" | null
+        null | m.0p30z | location.dated_location.date_founded | "1829-11-02" | null
+        null | m.0vbk | location.dated_location.date_founded | "1836-06-15" | null
+10 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, location.statistical_region.population, music.recording.artist, education.field_of_study.students_majoring, film.film.country, film.film.film_festivals, language.human_language.writing_system, location.location.people_born_here, music.recording.releases]
+location.location.containedby
+    ↪location.dated_location.date_founded
+        null | m.0ndsz | location.dated_location.date_founded | "1845" | null
+        null | m.09c7w0 | location.dated_location.date_founded | "1776-07-04" | null
+        null | m.04ych | location.dated_location.date_founded | "1821-08-10" | null
+10 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, location.statistical_region.population, music.recording.artist, education.field_of_study.students_majoring, film.film.country, film.film.film_festivals, language.human_language.writing_system, location.location.people_born_here, music.recording.releases]
+location.location.containedby
+    ↪location.dated_location.date_founded
+        null | m.09c7w0 | location.dated_location.date_founded | "1776-07-04" | null
+        null | m.0p4pp | location.dated_location.date_founded | "1848" | null
+        null | m.04ly1 | location.dated_location.date_founded | "1812-04-30" | null
+10 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, location.statistical_region.population, music.recording.artist, education.field_of_study.students_majoring, film.film.country, film.film.film_festivals, language.human_language.writing_system, location.location.people_born_here, music.recording.releases]
+location.location.containedby
+    ↪location.dated_location.date_founded
+        null | m.0498y | location.dated_location.date_founded | "1792-06-01" | null
+        null | m.0nnpp | location.dated_location.date_founded | "1838" | null
+        null | m.09c7w0 | location.dated_location.date_founded | "1776-07-04" | null
+10 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, location.statistical_region.population, music.recording.artist, education.field_of_study.students_majoring, film.film.country, film.film.film_festivals, language.human_language.writing_system, location.location.people_born_here, music.recording.releases]
+language.human_language.countries_spoken_in
+    ↪location.dated_location.date_founded
+        null | m.0d05w3 | location.dated_location.date_founded | "1949-10-01" | null
+        null | m.034m8 | location.dated_location.date_founded | "1966-05-26" | null
+        null | m.05sb1 | location.dated_location.date_founded | "1947-08-14" | null
+        null | m.035dk | location.dated_location.date_founded | "1957-03-06" | null
+        null | m.05v8c | location.dated_location.date_founded | "1521-03-16" | null
+        null | m.06s6l | location.dated_location.date_founded | "1979-10-27" | null
+        null | m.03__y | location.dated_location.date_founded | "1946-05-25" | null
+        null | m.06s0l | location.dated_location.date_founded | "1979-02-22" | null
+        null | m.0j5g9 | location.dated_location.date_founded | "1056" | null
+        null | m.03spz | location.dated_location.date_founded | "1948-05-14" | null
+        null | m.027nb | location.dated_location.date_founded | "1978-11-03" | null
+        null | m.04hzj | location.dated_location.date_founded | "1821" | null
+        null | m.035hm | location.dated_location.date_founded | "1704-08-04" | null
+        null | m.0chghy | location.dated_location.date_founded | "1901-01-01" | null
+        null | m.09pmkv | location.dated_location.date_founded | "1957-08-31" | null
+        null | m.01ppq | location.dated_location.date_founded | "1960-08-16" | null
+        null | m.07ssc | location.dated_location.date_founded | "1707-05-01" | null
+        null | m.07ytt | location.dated_location.date_founded | "1929-02-11" | null
+        null | m.035hr8 | location.dated_location.date_founded | "1967-11-30" | null
+        null | m.07tp2 | location.dated_location.date_founded | "1962-10-09" | null
+        null | m.026wtlf | location.dated_location.date_founded | "1949-11-06" | null
+        null | m.06tw8 | location.dated_location.date_founded | "1956-01-01" | null
+        null | m.04hhv | location.dated_location.date_founded | "1949-07-19" | null
+        null | m.02wt0 | location.dated_location.date_founded | "1970-10-10" | null
+        null | m.0ctw_b | location.dated_location.date_founded | "1840-02-06" | null
+        null | m.0hdx8 | location.dated_location.date_founded | "1965-02-18" | null
+        null | m.03h64 | location.dated_location.date_founded | "1842-08-29" | null
+        null | m.06ryl | location.dated_location.date_founded | "1983-09-19" | null
+        null | m.0167v | location.dated_location.date_founded | "1984-01-01" | null
+        null | m.03t1s | location.dated_location.date_founded | "1765" | null
+        null | m.03ryn | location.dated_location.date_founded | "1945-08-17" | null
+        null | m.0d060g | location.dated_location.date_founded | "1867-07-01" | null
+        null | m.047t_ | location.dated_location.date_founded | "1979-07-12" | null
+        null | m.0l3h | location.dated_location.date_founded | "1981-11-01" | null
+        null | m.05r7t | location.dated_location.date_founded | "1898-12-10" | null
+        null | m.07z5n | location.dated_location.date_founded | "1980-07-30" | null
+        null | m.06v36 | location.dated_location.date_founded | "1968-09-06" | null
+        null | m.01nln | location.dated_location.date_founded | "1960-01-01" | null
+        null | m.09wfqp | location.dated_location.date_founded | "1919" | null
+        null | m.0hzlz | location.dated_location.date_founded | "1961-05-31" | null
+        null | m.0166v | location.dated_location.date_founded | "1966-09-30" | null
+        null | m.06dfg | location.dated_location.date_founded | "1962-07-01" | null
+        null | m.05qkp | location.dated_location.date_founded | "1973-12-01" | null
+        null | m.0164b | location.dated_location.date_founded | "1981-09-21" | null
+        null | m.04v6v | location.dated_location.date_founded | "1986-10-21" | null
+        null | m.088q4 | location.dated_location.date_founded | "1980-04-18" | null
+        null | m.0697s | location.dated_location.date_founded | "1971-09-03" | null
+        null | m.07dzf | location.dated_location.date_founded | "1961-12-09" | null
+        null | m.016p5p | location.dated_location.date_founded | "1976" | null
+        null | m.0160w | location.dated_location.date_founded | "1964" | null
+        null | m.03rk0 | location.dated_location.date_founded | "1947-08-15" | null
+        null | m.04v3q | location.dated_location.date_founded | "1964-09-21" | null
+        null | m.035yg | location.dated_location.date_founded | "1974-02-07" | null
+        null | m.02lx0 | location.dated_location.date_founded | "1975-11-28" | null
+        null | m.0h44w | location.dated_location.date_founded | "1920" | null
+        null | m.0162b | location.dated_location.date_founded | "1971-03-26" | null
+        null | m.05cgv | location.dated_location.date_founded | "1960-10-01" | null
+        null | m.01k0p4 | location.dated_location.date_founded | "1988-11-15" | null
+        null | m.065skb | location.dated_location.date_founded | "1971" | null
+        null | m.06s9y | location.dated_location.date_founded | "1962-01-01" | null
+        null | m.03_xj | location.dated_location.date_founded | "1204" | null
+        null | m.0162v | location.dated_location.date_founded | "1966-11-30" | null
+        null | m.04wcf | location.dated_location.date_founded | "1632" | null
+        null | m.05br2 | location.dated_location.date_founded | "1968-01-31" | null
+        null | m.019pcs | location.dated_location.date_founded | "-0979" | null
+        null | m.03h2c | location.dated_location.date_founded | "1821-09-15" | null
+        null | m.06s_2 | location.dated_location.date_founded | "1961-04-27" | null
+        null | m.04hvw | location.dated_location.date_founded | "1966-10-04" | null
+        null | m.07fsv | location.dated_location.date_founded | "1978-10-01" | null
+        null | m.020p1 | location.dated_location.date_founded | "1965-08-04" | null
+        null | m.06t2t | location.dated_location.date_founded | "1819-02-06" | null
+        null | m.07f9q | location.dated_location.date_founded | "1948" | null
+        null | m.088vb | location.dated_location.date_founded | "1964-10-24" | null
+        null | m.019rg5 | location.dated_location.date_founded | "1963-12-12" | null
+        null | m.01nty | location.dated_location.date_founded | "1962" | null
+        null | m.06m_5 | location.dated_location.date_founded | "1948-02-04" | null
+        null | m.05bmq | location.dated_location.date_founded | "1990-03-21" | null
+education.field_of_study.students_majoring
+    ↪education.education.end_date
+        null | m.0zrjmc8 | education.education.end_date | "1977" | null
+        null | m.04hthhl | education.education.end_date | "1970" | null
+        null | m.0vtkwfg | education.education.end_date | "1991" | null
+        null | m.0bd2y8x | education.education.end_date | "1950" | null
+        null | m.02wpnfv | education.education.end_date | "1991" | null
+        null | m.0sw24y6 | education.education.end_date | "1969" | null
+        null | m.05g2f88 | education.education.end_date | "1984" | null
+        null | m.05px7rh | education.education.end_date | "1991" | null
+        null | m.04hdd_z | education.education.end_date | "1934" | null
+        null | m.0gz2m_n | education.education.end_date | "1990" | null
+        null | m.0qzklmq | education.education.end_date | "1930" | null
+        null | m.0n1l1v2 | education.education.end_date | "1929" | null
+        null | m.01072j8z | education.education.end_date | "1960" | null
+        null | m.0106m4sr | education.education.end_date | "1942" | null
+        null | m.0n1mlpk | education.education.end_date | "1965" | null
+        null | m.05yyy9s | education.education.end_date | "1959" | null
+        null | m.012ngqk4 | education.education.end_date | "2005-07" | null
+        null | m.010bd6c7 | education.education.end_date | "1930" | null
+        null | m.062ztwt | education.education.end_date | "2007" | null
+        null | m.0_y_ft4 | education.education.end_date | "1947" | null
+        null | m.0zvvyq7 | education.education.end_date | "1968" | null
+        null | m.0652ctq | education.education.end_date | "1951-01" | null
+        null | m.0_z7lpf | education.education.end_date | "1935" | null
+        null | m.0vwygyj | education.education.end_date | "1979" | null
+        null | m.0zcr5l8 | education.education.end_date | "1992" | null
+        null | m.0_r984d | education.education.end_date | "1966" | null
+        null | m.02hs9n4 | education.education.end_date | "1971" | null
+        null | m.0_gk1dj | education.education.end_date | "1953" | null
+        null | m.0zw3mtz | education.education.end_date | "1968" | null
+        null | m.05y_pwx | education.education.end_date | "1953" | null
+        null | m.0n0ktgl | education.education.end_date | "1943" | null
+        null | m.0n0bfrj | education.education.end_date | "1998" | null
+        null | m.07ysg41 | education.education.end_date | "1927" | null
+        null | m.0100_pt1 | education.education.end_date | "2009-06" | null
+        null | m.0n1k_ny | education.education.end_date | "1951" | null
+        null | m.011t8hh9 | education.education.end_date | "1983-12" | null
+        null | m.04ht3ss | education.education.end_date | "1983" | null
+        null | m.0107xl6c | education.education.end_date | "1936" | null
+        null | m.0n1mn4s | education.education.end_date | "1990" | null
+        null | m.0cv8rpp | education.education.end_date | "1958" | null
+        null | m.05lxhz3 | education.education.end_date | "1963" | null
+        null | m.02wph5c | education.education.end_date | "1968" | null
+        null | m.04hc_b8 | education.education.end_date | "1971" | null
+        null | m.0n0rq05 | education.education.end_date | "1971" | null
+        null | m.0_9h4s9 | education.education.end_date | "1963" | null
+        null | m.03p8b_d | education.education.end_date | "1997" | null
+        null | m.02wpvg6 | education.education.end_date | "1943" | null
+        null | m.02wnd3c | education.education.end_date | "1976" | null
+        null | m.0_0blsl | education.education.end_date | "1965" | null
+        null | m.0zbjj9p | education.education.end_date | "1992" | null
+        null | m.049y9ww | education.education.end_date | "1970" | null
+        null | m.04m14h4 | education.education.end_date | "1975" | null
+        null | m.010460h7 | education.education.end_date | "1953" | null
+        null | m.04jr07j | education.education.end_date | "1974" | null
+        null | m.0n117wt | education.education.end_date | "1973" | null
+        null | m.0_xw6qt | education.education.end_date | "1954" | null
+        null | m.0jrf102 | education.education.end_date | "1958" | null
+        null | m.05bjbqq | education.education.end_date | "1958" | null
+        null | m.02wnm_7 | education.education.end_date | "1979" | null
+        null | m.012nj7fd | education.education.end_date | "2008" | null
+        null | m.0n1n0g8 | education.education.end_date | "1931" | null
+        null | m.0n0w0ml | education.education.end_date | "1989" | null
+        null | m.05kp6b2 | education.education.end_date | "1970-03" | null
+        null | m.0zs7hqv | education.education.end_date | "1975" | null
+        null | m.02wmyw7 | education.education.end_date | "1915" | null
+        null | m.05fsk3p | education.education.end_date | "2006" | null
+        null | m.0svrv_x | education.education.end_date | "1961" | null
+        null | m.011cf5yq | education.education.end_date | "2009-04" | null
+        null | m.03qtj83 | education.education.end_date | "1940" | null
+        null | m.0zdgsq_ | education.education.end_date | "1969" | null
+        null | m.0n1lp34 | education.education.end_date | "1953" | null
+        null | m.0_7fllt | education.education.end_date | "1946" | null
+        null | m.0zgxgj8 | education.education.end_date | "1961" | null
+        null | m.0n1fh2j | education.education.end_date | "1966" | null
+        null | m.0k1r0yb | education.education.end_date | "1983" | null
+        null | m.03p7j7l | education.education.end_date | "1991" | null
+        null | m.04hqtls | education.education.end_date | "1971" | null
+        null | m.0j4mfz5 | education.education.end_date | "1983" | null
+        null | m.0n1nb8t | education.education.end_date | "1969" | null
+        null | m.0n1j2jg | education.education.end_date | "1922" | null
+        null | m.0zbfsks | education.education.end_date | "1991" | null
+        null | m.03yxq92 | education.education.end_date | "1984" | null
+        null | m.03p7ddy | education.education.end_date | "1985" | null
+        null | m.0gtf__6 | education.education.end_date | "1986" | null
+        null | m.0n9j3m2 | education.education.end_date | "1990" | null
+        null | m.04c_jl6 | education.education.end_date | "1967" | null
+        null | m.0zngqqm | education.education.end_date | "1970" | null
+        null | m.0zs_bvy | education.education.end_date | "1964" | null
+        null | m.0zc_f_x | education.education.end_date | "1965" | null
+        null | m.04dxvrq | education.education.end_date | "1958" | null
+        null | m.04hvhjb | education.education.end_date | "1976" | null
+        null | m.04hsdx0 | education.education.end_date | "1997" | null
+        null | m.08cd9pw | education.education.end_date | "1998" | null
+        null | m.0n1hw96 | education.education.end_date | "1962" | null
+        null | m.0_rghy5 | education.education.end_date | "1955" | null
+        null | m.0zcx18g | education.education.end_date | "1998" | null
+        null | m.0zngr9w | education.education.end_date | "1968" | null
+        null | m.0n1jjll | education.education.end_date | "1949" | null
+        null | m.04dx923 | education.education.end_date | "1974" | null
+        null | m.0zcry5w | education.education.end_date | "1959" | null
+        null | m.0k3fjfr | education.education.end_date | "1976" | null
+        null | m.0gtf2cr | education.education.end_date | "1992" | null
+        null | m.02wmw_x | education.education.end_date | "1951" | null
+        null | m.05tf_t4 | education.education.end_date | "1976" | null
+        null | m.0zmhsng | education.education.end_date | "1974" | null
+        null | m.0_tk4yp | education.education.end_date | "1948" | null
+        null | m.0zd5h36 | education.education.end_date | "1995" | null
+        null | m.0n0km5h | education.education.end_date | "1959" | null
+        null | m.0j_vjhq | education.education.end_date | "2003" | null
+        null | m.0108rgkt | education.education.end_date | "1942" | null
+        null | m.02wnxtr | education.education.end_date | "1916" | null
+        null | m.0zmlvqn | education.education.end_date | "1980" | null
+        null | m.0n0l8gs | education.education.end_date | "1986" | null
+        null | m.010731rf | education.education.end_date | "1946" | null
+        null | m.02xhh8c | education.education.end_date | "1992" | null
+        null | m.0zdb7g7 | education.education.end_date | "1988" | null
+        null | m.0zfmctl | education.education.end_date | "1981" | null
+        null | m.0_r7jtt | education.education.end_date | "1956" | null
+        null | m.0vwygpg | education.education.end_date | "1978" | null
+        null | m.0n0gf_8 | education.education.end_date | "1949" | null
+        null | m.0n1blzx | education.education.end_date | "1954" | null
+        null | m.0zvw589 | education.education.end_date | "1960" | null
+        null | m.0_r18j7 | education.education.end_date | "1970" | null
+        null | m.0zngp0x | education.education.end_date | "1975" | null
+        null | m.04lp91z | education.education.end_date | "1973" | null
+        null | m.0n1j0n1 | education.education.end_date | "1988" | null
+        null | m.010g35vc | education.education.end_date | "1916" | null
+        null | m.0n12htp | education.education.end_date | "1973" | null
+        null | m.0zbtq96 | education.education.end_date | "1973" | null
+        null | m.04f9tnr | education.education.end_date | "1972" | null
+        null | m.02wnffp | education.education.end_date | "1976" | null
+        null | m.010g35t0 | education.education.end_date | "1914" | null
+        null | m.0n1lwc4 | education.education.end_date | "1989" | null
+        null | m.02wnqxn | education.education.end_date | "1981" | null
+        null | m.0w52jqn | education.education.end_date | "1967" | null
+        null | m.0gggg4k | education.education.end_date | "1966" | null
+        null | m.06682lh | education.education.end_date | "1972" | null
+        null | m.05v8_t0 | education.education.end_date | "2008" | null
+        null | m.01010khl | education.education.end_date | "1956" | null
+        null | m.0zgqxtw | education.education.end_date | "1971" | null
+        null | m.0zt2jwp | education.education.end_date | "1957" | null
+        null | m.0n0tw3w | education.education.end_date | "1965" | null
+        null | m.045n_wj | education.education.end_date | "1991" | null
+        null | m.0zrhvtm | education.education.end_date | "2003" | null
+        null | m.0zgwznk | education.education.end_date | "1981" | null
+        null | m.02wplck | education.education.end_date | "1969" | null
+        null | m.05tf_sz | education.education.end_date | "1982" | null
+    ↪education.education.start_date
+        null | m.0zrjmc8 | education.education.start_date | "1973" | null
+        null | m.0sw24y6 | education.education.start_date | "1964" | null
+        null | m.012ngqk4 | education.education.start_date | "2002-09" | null
+        null | m.05pv71n | education.education.start_date | "1974" | null
+        null | m.02hs9n4 | education.education.start_date | "1966" | null
+        null | m.07ysg41 | education.education.start_date | "1926" | null
+        null | m.0n1k_ny | education.education.start_date | "1950" | null
+        null | m.011t8hh9 | education.education.start_date | "1979-09" | null
+        null | m.0zt73hy | education.education.start_date | "1965" | null
+        null | m.03p8b_d | education.education.start_date | "1994" | null
+        null | m.02wnd3c | education.education.start_date | "1972" | null
+        null | m.0n1l2cr | education.education.start_date | "1956" | null
+        null | m.02wnm_7 | education.education.start_date | "1975" | null
+        null | m.0yh82y5 | education.education.start_date | "1916" | null
+        null | m.02wmyw7 | education.education.start_date | "1911-10" | null
+        null | m.011cf5yq | education.education.start_date | "2004-09" | null
+        null | m.0_7fllt | education.education.start_date | "1944" | null
+        null | m.0k1r0yb | education.education.start_date | "1980" | null
+        null | m.0n1j2jg | education.education.start_date | "1921" | null
+        null | m.0gtf__6 | education.education.start_date | "1983" | null
+        null | m.0n9j3m2 | education.education.start_date | "1987" | null
+        null | m.04c_jl6 | education.education.start_date | "1963" | null
+        null | m.0zs_bvy | education.education.start_date | "1960" | null
+        null | m.08cd9pw | education.education.start_date | "1994" | null
+        null | m.0n1jjll | education.education.start_date | "1945" | null
+        null | m.0gtf2cr | education.education.start_date | "1983" | null
+        null | m.02wmw_x | education.education.start_date | "1946" | null
+        null | m.02wmsfb | education.education.start_date | "1951" | null
+        null | m.0n0km5h | education.education.start_date | "1956" | null
+        null | m.02xhh8c | education.education.start_date | "1987" | null
+        null | m.0zfmctl | education.education.start_date | "1975" | null
+        null | m.0n1blzx | education.education.start_date | "1950" | null
+        null | m.0n12htp | education.education.start_date | "1969" | null
+        null | m.0w52jqn | education.education.start_date | "1966" | null
+        null | m.05v8_t0 | education.education.start_date | "1998" | null
+        null | m.0n0tw3w | education.education.start_date | "1959" | null
+        null | m.045n_wj | education.education.start_date | "1987" | null
+        null | m.0zgwznk | education.education.start_date | "1976" | null
+language.human_language.main_country
+    ↪location.dated_location.date_dissolved
+        null | m.014tss | location.dated_location.date_dissolved | "1801" | null
+    ↪location.dated_location.date_founded
+        null | m.014tss | location.dated_location.date_founded | "1707-05-01" | null
+        null | m.09c7w0 | location.dated_location.date_founded | "1776-07-04" | null
+        null | m.0ctw_b | location.dated_location.date_founded | "1840-02-06" | null
+        null | m.0chghy | location.dated_location.date_founded | "1901-01-01" | null
+        null | m.0d060g | location.dated_location.date_founded | "1867-07-01" | null
+        null | m.07ssc | location.dated_location.date_founded | "1707-05-01" | null
+book.book_subject.works
+    ↪book.written_work.date_of_first_publication
+        null | m.0frym | book.written_work.date_of_first_publication | "1815-12" | null
+        null | m.04l38k | book.written_work.date_of_first_publication | "1991" | null
+        null | m.05yx_hm | book.written_work.date_of_first_publication | "2008-05" | null
+        null | m.09c55p | book.written_work.date_of_first_publication | "1859" | null
+        null | m.05yx_hb | book.written_work.date_of_first_publication | "2008-06" | null
+        null | m.03qcwjz | book.written_work.date_of_first_publication | "2006-01" | null
+        null | m.030jwp | book.written_work.date_of_first_publication | "1911" | null
+        null | m.060xy | book.written_work.date_of_first_publication | "1813-01-28" | null
+        null | m.01g5nl | book.written_work.date_of_first_publication | "1925-05-14" | null
+        null | m.0gk918x | book.written_work.date_of_first_publication | "2008" | null
+        null | m.040k3n | book.written_work.date_of_first_publication | "1892" | null
+        null | m.09y0q_ | book.written_work.date_of_first_publication | "2003" | null
+        null | m.07lbc8 | book.written_work.date_of_first_publication | "1962" | null
+        null | m.059b6vv | book.written_work.date_of_first_publication | "2008" | null
+        null | m.03j5j | book.written_work.date_of_first_publication | "1899-02" | null
+        null | m.06zdrd0 | book.written_work.date_of_first_publication | "2001" | null
+        null | m.0sxp_ | book.written_work.date_of_first_publication | "1908" | null
+        null | m.04bh9l | book.written_work.date_of_first_publication | "1990" | null
+        null | m.0cpwff5 | book.written_work.date_of_first_publication | "2008" | null
+        null | m.06kdn | book.written_work.date_of_first_publication | "1852" | null
+        null | m.01607l | book.written_work.date_of_first_publication | "1874" | null
+        null | m.05nvw | book.written_work.date_of_first_publication | "1884-02-01" | null
+        null | m.06d3548 | book.written_work.date_of_first_publication | "1935" | null
+        null | m.028kdt | book.written_work.date_of_first_publication | "1958" | null
+        null | m.06393v | book.written_work.date_of_first_publication | "1948-12" | null
+        null | m.068bwmy | book.written_work.date_of_first_publication | "1963" | null
+        null | m.0c1t4z8 | book.written_work.date_of_first_publication | "1891" | null
+        null | m.05yw5cc | book.written_work.date_of_first_publication | "2008-10" | null
+        null | m.0643c3 | book.written_work.date_of_first_publication | "2001" | null
+        null | m.09kjmqb | book.written_work.date_of_first_publication | "1949" | null
+        null | m.0js1m | book.written_work.date_of_first_publication | "1843-12-19" | null
+        null | m.0d070y | book.written_work.date_of_first_publication | "2003-04" | null
+        null | m.02yqq | book.written_work.date_of_first_publication | "1953" | null
+        null | m.053tc2 | book.written_work.date_of_first_publication | "1947" | null
+        null | m.04f05px | book.written_work.date_of_first_publication | "1966" | null
+        null | m.069qg0r | book.written_work.date_of_first_publication | "1958" | null
+        null | m.06vh_ | book.written_work.date_of_first_publication | "1811" | null
+        null | m.03kxyx | book.written_work.date_of_first_publication | "1960" | null
+        null | m.02q1ty1 | book.written_work.date_of_first_publication | "2004" | null
+        null | m.06v5f8h | book.written_work.date_of_first_publication | "1998" | null
+        null | m.0hhy | book.written_work.date_of_first_publication | "1945-08-17" | null
+        null | m.063ffhs | book.written_work.date_of_first_publication | "2003" | null
+        null | m.027nzv9 | book.written_work.date_of_first_publication | "2002-04-15" | null
+        null | m.05wc1b | book.written_work.date_of_first_publication | "1903" | null
+        null | m.0lz9s | book.written_work.date_of_first_publication | "1949-06-08" | null
+        null | m.01lvfw | book.written_work.date_of_first_publication | "1969" | null
+        null | m.0952p | book.written_work.date_of_first_publication | "1932" | null
+        null | m.0251rv | book.written_work.date_of_first_publication | "1978" | null
+        null | m.0662w5h | book.written_work.date_of_first_publication | "2004" | null
+        null | m.03cf4h | book.written_work.date_of_first_publication | "1927-05-05" | null
+12 sortable predicates, listed below:
+[language.human_language.countries_spoken_in, location.location.containedby, location.statistical_region.population, music.recording.artist, language.human_language.main_country, book.book_subject.works, education.field_of_study.students_majoring, film.film.country, film.film.film_festivals, language.human_language.writing_system, location.location.people_born_here, music.recording.releases]
+Layer one triples: 1764
+Layer two triples: 488520
+The match is : [Fiction, media_common.literary_genre.books_in_this_genre, null, domesday book] 
+Match is from triple : Fiction | m.02xlf | media_common.literary_genre.books_in_this_genre | m.04w38w5 | domesday book 
+     The 2nd layer triple is : The Souls of Black Folk | m.05wc1b | book.book.genre | m.02xlf | Fiction 
+             The root triple is : english | m.02h40lc | book.book_subject.works | m.05wc1b | The Souls of Black Folk 
+
+PROGRESS: 1 MATCHES (3 UNIQUE MATCHES)
+TIME: 229.157s FOR QUESTION AND 27330.678s SINCE START
